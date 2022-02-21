@@ -1,41 +1,17 @@
 version: '3.8'
 
 networks:
-  ouistack:
+  cenobridge:
     external:
       name: host
 volumes:
-  bootstrap_storage:
   bridge_storage:
 services:
-  # dht-bootstrap "bootstrap" service is below
-  bootstrap:
-    image: keith/ouistack-bootstrap:v0.0.1
-    networks:
-      - ouistack
-    environment:
-      # The IP and port numbers below are used as --x-pollinate values
-      DHT_IP: "67.215.246.10"
-      DHT_PORT: "6881"
-      # This directory is used by the application to store buckets across restarts
-      DHT_DIR: "/opt/bootstrap/storage"
-    volumes:
-      - bootstrap_storage:/opt/bootstrap/storage
-    deploy:
-      mode: replicated
-      replicas: 1
-      placement:
-        constraints:
-          - node.labels.ouistackrole == bootstrap
-        max_replicas_per_node: 1
-      resources:
-        limits:
-          memory: 128M
   # ceno-client "bridge" service is below
   bridge:
     image: equalitie/ceno-client:latest
     networks:
-      - ouistack
+      - cenobridge
     volumes:
       - bridge_storage:/var/opt/ouinet
     deploy:
@@ -43,7 +19,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.ouistackrole == bridge
+          - node.labels.dwebstackrole == bridge
         max_replicas_per_node: 1
       resources:
         limits:
