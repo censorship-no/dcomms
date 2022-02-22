@@ -16,6 +16,7 @@ volumes:
     external: true
   caddy_config:
   synapse_data:
+    external: true
 services:
   # ceno-client "bridge" service is below
   bridge:
@@ -40,6 +41,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "8448:8448"
     volumes:
       - caddy_data:/data
       - caddy_config:/config
@@ -68,7 +70,7 @@ services:
     networks:
       - caddy
     environment:
-          SYNAPSE_CONFIG_PATH: "/data/homeserver.yaml"
+      SYNAPSE_CONFIG_PATH: "/data/homeserver.yaml"
     depends_on:
       - caddy
     configs:
@@ -94,14 +96,11 @@ configs:
     file: ./conf/caddy/Caddyfile.tmpl
     external: false
   synapse-homeserver-config:
-    template_driver: golang
     file: ./conf/synapse/${DWEB_DOMAIN}.homeserver.yaml
     external: false
   synapse-signingkey-config:
-    template_driver: golang
     file: ./conf/synapse/${DWEB_DOMAIN}.signing.key
     external: false
   synapse-logconfig-config:
-    template_driver: golang
     file: ./conf/synapse/${DWEB_DOMAIN}.log.config
     external: false
