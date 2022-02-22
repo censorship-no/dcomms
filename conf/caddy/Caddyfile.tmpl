@@ -11,6 +11,7 @@
 {{ env "DWEB_DOMAIN" }} {
   reverse_proxy /_matrix/* http://synapse:8008
   reverse_proxy /_synapse/client/* http://synapse:8008
+  reverse_proxy /new_email* http://mailadm:3691
 }
 
 {{ env "DWEB_DOMAIN" }}:8448 {

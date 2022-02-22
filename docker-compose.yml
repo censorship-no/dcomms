@@ -9,14 +9,23 @@ networks:
     driver_opts:
       encrypted: ""
     attachable: true
-    name: monitoring
+    name: caddy
+  mail:
+    driver: overlay
+    driver_opts:
+      encrypted: ""
+    attachable: true
+    name: mail
 volumes:
   bridge_storage:
   caddy_data:
     external: true
   caddy_config:
+    external: true
   synapse_data:
     external: true
+  mailadm_db:
+  certs_data:
 services:
   # ceno-client "bridge" service is below
   bridge:
@@ -86,6 +95,82 @@ services:
       placement:
         constraints:
           - node.labels.dwebstackrole == synapse
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+# postfix is running as a part of the delta chat service
+  postfix:
+    image: keith/deltachat-mailadm-postfix:v0.0.1
+    ports:
+      - "587:587"
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.crt:/certs/fullchain.pem
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.key:/certs/privkey.pem
+    environment:
+      MAIL_DOMAIN: "${DWEB_DOMAIN}"
+    networks:
+      - mail
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # dovecot is running as a part of the delta chat service
+  dovecot:
+    image: keith/deltachat-mailadm-dovecot:v0.0.1
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.crt:/certs/fullchain.pem
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.key:/certs/privkey.pem
+    environment:
+      VMAIL_UID: "${VMAIL_UID}"
+      VMAIL_GID: "${VMAIL_GID}"
+    networks:
+      - mail
+    ports:
+      - "143:143"
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # mailadm is running as a part of the delta chat service
+  mailadm:
+    image: keith/deltachat-mailadm:v0.0.1
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+    environment:
+      MAIL_DOMAIN: "${DWEB_DOMAIN}"
+      VMAIL_UID: "${VMAIL_UID}"
+      VMAIL_GID: "${VMAIL_GID}"
+      WEB_ENDPOINT: "https://${DWEB_DOMAIN}/new_email"
+    networks:
+      - caddy
+      - mail
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
         max_replicas_per_node: 1
       resources:
         limits:
