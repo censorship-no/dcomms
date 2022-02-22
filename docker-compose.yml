@@ -89,13 +89,13 @@ configs:
     external: false
   synapse-homeserver-config:
     template_driver: golang
-    file: ./conf/${DWEB_DOMAIN}.homeserver.yaml
+    file: ./conf/synapse/${DWEB_DOMAIN}.homeserver.yaml
     external: false
   synapse-signingkey-config:
     template_driver: golang
-    file: ./conf/${DWEB_DOMAIN}.signing.key
+    file: ./conf/synapse/${DWEB_DOMAIN}.signing.key
     external: false
   synapse-logconfig-config:
     template_driver: golang
-    file: ./conf/${DWEB_DOMAIN}.log.config
+    file: ./conf/synapse/${DWEB_DOMAIN}.log.config
     external: false
