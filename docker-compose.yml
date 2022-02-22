@@ -9,6 +9,7 @@ volumes:
   caddy_data:
     external: true
   caddy_config:
+  synapse_data:
 services:
   # ceno-client "bridge" service is below
   bridge:
@@ -27,7 +28,7 @@ services:
       resources:
         limits:
           memory: 512M
-  # caddy acts as a reverse proxy for synapse (matirx) and deltachat (dchat)
+  # caddy acts as a reverse proxy for synapse (matrix) and deltachat (dchat)
   caddy:
     image: caddy:latest
     ports:
@@ -41,7 +42,7 @@ services:
     environment:
           DWEB_DOMAIN: "${DWEB_DOMAIN}"
     configs:
-      - source: caddy
+      - source: caddy-caddyfile-config
         target: /etc/caddy/Caddyfile
     deploy:
       mode: replicated
@@ -53,8 +54,48 @@ services:
       resources:
         limits:
           memory: 512M
+  # synapse is a matrix homeserver running as a service
+  synapse:
+    image: matrixdotorg/synapse:v1.52.0
+    volumes:
+      - synapse_data:/data
+    networks:
+      - monitoring
+    environment:
+          SYNAPSE_CONFIG_PATH: "/data/homeserver.yaml"
+    depends_on:
+      - caddy
+    configs:
+      - source: synapse-homeserver-config
+        target: /data/homeserver.yaml
+      - source: synapse-signingkey-config
+        target: /data/${DWEB_DOMAIN}.signing.key
+      - source: synapse-logconfig-config
+        target: /data/${DWEB_DOMAIN}.log.config
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == synapse
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
 configs:
-  caddy:
+  caddy-caddyfile-config:
     template_driver: golang
-    file: ./conf/Caddyfile.tmpl
+    file: ./conf/caddy/Caddyfile.tmpl
+    external: false
+  synapse-homeserver-config:
+    template_driver: golang
+    file: ./conf/${DWEB_DOMAIN}.homeserver.yaml
+    external: false
+  synapse-signingkey-config:
+    template_driver: golang
+    file: ./conf/${DWEB_DOMAIN}.signing.key
+    external: false
+  synapse-logconfig-config:
+    template_driver: golang
+    file: ./conf/${DWEB_DOMAIN}.log.config
     external: false
