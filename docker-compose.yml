@@ -4,6 +4,12 @@ networks:
   cenobridge:
     external:
       name: host
+  caddy:
+    driver: overlay
+    driver_opts:
+      encrypted: ""
+    attachable: true
+    name: monitoring
 volumes:
   bridge_storage:
   caddy_data:
@@ -38,7 +44,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - monitoring
+      - caddy
     environment:
           DWEB_DOMAIN: "${DWEB_DOMAIN}"
     configs:
@@ -60,7 +66,7 @@ services:
     volumes:
       - synapse_data:/data
     networks:
-      - monitoring
+      - caddy
     environment:
           SYNAPSE_CONFIG_PATH: "/data/homeserver.yaml"
     depends_on:
