@@ -18,7 +18,7 @@ echo "## Removing synapse-data"
 echo "## Generating synapse config"
 docker run -it --rm \
     --mount type=volume,src=synapse_data_tmp,dst=/data \
-    -e SYNAPSE_SERVER_NAME=$DWEB_DOMAIN \
+    -e SYNAPSE_SERVER_NAME=matrix.$DWEB_DOMAIN \
     -e SYNAPSE_REPORT_STATS=no \
     -e SYNAPSE_DATA_DIR=/data \
     matrixdotorg/synapse:v1.53.0 generate
