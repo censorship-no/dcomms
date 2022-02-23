@@ -86,12 +86,12 @@ services:
         gid: '991'
         mode: 0644
       - source: synapse-signingkey-config
-        target: /data/${DWEB_DOMAIN}.signing.key
+        target: /data/matrix.${DWEB_DOMAIN}.signing.key
         uid: '991'
         gid: '991'
         mode: 0644
       - source: synapse-logconfig-config
-        target: /data/${DWEB_DOMAIN}.log.config
+        target: /data/matrix.${DWEB_DOMAIN}.log.config
         uid: '991'
         gid: '991'
         mode: 0644
