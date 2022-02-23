@@ -108,7 +108,7 @@ services:
       - synapse
     configs:
       - source: element-json-config
-        target: /etc/element-web/config.json
+        target: /app/config.json
       - source: element-nginx-config
         target: /etc/nginx/conf.d/default.conf
     deploy:
