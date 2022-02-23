@@ -23,9 +23,9 @@ docker run -it --rm \
     -e SYNAPSE_DATA_DIR=/data \
     matrixdotorg/synapse:v1.53.0 generate
 echo "## Copying config files into docker swarm configs"
-cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
-cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
+sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
+sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
 
 #sed -i 's/data\/media_store/data2\/media_store/g' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
 
