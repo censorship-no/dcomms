@@ -36,10 +36,6 @@ services:
   # caddy acts as a reverse proxy for synapse (matrix)
   caddy:
     image: caddy:latest
-    ports:
-      - "80:80"
-      - "443:443"
-      - "8448:8448"
     volumes:
       - caddy_data:/data
       - caddy_config:/config
@@ -113,6 +109,8 @@ services:
     configs:
       - source: element-json-config
         target: /etc/element-web/config.json
+      - source: element-nginx-config
+        target: /etc/nginx/conf.d/default.conf
     deploy:
       mode: replicated
       replicas: 1
@@ -140,4 +138,8 @@ configs:
   element-json-config:
     template_driver: golang
     file: ./conf/element/config.json
+    external: false
+  element-nginx-config:
+    template_driver: golang
+    file: ./conf/element/nginx.conf
     external: false

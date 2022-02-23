@@ -9,7 +9,7 @@
 # domain name.
 
 {{ env "DWEB_DOMAIN" }} {
-  reverse_proxy http://element:80
+  reverse_proxy http://element:8001
 }
 
 matrix.{{ env "DWEB_DOMAIN" }} {
