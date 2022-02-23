@@ -25,10 +25,7 @@ docker run -it --rm \
     matrixdotorg/synapse:v1.53.0 generate
 echo "## Copying config files into docker swarm configs"
 sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
-sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
-
-#sed -i 's/data\/media_store/data2\/media_store/g' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-
+sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
+sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
 echo "## Provisioning dwebstack"
 DWEB_DOMAIN=$DWEB_DOMAIN DWEB_FRIENDLY_DOMAIN=$DWEB_FRIENDLY_DOMAIN docker stack deploy -c docker-compose.yml dwebstack-${DWEB_FRIENDLY_DOMAIN}
