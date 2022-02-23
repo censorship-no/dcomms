@@ -137,7 +137,7 @@ configs:
     external: false
   element-json-config:
     template_driver: golang
-    file: ./conf/element/config.json
+    file: ./conf/element/$DWEB_DOMAIN.config.json
     external: false
   element-nginx-config:
     template_driver: golang
