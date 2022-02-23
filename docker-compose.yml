@@ -9,7 +9,7 @@ networks:
     driver_opts:
       encrypted: ""
     attachable: true
-    name: caddy
+    name: caddy-${DWEB_FRIENDLY_DOMAIN}
 volumes:
   bridge_storage:
   caddy_data:
@@ -58,35 +58,70 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.dwebstackrole == caddy
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
         max_replicas_per_node: 1
       resources:
         limits:
           memory: 512M
   # synapse is a matrix homeserver running as a service
   synapse:
-    image: matrixdotorg/synapse:v1.52.0
+    image: matrixdotorg/synapse:v1.53.0
+    entrypoint:
+    - sh
+    - -c
+    - chown -R 991:991 /data ; /start.py
     volumes:
       - synapse_data:/data
     networks:
       - caddy
     environment:
-      SYNAPSE_CONFIG_PATH: "/data/homeserver.yaml"
+      SYNAPSE_CONFIG_DIR: "/data"
+      SYNAPSE_DATA_DIR: "/data"
     depends_on:
       - caddy
     configs:
       - source: synapse-homeserver-config
         target: /data/homeserver.yaml
+        uid: '991'
+        gid: '991'
+        mode: 0644
       - source: synapse-signingkey-config
         target: /data/${DWEB_DOMAIN}.signing.key
+        uid: '991'
+        gid: '991'
+        mode: 0644
       - source: synapse-logconfig-config
         target: /data/${DWEB_DOMAIN}.log.config
+        uid: '991'
+        gid: '991'
+        mode: 0644
     deploy:
       mode: replicated
       replicas: 1
       placement:
         constraints:
-          - node.labels.dwebstackrole == synapse
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # element is a matrix web GUI running as a service
+  element:
+    image: vectorim/element-web:v1.10.4
+    networks:
+      - caddy
+    depends_on:
+      - caddy
+      - synapse
+    configs:
+      - source: element-json-config
+        target: /etc/element-web/config.json
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
         max_replicas_per_node: 1
       resources:
         limits:
@@ -104,4 +139,8 @@ configs:
     external: false
   synapse-logconfig-config:
     file: ./conf/synapse/${DWEB_DOMAIN}.log.config
+    external: false
+  element-json-config:
+    template_driver: golang
+    file: ./conf/element/config.json
     external: false
