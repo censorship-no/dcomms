@@ -1,8 +1,8 @@
 {
     "default_server_config": {
         "m.homeserver": {
-            "base_url": "https://{{ env "DWEB_DOMAIN" }}",
-            "server_name": "{{ env "DWEB_DOMAIN" }}"
+            "base_url": "https://matrix.{{ env "DWEB_DOMAIN" }}",
+            "server_name": "matrix.{{ env "DWEB_DOMAIN" }}"
         }
     },
     "disable_custom_urls": false,
