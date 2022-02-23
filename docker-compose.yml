@@ -70,6 +70,7 @@ services:
     environment:
       SYNAPSE_CONFIG_DIR: "/data"
       SYNAPSE_DATA_DIR: "/data"
+      TZ: "UA"
     depends_on:
       - caddy
     configs:
