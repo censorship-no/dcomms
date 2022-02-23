@@ -9,16 +9,16 @@
 # domain name.
 
 {{ env "DWEB_DOMAIN" }} {
-  reverse_proxy http://element:8001
+  reverse_proxy http://localhost:8001
 }
 
 matrix.{{ env "DWEB_DOMAIN" }} {
-  reverse_proxy /_matrix/* http://synapse:8008
-  reverse_proxy /_synapse/client/* http://synapse:8008
+  reverse_proxy /_matrix/* http://localhost:8008
+  reverse_proxy /_synapse/client/* http://localhost:8008
 }
 
 matrix.{{ env "DWEB_DOMAIN" }}:8448 {
-  reverse_proxy http://synapse:8008
+  reverse_proxy http://localhost:8008
 }
 
 
