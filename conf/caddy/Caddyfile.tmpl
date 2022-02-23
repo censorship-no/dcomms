@@ -9,13 +9,18 @@
 # domain name.
 
 {{ env "DWEB_DOMAIN" }} {
+  reverse_proxy http://element:80
+}
+
+matrix.{{ env "DWEB_DOMAIN" }} {
   reverse_proxy /_matrix/* http://synapse:8008
   reverse_proxy /_synapse/client/* http://synapse:8008
 }
 
-{{ env "DWEB_DOMAIN" }}:8448 {
+matrix.{{ env "DWEB_DOMAIN" }}:8448 {
   reverse_proxy http://synapse:8008
 }
+
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
