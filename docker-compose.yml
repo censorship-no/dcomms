@@ -5,11 +5,8 @@ networks:
     external:
       name: host
   caddy:
-    driver: overlay
-    driver_opts:
-      encrypted: ""
-    attachable: true
-    name: caddy-${DWEB_FRIENDLY_DOMAIN}
+    external:
+      name: host
 volumes:
   bridge_storage:
   caddy_data:
