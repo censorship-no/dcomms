@@ -12,9 +12,10 @@ export DWEB_FRIENDLY_DOMAIN="${DWEB_DOMAIN//./_}"
 echo "## Removing existing dwebstack"
 docker stack rm dwebstack-${DWEB_FRIENDLY_DOMAIN}
 docker network rm caddy-${DWEB_FRIENDLY_DOMAIN}
+echo "## Removing previous synapse-data"
+docker volume rm synapse_data_tmp
 echo "## Sleeping for 10 seconds"
 sleep 10
-echo "## Removing synapse-data"
 echo "## Generating synapse config"
 docker run -it --rm \
     --mount type=volume,src=synapse_data_tmp,dst=/data \
