@@ -8,6 +8,11 @@
 # this machine's public IP, then replace ":80" below with your
 # domain name.
 
+{{ env "DWEB_DOMAIN" }} {
+  root * /www
+  file_server
+}
+
 chat.{{ env "DWEB_DOMAIN" }} {
   reverse_proxy http://localhost:8001
 }

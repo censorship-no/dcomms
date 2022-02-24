@@ -39,6 +39,9 @@ services:
     volumes:
       - caddy_data:/data
       - caddy_config:/config
+      - type: bind
+        source: ./www
+        target: /www
     networks:
       - caddy
     environment:
