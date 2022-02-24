@@ -29,6 +29,7 @@ sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.si
 sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
 sudo chown -R eq:eq ./conf/
 sed -i 's/#enable_registration: false/enable_registration: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+sed -i 's/#encryption_enabled_by_default_for_room_type: invite/encryption_enabled_by_default_for_room_type: all/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
 cp ./conf/element/config.json ./conf/element/$DWEB_DOMAIN.config.json
 sed -i "s/TEMPLATE/$DWEB_DOMAIN/" ./conf/element/$DWEB_DOMAIN.config.json
 echo "## Provisioning dwebstack"
