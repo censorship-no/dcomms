@@ -15,6 +15,7 @@ volumes:
     external: true
   synapse_data:
     external: true
+  mailadm_db:
 services:
   # ceno-client "bridge" service is below
   bridge:
@@ -121,6 +122,85 @@ services:
       placement:
         constraints:
           - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # postfix is running as a part of the delta chat service
+  postfix:
+    image: keith/deltachat-mailadm-postfix:v0.0.3
+    entrypoint:
+    - sh
+    - -c
+    - "postconf -M submission/inet=\"submission inet n - n - - smtpd\" && postconf -P submission/inet/syslog_name=postfix/submission && postconf -P submission/inet/smtpd_tls_security_level=encrypt && postconf -P submission/inet/smtpd_sasl_type=dovecot && postconf -P submission/inet/smtpd_sasl_path=inet:localhost:12345 && postconf -P submission/inet/smtpd_sasl_auth_enable=yes && postconf \"myhostname=${DWEB_DOMAIN}\" && postconf \"mydestination=\" && postconf \"virtual_mailbox_domains=${DWEB_DOMAIN}\" && postconf \"virtual_transport=lmtp:localhost:24\" && postconf \"virtual_mailbox_base=/home/vmail\" && postconf \"virtual_mailbox_maps=texthash:/var/lib/mailadm/virtual_mailboxes\" && postconf \"maillog_file=/dev/stdout\" && postconf \"smtpd_tls_cert_file=/certs/fullchain.pem\" && postconf \"smtpd_tls_key_file=/certs/privkey.pem\" && postfix start-fg"
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.crt:/certs/fullchain.pem
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.key:/certs/privkey.pem
+    environment:
+      MAIL_DOMAIN: "${DWEB_DOMAIN}"
+    networks:
+      - caddy
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # dovecot is running as a part of the delta chat service
+  dovecot:
+    image: keith/deltachat-mailadm-dovecot:v0.0.1
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.crt:/certs/fullchain.pem
+      - /var/lib/docker/volumes/caddy_data/_data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/${DWEB_DOMAIN}/${DWEB_DOMAIN}.key:/certs/privkey.pem
+    environment:
+      VMAIL_UID: "${VMAIL_UID}"
+      VMAIL_GID: "${VMAIL_GID}"
+    networks:
+      - caddy
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
+        max_replicas_per_node: 1
+      resources:
+        limits:
+          memory: 512M
+  # mailadm is running as a part of the delta chat service
+  mailadm:
+    image: keith/deltachat-mailadm:v0.0.1
+    entrypoint:
+    - sh
+    - -c
+    - mailadm init --web-endpoint="https://${DWEB_DOMAIN}/new_email" --mail-domain=${DWEB_DOMAIN} --vmail-user=vmail ; mailadm add-token ZMqbnG8P --maxuse 100000 --expiry 999d --token ZMqbnG8P ; gunicorn -b :3691 -w 1 mailadm.app:app
+    volumes:
+      - mailadm_db:/var/lib/mailadm/
+    environment:
+      MAIL_DOMAIN: "${DWEB_DOMAIN}"
+      VMAIL_UID: "${VMAIL_UID}"
+      VMAIL_GID: "${VMAIL_GID}"
+      WEB_ENDPOINT: "https://${DWEB_DOMAIN}/new_email"
+    networks:
+      - caddy
+    depends_on:
+      - caddy
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.dwebstackrole == caddy
         max_replicas_per_node: 1
       resources:
         limits:
