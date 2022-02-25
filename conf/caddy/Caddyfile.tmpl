@@ -14,7 +14,7 @@
     reverse_proxy http://localhost:3691
   }
   root * /www
-  file_server
+  file_server browse
 }
 
 chat.{{ env "DWEB_DOMAIN" }} {
