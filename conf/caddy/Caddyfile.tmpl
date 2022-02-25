@@ -8,6 +8,10 @@
 # this machine's public IP, then replace ":80" below with your
 # domain name.
 
+{
+  acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+
 {{ env "DWEB_DOMAIN" }} {
   handle_path /new_email* {
     rewrite * /{path}
