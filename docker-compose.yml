@@ -148,7 +148,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.dwebstackrole == caddy
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
         max_replicas_per_node: 1
       resources:
         limits:
@@ -172,7 +172,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.dwebstackrole == caddy
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
         max_replicas_per_node: 1
       resources:
         limits:
@@ -200,7 +200,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.dwebstackrole == caddy
+          - node.labels.dwebstackdomain == ${DWEB_DOMAIN}
         max_replicas_per_node: 1
       resources:
         limits:
