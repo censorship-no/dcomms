@@ -11,6 +11,7 @@ export default {
     htmlAttrs: {
       lang: "en",
     },
+
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -23,15 +24,42 @@ export default {
   modules: ["@nuxtjs/i18n"],
 
   i18n: {
-    locales: ["ua", "ru", "en"],
+    vueI18nLoader: true,
     defaultLocale: "ua",
     vueI18n: {
-      fallbackLocale: "ua",
+      fallbackLocale: ["ua", "en", "ru"],
     },
+    strategy: "prefix_except_default",
+    legacy: false,
+    globalInjection: true,
+    langDir: "lang/",
+    locales: [
+      {
+        code: "ua",
+        name: "UA",
+        nameFull: "Ukranian",
+        iso: "ua-UA",
+        file: "ua.js",
+      },
+      {
+        code: "ru",
+        name: "RU",
+        nameFull: "Русский",
+        iso: "ru-RU",
+        file: "ru.js",
+      },
+      {
+        code: "en",
+        name: "EN",
+        nameFull: "English",
+        iso: "en-US",
+        file: "en.js",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/style.css"],
+  css: ["@/assets/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,9 +72,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
