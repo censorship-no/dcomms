@@ -26,9 +26,9 @@ The dcomms stack leverages single node, non-replicated, containers of the follow
 
 ## Ports
 
-CENO client: 28729/udp
-Caddy (webserver): 443/tcp, 80/tcp, 8448/tcp
-docker-mailadm: 587/tcp 143/tcp
+CENO client: 28729/udp \
+Caddy (webserver): 443/tcp, 80/tcp, 8448/tcp \
+DeltaChat (postfix/dovecot): 587/tcp 143/tcp
 
 * Note: `dcomms` leverages docker host networking and therefore we recommend denying access to all other unnecessary ports at the host level.
 
