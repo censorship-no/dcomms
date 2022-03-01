@@ -2,15 +2,17 @@
 
 Decentralized communications that work with or without the Internet 
 
-## Prerequisites
-* A pre-existing docker swarm already setup and configured is necessary for orchestration of this software service stack.
+# Prerequisites
+* A pre-existing [docker swarm](https://docs.docker.com/engine/swarm/) already setup and configured is necessary for orchestration of this software service stack.
 * A domain to use for production.
 * A subdomain with the A record pointed to the IP address of a node for automatic issuance of a Let's Encrypt SSL certificate.
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
 
 # Introduction
 
-`dcomms` is a bundle of decentralized communication software running as services in the form of a docker swarm stack. It can be used to rapidly deploy decentralized services on multiple hosts.
+`dcomms` is a bundle of decentralized communication software running as services in the form of a docker swarm stack.
+
+It is used to rapidly deploy and orchestrate decentralized, federated, communications platforms such as [Matrix](https://matrix.org/) and [DeltaChat](https://delta.chat) across multiple hosts.
 
 ## Service containers
 
@@ -47,8 +49,9 @@ server1.example.org -> server1.example.org
 Clone or download this repository.  Review `./docker-compose.yml` and make any changes that may be required for your production environment.
 
 ## Label
+Use labels to specify which docker nodes services should run on
 
-Specify a docker worker node to act as a CENO bridge.
+### Specify a docker worker node to act as a CENO bridge
 
 * Obtain the node ID of a worker.  From the manager node of the swarm type:
 ```
@@ -59,8 +62,7 @@ docker node ls
 docker node update --label-add=dwebstackrole=bridge <nodeid>
 ```
 
-Specify a docker worker node to host all other services.
-
+### Specify a docker worker node to host all other services
 
 * Add the `node.labels.dwebstackdomain` label that matches the subdomain you wish to provision to the node:
 ```
@@ -79,14 +81,14 @@ DWEB_DOMAIN=server1.example.org ./provision.sh
 
 ## Redeploy
 
-Redeploy a dcomms server as `server1.example.org`.  From the manager node type:
+In the future, to redeploy or restart all dcomms services on `server1.example.org`, from the manager node type:
 ```
 DWEB_DOMAIN=server1.example.org ./redeploy.sh
 ```
 
 # Post installation
 
-* Copy a pre-existing website into `/var/www` of the docker host or checkout the files from `./site` from this repository into that location.
+* Copy a pre-existing website into `/var/www` of the docker host or checkout all files from `./site` into the same location.
 * Optionally visit `https://server1.example.org` to view the website.
 * Optionally visit `https://chat.server1.example.org` to view the Element service.
 * Optionally configure a Matrix client to use `https://matrix.server1.example.org` as the homeserver.
