@@ -8,7 +8,7 @@ Decentralized communications that work with or without the Internet
 * A subdomain with the A record pointed to the IP address of a node for automatic issuance of a Let's Encrypt SSL certificate.
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
 
-## Introduction
+# Introduction
 
 `dcomms` is a bundle of decentralized communication software running as services in the form of a docker swarm stack. It can be used to rapidly deploy decentralized services on multiple hosts.
 
@@ -46,7 +46,7 @@ server1.example.org -> server1.example.org
 
 Clone or download this repository.  Review `./docker-compose.yml` and make any changes that may be required for your production environment.
 
-### Label
+## Label
 
 Specify a docker worker node to act as a CENO bridge.
 
@@ -67,7 +67,7 @@ Specify a docker worker node to host all other services.
 docker node update --label-add=dwebstackdomain=server1.example.org <nodeid>
 ```
 
-### Provision
+## Provision
 
 Provision a dcomms server as `server1.example.org`.  From the manager node type:
 
@@ -77,14 +77,14 @@ DWEB_DOMAIN=server1.example.org ./provision.sh
 
 * Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overrwiting data.
 
-### Redeploy
+## Redeploy
 
 Redeploy a dcomms server as `server1.example.org`.  From the manager node type:
 ```
 DWEB_DOMAIN=server1.example.org ./redeploy.sh
 ```
 
-## Post installation
+# Post installation
 
 * Copy a pre-existing website into `/var/www` of the docker host or checkout the files from `./site` from this repository into that location.
 * Optionally visit `https://server1.example.org` to view the website.
@@ -95,7 +95,9 @@ DWEB_DOMAIN=server1.example.org ./redeploy.sh
 
 You may desire to tag the images within `docker-compose.yml` instead of relying upon the latest images for a more consistent deployment experience in production.
 
-## Troubleshooting
+# Troubleshooting
+
+## Log review
 
 To review logs, from the manager node of the swarm, type:
 ```
