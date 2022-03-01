@@ -16,7 +16,7 @@ It is used to rapidly deploy and orchestrate decentralized, federated, communica
 
 ## Service containers
 
-The dcomms stack leverages single node, non-replicated, containers of the following services built from the latest images below:
+The dcomms stack leverages single node, non-replicated containers of the following services built from the latest images below:
 
 * [CENO client](https://hub.docker.com/r/equalitie/ceno-client) courtesy of censorship.no
 * [Synapse Docker](https://hub.docker.com/r/matrixdotorg/synapse/) courtesy of matrix.org
@@ -77,7 +77,7 @@ Provision a dcomms server as `server1.example.org`.  From the manager node type:
 DWEB_DOMAIN=server1.example.org ./provision.sh
 ```
 
-* Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overrwiting data.
+* Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overwriting data.
 
 ## Redeploy
 
