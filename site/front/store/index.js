@@ -34,16 +34,16 @@ Public group moderation is on.</p>
               name: {
                 ua: "Web chat: Київ",
                 ru: "Веб чат: Киев",
-                en: "Web chat: Kharkiv",
+                en: "Web chat: Kyiv",
               },
               link: "https://chat.kyiv.dcomm.net.ua/",
               docs: [
                 {
                   name: "PDF",
                   link: {
-                    ua: "/docs/matrix/kharkiv.pdf",
-                    en: "/docs/matrix/kharkiv.pdf",
-                    ru: "/docs/matrix/kharkiv.pdf",
+                    ua: "/docs/matrix/kyiv.pdf",
+                    en: "/docs/matrix/kyiv.pdf",
+                    ru: "/docs/matrix/kyiv.pdf",
                   },
                 },
               ],
@@ -77,9 +77,9 @@ Public group moderation is on.</p>
                 {
                   name: "PDF",
                   link: {
-                    ua: "/docs/matrix/kharkiv.pdf",
-                    en: "/docs/matrix/kharkiv.pdf",
-                    ru: "/docs/matrix/kharkiv.pdf",
+                    ua: "/docs/matrix/odessa.pdf",
+                    en: "/docs/matrix/odessa.pdf",
+                    ru: "/docs/matrix/odessa.pdf",
                   },
                 },
               ],
