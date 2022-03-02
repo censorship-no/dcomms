@@ -1,5 +1,9 @@
 # front
 
+Static files in `/dist` directory
+If you want add servise use `/storage/index.js`
+Translate interface in `/lang/` directory
+
 ## Build Setup
 
 ```bash
