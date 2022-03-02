@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "front",
+    title: "dComm",
     htmlAttrs: {
       lang: "en",
     },
@@ -71,6 +71,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/pwa",
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
