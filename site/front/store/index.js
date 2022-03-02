@@ -322,7 +322,7 @@ Public group moderation is on.</p>
             {
               name: "PDF",
               link: {
-                ua: "/docs/ceno/ceno-manual_ua.pdf",
+                ua: "/docs/ceno/ceno-manual.pdf",
                 en: "/docs/ceno/ceno-manual_en.pdf",
                 ru: "/docs/ceno/ceno-manual_ru.pdf",
               },
@@ -365,7 +365,7 @@ Public group moderation is on.</p>
             {
               name: "HTML",
               link: {
-                ua: "/docs/newnode/index_ua.html",
+                ua: "/docs/newnode/index.html",
                 en: "/docs/newnode/index_en.html",
                 ru: "/docs/newnode/index_ru.html",
               },
