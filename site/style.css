@@ -80,9 +80,17 @@ html a {
     border-bottom: none;
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
 
-
-
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 @media screen and (min-width: 568px) {
     .table-title {
@@ -186,4 +194,17 @@ html a {
     .mobile-rubric {
         display: none;
     }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+hr {
+    border: none;
+    background-color: #E8E8E8;
+    color: #E8E8E8;
+    height: 1px;
 }
