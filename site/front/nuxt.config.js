@@ -4,7 +4,20 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-
+  router: {
+    extendRoutes(routes) {
+      routes.forEach((route) => {
+        // When options.generate.subFolders is true (default)
+        const alias =
+          route.path.length > 1 ? `${route.path}/index.html` : "/index.html";
+        // When options.generate.subFolders is false
+        // const normalizedRoute = route.path.replace(/\/$/, '') // Remove trailing slashes if they exist
+        // const alias =
+        //   route.path.length > 1 ? `${normalizedRoute}.html` : '/index.html'
+        route.alias = alias;
+      });
+    },
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "dComm",

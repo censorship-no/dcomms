@@ -98,8 +98,13 @@ Public group moderation is on.</p>
           localLink: "https://kharkiv.dcomm.net.ua/package/element/files/",
           servers: [
             {
-              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "https://matrix.kyiv.dcomm.net.ua",
+              name: {
+                ua: "Київ сервер matrix.kyiv.dcomm.net.ua",
+                ru: "Киев сервер matrix.kyiv.dcomm.net.ua",
+                en: "Kyiv server matrix.kyiv.dcomm.net.ua",
+              },
+              link: "",
+
               docs: [
                 {
                   name: "PDF",
@@ -113,11 +118,12 @@ Public group moderation is on.</p>
             },
             {
               name: {
-                ua: "Харків сервер",
-                ru: "Харьков сервер",
-                en: "Kharkiv server",
+                ua: "Харків сервер matrix.kharkiv.dcomm.net.ua",
+                ru: "Харьков сервер matrix.kharkiv.dcomm.net.ua",
+                en: "Kharkiv server matrix.kharkiv.dcomm.net.ua",
               },
-              link: "https://matrix.kharkiv.dcomm.net.ua",
+              link: "",
+
               docs: [
                 {
                   name: "PDF",
@@ -131,11 +137,11 @@ Public group moderation is on.</p>
             },
             {
               name: {
-                ua: "Одеса сервер",
-                ru: "Одесса сервер",
-                en: "Odessa server",
+                ua: "Одеса сервер matrix.odessa.dcomm.net.ua",
+                ru: "Одесса сервер matrix.odessa.dcomm.net.ua",
+                en: "Odessa server matrix.odessa.dcomm.net.ua",
               },
-              link: "https://matrix.odessa.dcomm.net.ua",
+              link: "",
               docs: [
                 {
                   name: "PDF",
@@ -162,6 +168,49 @@ Public group moderation is on.</p>
           ru: `<p>Delta.chat —  зашифрованная служба обмена сообщениями, использующая протокол электронной почты (SMTP). Дизайн похож на Whatsapp. Пользователям необходимо установить приложение для смартфона и добавить сервер с помощью QR-кодов, ссылки на которые приведены ниже. Другие люди могут общаться с вами в чате, сгенерировав QR-код приглашения в чат в самом приложении.</p>`,
         },
         logo: "/logo/deltachat.svg",
+        desktopApp: {
+          name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
+          logo: "/logo/deltachat.svg",
+          platforms: [
+            { name: "Linux", link: "" },
+            { name: "Windows", link: "" },
+            { name: "macOs", link: "" },
+          ],
+          link: "https://delta.chat/en/download",
+          localLink: "",
+          servers: [
+            {
+              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
+              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kyiv-invite.png",
+            },
+            {
+              name: {
+                ua: "Харків сервер",
+                ru: "Харьков сервер",
+                en: "Kharkiv server",
+              },
+              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kharkiv-invite.png",
+            },
+            {
+              name: {
+                ua: "Одеса сервер",
+                ru: "Одесса сервер",
+                en: "Odessa server",
+              },
+              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/odessa-invite.png",
+            },
+          ],
+          docs: [
+            {
+              name: "PDF",
+              link: {
+                ua: "/docs/deltachat/deltachat-manual.pdf",
+                en: "/docs/deltachat/deltachat-manual_en.pdf",
+                ru: "/docs/deltachat/deltachat-manual_ru.pdf",
+              },
+            },
+          ],
+        },
         mobileApp: {
           name: {
             ua: "Deltachat",
@@ -236,6 +285,14 @@ Public group moderation is on.</p>
                 ru: "/docs/briar/briar_ru.pdf",
               },
             },
+            {
+              name: "HTML",
+              link: {
+                ua: "/docs/briar/index.html",
+                en: "/docs/briar/index_en.html",
+                ru: "/docs/briar/index_ru.html",
+              },
+            },
           ],
           link: "https://briarproject.org/download-briar/",
           localLink: "https://kharkiv.dcomm.net.ua/package/briar/files/",
@@ -270,6 +327,14 @@ Public group moderation is on.</p>
                 ru: "/docs/ceno/ceno-manual_ru.pdf",
               },
             },
+            {
+              name: "HTML",
+              link: {
+                ua: "/docs/ceno/index.html",
+                en: "/docs/ceno/index_en.html",
+                ru: "/docs/ceno/index_ru.html",
+              },
+            },
           ],
           link: "https://censorship.no/download",
           localLink: "https://kyiv.dcomm.net.ua/package/ceno/files/",
@@ -292,7 +357,10 @@ Public group moderation is on.</p>
             en: "NewNode VPN",
           },
           logo: "/logo/newnode.png",
-          platforms: [{ name: "Android", link: "" }],
+          platforms: [
+            { name: "Android", link: "" },
+            { name: "iOs", link: "" },
+          ],
           docs: [
             {
               name: "HTML",
