@@ -39,7 +39,7 @@ Public group moderation is on.</p>
               link: "https://chat.kyiv.dcomm.net.ua/",
               docs: [
                 {
-                  name: "html"
+                  name: "HTML",
                   link: {
                     ua: "/docs/matrix/kyiv.html",
                     en: "/docs/matrix/kyiv.html",
@@ -65,11 +65,11 @@ Public group moderation is on.</p>
               link: "https://chat.kharkiv.dcomm.net.ua/",
               docs: [
                 {
-                  name: "HTML"
+                  name: "HTML",
                   link: {
-                    ua: "/docs/matrix/kharkiv.html
-                    en: "/docs/matrix/kharkiv.html
-                    ru: "/docs/matrix/kharkiv.html
+                    ua: "/docs/matrix/kharkiv.html",
+                    en: "/docs/matrix/kharkiv.html",
+                    ru: "/docs/matrix/kharkiv.html",
                   },
                 },
                 {
@@ -91,9 +91,9 @@ Public group moderation is on.</p>
               link: "https://chat.odessa.dcomm.net.ua/",
               docs: [
                 {
-                  name: "html
+                  name: "HTML",
                   link: {
-                    ua: "/docs/matrix/odessa.html"
+                    ua: "/docs/matrix/odessa.html",
                     en: "/docs/matrix/odessa.html",
                     ru: "/docs/matrix/odessa.html",
                   },
