@@ -95,7 +95,7 @@ Public group moderation is on.</p>
           logo: "/logo/logo-mark-primary.svg",
           platforms: [{ name: "Android", link: "" }],
           link: "https://element.io/get-started#download",
-          localLink: "https://kharkiv.dcomm.net.ua/package/element/files/",
+          localLink: "/package/element/files/",
           servers: [
             {
               name: {
@@ -181,7 +181,7 @@ Public group moderation is on.</p>
           servers: [
             {
               name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kyiv-invite.png",
+              link: "/docs/deltachat/kyiv-invite.png",
             },
             {
               name: {
@@ -189,7 +189,7 @@ Public group moderation is on.</p>
                 ru: "Харьков сервер",
                 en: "Kharkiv server",
               },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kharkiv-invite.png",
+              link: "/docs/deltachat/kharkiv-invite.png",
             },
             {
               name: {
@@ -197,7 +197,7 @@ Public group moderation is on.</p>
                 ru: "Одесса сервер",
                 en: "Odessa server",
               },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/odessa-invite.png",
+              link: "/docs/deltachat/odessa-invite.png",
             },
           ],
           docs: [
@@ -233,11 +233,11 @@ Public group moderation is on.</p>
               },
             },
           ],
-          localLink: "https://kharkiv.dcomm.net.ua/package/deltachat/files/",
+          localLink: "/package/deltachat/files/",
           servers: [
             {
               name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kyiv-invite.png",
+              link: "/docs/deltachat/kyiv-invite.png",
             },
             {
               name: {
@@ -245,7 +245,7 @@ Public group moderation is on.</p>
                 ru: "Харьков сервер",
                 en: "Kharkiv server",
               },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/kharkiv-invite.png",
+              link: "/docs/deltachat/kharkiv-invite.png",
             },
             {
               name: {
@@ -253,7 +253,7 @@ Public group moderation is on.</p>
                 ru: "Одесса сервер",
                 en: "Odessa server",
               },
-              link: "https://kharkiv.dcomm.net.ua/docs/deltachat/odessa-invite.png",
+              link: "/docs/deltachat/odessa-invite.png",
             },
           ],
         },
@@ -295,7 +295,7 @@ Public group moderation is on.</p>
             },
           ],
           link: "https://briarproject.org/download-briar/",
-          localLink: "https://kharkiv.dcomm.net.ua/package/briar/files/",
+          localLink: "/package/briar/files/",
         },
       },
     ],
@@ -337,7 +337,7 @@ Public group moderation is on.</p>
             },
           ],
           link: "https://censorship.no/download",
-          localLink: "https://kyiv.dcomm.net.ua/package/ceno/files/",
+          localLink: "/package/ceno/files/",
         },
       },
       {
@@ -373,7 +373,7 @@ Public group moderation is on.</p>
           ],
 
           link: "https://newnode.com/download-vpn",
-          localLink: "https://kyiv.dcomm.net.ua/package/newnode/files/",
+          localLink: "/package/newnode/files/",
         },
       },
     ],
