@@ -39,6 +39,14 @@ Public group moderation is on.</p>
               link: "https://chat.kyiv.dcomm.net.ua/",
               docs: [
                 {
+                  name: "html"
+                  link: {
+                    ua: "/docs/matrix/kyiv.html",
+                    en: "/docs/matrix/kyiv.html",
+                    ru: "/docs/matrix/kyiv.html",
+                  },
+                },
+                {
                   name: "PDF",
                   link: {
                     ua: "/docs/matrix/kyiv.pdf",
@@ -57,6 +65,14 @@ Public group moderation is on.</p>
               link: "https://chat.kharkiv.dcomm.net.ua/",
               docs: [
                 {
+                  name: "HTML"
+                  link: {
+                    ua: "/docs/matrix/kharkiv.html
+                    en: "/docs/matrix/kharkiv.html
+                    ru: "/docs/matrix/kharkiv.html
+                  },
+                },
+                {
                   name: "PDF",
                   link: {
                     ua: "/docs/matrix/kharkiv.pdf",
@@ -74,6 +90,14 @@ Public group moderation is on.</p>
               },
               link: "https://chat.odessa.dcomm.net.ua/",
               docs: [
+                {
+                  name: "html
+                  link: {
+                    ua: "/docs/matrix/odessa.html"
+                    en: "/docs/matrix/odessa.html",
+                    ru: "/docs/matrix/odessa.html",
+                  },
+                },
                 {
                   name: "PDF",
                   link: {
@@ -99,13 +123,21 @@ Public group moderation is on.</p>
           servers: [
             {
               name: {
-                ua: "Київ сервер matrix.kyiv.dcomm.net.ua",
-                ru: "Киев сервер matrix.kyiv.dcomm.net.ua",
-                en: "Kyiv server matrix.kyiv.dcomm.net.ua",
+                ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
+                ru: "Киев сервер: matrix.kyiv.dcomm.net.ua",
+                en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
               },
               link: "",
 
               docs: [
+             {
+              name: "HTML",
+              link: {
+                ua: "/docs/element/kyiv.html",
+                en: "/docs/element/kyiv.html",
+                ru: "/docs/element/kyiv.html",
+              },
+            },
                 {
                   name: "PDF",
                   link: {
@@ -118,13 +150,21 @@ Public group moderation is on.</p>
             },
             {
               name: {
-                ua: "Харків сервер matrix.kharkiv.dcomm.net.ua",
-                ru: "Харьков сервер matrix.kharkiv.dcomm.net.ua",
-                en: "Kharkiv server matrix.kharkiv.dcomm.net.ua",
+                ua: "Харків сервер: matrix.kharkiv.dcomm.net.ua",
+                ru: "Харьков сервер: matrix.kharkiv.dcomm.net.ua",
+                en: "Kharkiv server: matrix.kharkiv.dcomm.net.ua",
               },
               link: "",
 
               docs: [
+             {
+              name: "HTML",
+              link: {
+                ua: "/docs/element/kharkiv.html",
+                en: "/docs/element/kharkiv.html",
+                ru: "/docs/element/kharkiv.html",
+              },
+            },
                 {
                   name: "PDF",
                   link: {
@@ -137,12 +177,20 @@ Public group moderation is on.</p>
             },
             {
               name: {
-                ua: "Одеса сервер matrix.odessa.dcomm.net.ua",
-                ru: "Одесса сервер matrix.odessa.dcomm.net.ua",
-                en: "Odessa server matrix.odessa.dcomm.net.ua",
+                ua: "Одеса сервер: matrix.odessa.dcomm.net.ua",
+                ru: "Одесса сервер: matrix.odessa.dcomm.net.ua",
+                en: "Odessa server: matrix.odessa.dcomm.net.ua",
               },
               link: "",
               docs: [
+             {
+              name: "HTML",
+              link: {
+                ua: "/docs/element/odessa.html",
+                en: "/docs/element/odessa.html",
+                ru: "/docs/element/odessa.html",
+              },
+            },
                 {
                   name: "PDF",
                   link: {
@@ -277,20 +325,20 @@ Public group moderation is on.</p>
           logo: "/logo/briar.png  ",
           platforms: [{ name: "Android", link: "" }],
           docs: [
+              {
+              name: "HTML",
+              link: {
+                ua: "/docs/briar/index.html",
+                en: "/docs/briar/index_en.html",
+                ru: "/docs/briar/index_ru.html",
+              },
+            },
             {
               name: "PDF",
               link: {
                 ua: "/docs/briar/briar.pdf",
                 en: "/docs/briar/briar_en.pdf",
                 ru: "/docs/briar/briar_ru.pdf",
-              },
-            },
-            {
-              name: "HTML",
-              link: {
-                ua: "/docs/briar/index.html",
-                en: "/docs/briar/index_en.html",
-                ru: "/docs/briar/index_ru.html",
               },
             },
           ],
@@ -320,19 +368,19 @@ Public group moderation is on.</p>
           platforms: [{ name: "Android", link: "" }],
           docs: [
             {
-              name: "PDF",
-              link: {
-                ua: "/docs/ceno/ceno-manual.pdf",
-                en: "/docs/ceno/ceno-manual_en.pdf",
-                ru: "/docs/ceno/ceno-manual_ru.pdf",
-              },
-            },
-            {
               name: "HTML",
               link: {
                 ua: "/docs/ceno/index.html",
                 en: "/docs/ceno/index_en.html",
                 ru: "/docs/ceno/index_ru.html",
+              },
+            },
+            {
+              name: "PDF",
+              link: {
+                ua: "/docs/ceno/ceno-manual.pdf",
+                en: "/docs/ceno/ceno-manual_en.pdf",
+                ru: "/docs/ceno/ceno-manual_ru.pdf",
               },
             },
           ],
