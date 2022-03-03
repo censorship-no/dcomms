@@ -23,9 +23,9 @@ export default {
     browsing: "Web Browsing",
   },
   items: {
-    desktopApp: "Connecting from a desktop computer::",
+    desktopApp: "Connecting from a desktop computer:",
     localDownload: "local download",
-    instruction: "instruction",
+    instruction: "Instructions: ",
     mobileApp: "Smartphone App:",
   },
 };
