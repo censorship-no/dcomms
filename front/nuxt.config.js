@@ -28,6 +28,7 @@ export default {
   modules: ["@nuxtjs/i18n"],
 
   i18n: {
+    detectBrowserLanguage: false,
     vueI18nLoader: true,
     defaultLocale: "ua",
     vueI18n: {
