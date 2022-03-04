@@ -31,7 +31,7 @@
           <a
             v-if="data.desktopApp.localLink"
             :href="data.desktopApp.localLink"
-            class="ml-2 mt-2 text-gray-600"
+            class="my-1 text-gray-600 whitespace-nowrap block"
           >
             <img class="inline w-3" src="/download.svg" alt="" />
             <span class="mr-1"> {{ $t("items.localDownload") }}</span>
@@ -108,7 +108,7 @@
           <a
             v-if="data.mobileApp.localLink"
             :href="data.mobileApp.localLink"
-            class="ml-2 mt-2 text-gray-600"
+            class="my-1 text-gray-600 whitespace-nowrap block"
           >
             <img class="inline w-3" src="/download.svg" alt="" />
             <span class="mr-1"> {{ $t("items.localDownload") }}</span>
