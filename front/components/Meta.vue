@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      descrD: this.description ? this.description : this.$t("descr"),
+      descrD: this.description ? this.description : this.$t("subtitle"),
       titleD: this.title ? this.title : this.$t("title"),
     };
   },
