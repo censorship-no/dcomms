@@ -38,7 +38,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
       {
         hid: "twitter:card",
@@ -53,7 +53,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
       {
         hid: "twitter:image:alt",
@@ -79,9 +79,13 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
-
+      {
+        hid: "og:image:heigth",
+        property: "og:image:heigth",
+        content: "200",
+      },
       {
         hid: "og:image:width",
         property: "og:image:width",
@@ -95,24 +99,64 @@ export default {
       {
         hid: "og:image:secure_url",
         property: "og:image:secure_url",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
 
       {
         hid: "vk:image",
         property: "vk:image",
-        content: `/logo_ceno.png`,
+        content: `/bridge-icon.png`,
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   modules: ["@nuxtjs/i18n"],
+  pwa: {
+    manifest: {
+      name: "dComms",
+      short_name: "dComms",
+      start_url: "/?standalone=true",
+      lang: "ua",
+      display: "standalone",
+      description:
+        "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+      theme_color: "#111111",
+      icons: [
+        {
+          src: "/android-chrome-192x192.png",
+          type: "image/png",
+          sizes: "192x192",
+        },
+        {
+          src: "/android-chrome-512x512.png",
+          type: "image/png",
+          sizes: "512x512",
+        },
+        {
+          src: "/favicon-32x32.png",
+          type: "image/png",
+          sizes: "32x32",
+        },
+        {
+          src: "/favicon-16x16.png",
+          type: "image/png",
+          sizes: "16x16",
+        },
+        {
+          src: "/android-chrome-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+          purpose: "any maskable",
+        },
+      ],
+    },
+  },
 
   i18n: {
     detectBrowserLanguage: false,
