@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Meta :title="$t('title')" :description="$t('subtitle')"></Meta>
     <Header></Header>
     <div class="bg-white py-8 sm:py-20">
       <div class="container px-3 sm:px-0">
