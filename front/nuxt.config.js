@@ -11,16 +11,103 @@ export default {
   router: {},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "dComms",
     htmlAttrs: {
-      lang: "en",
+      lang: "ua",
     },
-
+    title: "dComms",
+    description:
+      "Децентралізовані комунікації, які працюють з інтернетом або без нього",
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Децентралізовані комунікації, які працюють з інтернетом або без нього" },
-      { name: "format-detection", content: "telephone=no" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "dComms",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: `/logo_ceno.png`,
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "summary_large_image",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: `/logo_ceno.png`,
+      },
+      {
+        hid: "twitter:image:alt",
+        name: "twitter:image:alt",
+        content: "dComms",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "dComms",
+      },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "dComms",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `/logo_ceno.png`,
+      },
+
+      {
+        hid: "og:image:width",
+        property: "og:image:width",
+        content: "200",
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website",
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image:secure_url",
+        content: `/logo_ceno.png`,
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: `/logo_ceno.png`,
+      },
+
+      {
+        hid: "vk:image",
+        property: "vk:image",
+        content: `/logo_ceno.png`,
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
