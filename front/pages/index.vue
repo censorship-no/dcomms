@@ -7,7 +7,8 @@
         <p class="text-lg">{{ $t("about.sites") }}</p>
         <p
           class="
-            grid grid-cols-3
+            grid grid-cols-1
+            sm:grid-cols-4
             gap-3
             sm:gap-8
             text-center
@@ -54,6 +55,19 @@
             href="https://kharkiv.dcomm.net.ua"
             >{{ $t("cities.kharkiv") }}</a
           >
+          <a
+            class="
+              sm:text-xl
+              border-2 border-gray-600
+              p-3
+              sm:p-6
+              rounded-lg
+              text-gray-600
+              hover:border-[#e53323] hover:text-[#e53323]
+            "
+            href="https://lviv.dcomm.net.ua"
+            >{{ $t("cities.lviv") }}</a
+          >
         </p>
         <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
       </div>
@@ -66,7 +80,7 @@
         <div v-for="item in messaging" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20"">
+        <h3 class="text-3xl font-bold my-8 sm:my-2">
           {{ $t("rubric.browsing") }}
         </h3>
         <div v-for="item in browsing" :key="item.id">

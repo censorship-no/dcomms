@@ -53,7 +53,7 @@
         <div>
           <div
             v-for="itemServers in data.desktopApp.servers"
-            :key="itemServers.name"
+            :key="itemServers.name[$i18n.locale]"
             class="mb-3 sm:pr-6"
           >
             <a :href="itemServers.link" v-if="itemServers.link">{{
@@ -65,7 +65,7 @@
               {{ $t("items.instruction") }}
               <a
                 v-for="(itemDocs, index) in itemServers.docs"
-                :key="itemDocs.link"
+                :key="itemDocs.link[$i18n.locale]"
                 :href="itemDocs.link[$i18n.locale]"
                 >{{
                   itemDocs.name +
@@ -125,7 +125,7 @@
         </div>
         <div
           v-for="itemServers in data.mobileApp.servers"
-          :key="itemServers.name"
+          :key="itemServers.name[$i18n.locale]"
           class="mb-3"
         >
           <a :href="itemServers.link" v-if="itemServers.link">{{
@@ -137,7 +137,7 @@
             ({{ $t("items.instruction") }}
             <a
               v-for="itemDocs in itemServers.docs"
-              :key="itemDocs.link"
+              :key="itemDocs.link[$i18n.locale]"
               :href="itemDocs.link[$i18n.locale]"
               >{{ itemDocs.name }} </a
             >)

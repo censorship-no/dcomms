@@ -108,6 +108,32 @@ Public group moderation is on.</p>
                 },
               ],
             },
+            {
+              name: {
+                ua: "Web chat: Львів",
+                ru: "Веб чат: Львов",
+                en: "Web chat: Lviv",
+              },
+              link: "https://chat.lviv.dcomm.net.ua/",
+              // docs: [
+                // {
+                //   name: "HTML",
+                //   link: {
+                //     ua: "/docs/matrix/lviv.html",
+                //     en: "/docs/matrix/lviv.html",
+                //     ru: "/docs/matrix/lviv.html",
+                //   },
+                // },
+                // {
+                //   name: "PDF",
+                //   link: {
+                //     ua: "/docs/matrix/odessa.pdf",
+                //     en: "/docs/matrix/odessa.pdf",
+                //     ru: "/docs/matrix/odessa.pdf",
+                //   },
+                // },
+              // ],
+            },
           ],
         },
         mobileApp: {
@@ -130,14 +156,14 @@ Public group moderation is on.</p>
               link: "",
 
               docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/kyiv.html",
-                en: "/docs/element/kyiv.html",
-                ru: "/docs/element/kyiv.html",
-              },
-            },
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/element/kyiv.html",
+                    en: "/docs/element/kyiv.html",
+                    ru: "/docs/element/kyiv.html",
+                  },
+                },
                 {
                   name: "PDF",
                   link: {
@@ -157,14 +183,14 @@ Public group moderation is on.</p>
               link: "",
 
               docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/kharkiv.html",
-                en: "/docs/element/kharkiv.html",
-                ru: "/docs/element/kharkiv.html",
-              },
-            },
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/element/kharkiv.html",
+                    en: "/docs/element/kharkiv.html",
+                    ru: "/docs/element/kharkiv.html",
+                  },
+                },
                 {
                   name: "PDF",
                   link: {
@@ -183,14 +209,14 @@ Public group moderation is on.</p>
               },
               link: "",
               docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/odessa.html",
-                en: "/docs/element/odessa.html",
-                ru: "/docs/element/odessa.html",
-              },
-            },
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/element/odessa.html",
+                    en: "/docs/element/odessa.html",
+                    ru: "/docs/element/odessa.html",
+                  },
+                },
                 {
                   name: "PDF",
                   link: {
@@ -200,6 +226,32 @@ Public group moderation is on.</p>
                   },
                 },
               ],
+            },
+            {
+              name: {
+                ua: "Львів сервер: matrix.lviv.dcomm.net.ua",
+                ru: "Львов сервер: matrix.lviv.dcomm.net.ua",
+                en: "Lviv server: matrix.lviv.dcomm.net.ua",
+              },
+              link: "",
+              // docs: [
+                // {
+                //   name: "HTML",
+                //   link: {
+                //     ua: "/docs/element/lviv.html",
+                //     en: "/docs/element/lviv.html",
+                //     ru: "/docs/element/lviv.html",
+                //   },
+                // },
+                // {
+                //   name: "PDF",
+                //   link: {
+                //     ua: "/docs/element/odessa.pdf",
+                //     en: "/docs/element/odessa.pdf",
+                //     ru: "/docs/element/odessa.pdf",
+                //   },
+                // },
+              // ],
             },
           ],
         },
@@ -246,6 +298,14 @@ Public group moderation is on.</p>
                 en: "Odessa server",
               },
               link: "/docs/deltachat/odessa-invite.png",
+            },
+            {
+              name: {
+                ua: "Львів сервер",
+                ru: "Львов сервер",
+                en: "Lviv server",
+              },
+              link: "/docs/deltachat/lviv-invite.png",
             },
           ],
           docs: [
@@ -303,6 +363,14 @@ Public group moderation is on.</p>
               },
               link: "/docs/deltachat/odessa-invite.png",
             },
+            {
+              name: {
+                ua: "Львів сервер",
+                ru: "Львов сервер",
+                en: "Lviv server",
+              },
+              link: "/docs/deltachat/lviv-invite.png",
+            },
           ],
         },
       },
@@ -325,7 +393,7 @@ Public group moderation is on.</p>
           logo: "/logo/briar.png  ",
           platforms: [{ name: "Android", link: "" }],
           docs: [
-              {
+            {
               name: "HTML",
               link: {
                 ua: "/docs/briar/index.html",

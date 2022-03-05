@@ -6,6 +6,7 @@ export default {
     kyiv: "Kyiv",
     odessa: "Odessa",
     kharkiv: "Kharkiv",
+    lviv: "Lviv",
   },
   about: {
     info: "Communication services that work on a local network. Useful for staying in touch with friends and family, also when Internet connectivity to Telegram, Whatsapp, FB, etc  is no longer available in your area. The servers below are hosted in Ukraine with local Internet providers. If you can reach them, you can communicate!",
