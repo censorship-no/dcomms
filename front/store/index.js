@@ -520,21 +520,21 @@ Public group moderation is on.</p>
             {
               name: "HTML",
               link: {
-                ua: "/docs/syncthing/index.html",
+                ua: "/docs/syncthing/index_en.html",
                 en: "/docs/syncthing/index_en.html",
-                ru: "/docs/syncthing/index_ru.html",
+                ru: "/docs/syncthing/index_en.html",
               },
             },
             {
               name: "PDF",
               link: {
                 ua: "/docs/syncthing/syncthing.pdf",
-                en: "/docs/syncthing/syncthing_en.pdf",
-                ru: "/docs/syncthing/syncthing_ru.pdf",
+                en: "/docs/syncthing/syncthing.pdf",
+                ru: "/docs/syncthing/syncthing.pdf",
               },
             },
           ],
-          link: "https://censorship.no/download",
+          link: "https://syncthing.net/downloads",
           localLink: "/package/syncthing/files/",
         },
       },
