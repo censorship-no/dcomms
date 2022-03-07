@@ -86,6 +86,12 @@
         <div v-for="item in browsing" :key="item.id">
           <AppItem :data="item" />
         </div>
+        <h3 class="text-3xl font-bold my-8 sm:my-2">
+          {{ $t("rubric.filesharing") }}
+        </h3>
+        <div v-for="item in filesharing" :key="item.id">
+          <AppItem :data="item" />
+        </div>
       </div>
     </main>
     <Footer></Footer>
