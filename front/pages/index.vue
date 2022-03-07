@@ -115,6 +115,11 @@ export default {
         return item.show === true;
       });
     },
+    filesharing() {
+      return this.$store.state.items.filesharing.filter((item) => {
+        return item.show === true;
+      });
+    },
   },
 };
 </script>
