@@ -493,5 +493,55 @@ Public group moderation is on.</p>
         },
       },
     ],
+    filesharing: [
+      {
+        id: 1,
+        show: true,
+        descr: {
+          ua: `<p>Syncthing (Синхронізатор) замінює синхронізацію володільця та хмарні сервіси за принципами відкритості, надійності і децентралізації. Ваші дані – це тільки ваші дані, і вам обирати, де вони по>
+          en: `<p>Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is s>
+          ru: `<p>Syncthing — это надёжное, децентрализованное облачное хранение. Ваши данные остаются только в ваших руках, вы выбираете где они хранятся, хотите ли вы делиться ими с кем-то и каким образом пер>
+        },
+        logo: "/logo/syncthing.png",
+
+        mobileApp: {
+          name: {
+            ua: "Syncthing",
+            ru: "Syncthing",
+            en: "Syncthing",
+          },
+          logo: "/logo/syncthing.png",
+          platforms: [
+            { name: "Android", link: "" },
+            { name: "Linux", link: "" },
+            { name: "Windows", link: "" },
+            { name: "macOs", link: "" },],
+          docs: [
+            {
+              name: "HTML",
+              link: {
+                ua: "/docs/syncthing/index.html",
+                en: "/docs/syncthing/index_en.html",
+                ru: "/docs/syncthing/index_ru.html",
+              },
+            },
+            {
+              name: "PDF",
+              link: {
+                ua: "/docs/syncthing/syncthing.pdf",
+                en: "/docs/syncthing/syncthing_en.pdf",
+                ru: "/docs/syncthing/syncthing_ru.pdf",
+              },
+            },
+          ],
+          link: "https://censorship.no/download",
+          localLink: "/package/syncthing/files/",
+        },
+      },
+    ],
   },
 });
+
+
+
+

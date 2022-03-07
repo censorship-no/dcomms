@@ -22,6 +22,7 @@ export default {
   rubric: {
     messaging: "Переписка",
     browsing: "Просмотр сайтов",
+    filesharing: "Обмен файлами",
   },
   items: {
     desktopApp: "Подключиться с компьютера:",

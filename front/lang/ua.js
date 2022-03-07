@@ -23,6 +23,7 @@ export default {
   rubric: {
     messaging: "Переписка",
     browsing: "Перегляд сайтів",
+    filesharing: "Файлообмінник",
   },
   items: {
     desktopApp: "Як отримати доступ з комп’ютера (десктоп):",
