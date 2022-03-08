@@ -12,7 +12,7 @@
       ></div>
     </div>
     <div class="sm:grid sm:grid-cols-2 sm:gap-8 mt-8">
-      <div v-if="data.desktopApp" class="p-5 sm:rounded-lg mb-6 -mx-3 sm:mx-0">
+      <div v-if="data.desktopApp" class="sm:rounded-lg mb-6 -mx-3 sm:mx-0">
         <div class="mb-3 font-bold">{{ $t("items.desktopApp") }}</div>
         <div v-if="data.desktopApp.name[$i18n.locale]" class="mb-3">
           <img
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div v-if="data.mobileApp" class="p-5 sm:rounded-lg -mx-3 sm:mx-0">
+      <div v-if="data.mobileApp" class="sm:rounded-lg -mx-3 sm:mx-0">
         <div class="mb-3 font-bold">{{ $t("items.mobileApp") }}</div>
         <div v-if="data.mobileApp.name[$i18n.locale]" class="mb-3">
           <img

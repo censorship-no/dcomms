@@ -80,13 +80,13 @@
         <div v-for="item in messaging" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-2">
+        <h3 class="text-3xl font-bold my-8 sm:my-20">
           {{ $t("rubric.browsing") }}
         </h3>
         <div v-for="item in browsing" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-2">
+        <h3 class="text-3xl font-bold my-8 sm:my-20">
           {{ $t("rubric.filesharing") }}
         </h3>
         <div v-for="item in filesharing" :key="item.id">
