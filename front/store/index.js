@@ -116,22 +116,22 @@ Public group moderation is on.</p>
               },
               link: "https://chat.lviv.dcomm.net.ua/",
               // docs: [
-                // {
-                //   name: "HTML",
-                //   link: {
-                //     ua: "/docs/matrix/lviv.html",
-                //     en: "/docs/matrix/lviv.html",
-                //     ru: "/docs/matrix/lviv.html",
-                //   },
-                // },
-                // {
-                //   name: "PDF",
-                //   link: {
-                //     ua: "/docs/matrix/odessa.pdf",
-                //     en: "/docs/matrix/odessa.pdf",
-                //     ru: "/docs/matrix/odessa.pdf",
-                //   },
-                // },
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/matrix/lviv.html",
+              //     en: "/docs/matrix/lviv.html",
+              //     ru: "/docs/matrix/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/matrix/odessa.pdf",
+              //     en: "/docs/matrix/odessa.pdf",
+              //     ru: "/docs/matrix/odessa.pdf",
+              //   },
+              // },
               // ],
             },
           ],
@@ -235,22 +235,22 @@ Public group moderation is on.</p>
               },
               link: "",
               // docs: [
-                // {
-                //   name: "HTML",
-                //   link: {
-                //     ua: "/docs/element/lviv.html",
-                //     en: "/docs/element/lviv.html",
-                //     ru: "/docs/element/lviv.html",
-                //   },
-                // },
-                // {
-                //   name: "PDF",
-                //   link: {
-                //     ua: "/docs/element/odessa.pdf",
-                //     en: "/docs/element/odessa.pdf",
-                //     ru: "/docs/element/odessa.pdf",
-                //   },
-                // },
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/element/lviv.html",
+              //     en: "/docs/element/lviv.html",
+              //     ru: "/docs/element/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/element/odessa.pdf",
+              //     en: "/docs/element/odessa.pdf",
+              //     ru: "/docs/element/odessa.pdf",
+              //   },
+              // },
               // ],
             },
           ],
@@ -515,25 +515,26 @@ Public group moderation is on.</p>
             { name: "Android", link: "" },
             { name: "Linux", link: "" },
             { name: "Windows", link: "" },
-            { name: "macOs", link: "" },],
-          docs: [
-            {
-              name: "HTML",
-              link: {
-                ua: "/docs/syncthing/index_en.html",
-                en: "/docs/syncthing/index_en.html",
-                ru: "/docs/syncthing/index_en.html",
-              },
-            },
-            {
-              name: "PDF",
-              link: {
-                ua: "/docs/syncthing/syncthing.pdf",
-                en: "/docs/syncthing/syncthing.pdf",
-                ru: "/docs/syncthing/syncthing.pdf",
-              },
-            },
+            { name: "macOs", link: "" },
           ],
+          // docs: [
+          //   {
+          //     name: "HTML",
+          //     link: {
+          //       ua: "/docs/syncthing/index_en.html",
+          //       en: "/docs/syncthing/index_en.html",
+          //       ru: "/docs/syncthing/index_en.html",
+          //     },
+          //   },
+          //   {
+          //     name: "PDF",
+          //     link: {
+          //       ua: "/docs/syncthing/syncthing.pdf",
+          //       en: "/docs/syncthing/syncthing.pdf",
+          //       ru: "/docs/syncthing/syncthing.pdf",
+          //     },
+          //   },
+          // ],
           link: "https://syncthing.net/downloads",
           localLink: "/package/syncthing/files/",
         },
@@ -541,7 +542,3 @@ Public group moderation is on.</p>
     ],
   },
 });
-
-
-
-
