@@ -22,7 +22,7 @@ export default {
   rubric: {
     messaging: "Chat",
     browsing: "Web Browsing",
-    filesharing: "File-Sharing",
+//    filesharing: "File-Sharing",
   },
   items: {
     desktopApp: "Connecting from a desktop computer:",
