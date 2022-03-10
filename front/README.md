@@ -1,6 +1,8 @@
-# front
+# dcomms website
 
-Static files in `/dist` directory
+Website configuration for dcomms, a ready-to-go suite of decentralized communications tools that work with or without Internet. 
+
+Static files in `/static/` directory
 If you want add servise use `/storage/index.js`
 Translate interface in `/lang/` directory
 
