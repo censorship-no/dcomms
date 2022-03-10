@@ -86,12 +86,6 @@
         <div v-for="item in browsing" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20">
-          {{ $t("rubric.filesharing") }}
-        </h3>
-        <div v-for="item in filesharing" :key="item.id">
-          <AppItem :data="item" />
-        </div>
       </div>
     </main>
     <Footer></Footer>
@@ -112,11 +106,6 @@ export default {
     },
     browsing() {
       return this.$store.state.items.browsing.filter((item) => {
-        return item.show === true;
-      });
-    },
-    filesharing() {
-      return this.$store.state.items.filesharing.filter((item) => {
         return item.show === true;
       });
     },
