@@ -123,24 +123,24 @@ Public group moderation is on.</p>
                 en: "Web chat: Lviv",
               },
               link: "https://chat.lviv.dcomm.net.ua/",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/matrix/lviv.html",
-              //     en: "/docs/matrix/lviv.html",
-              //     ru: "/docs/matrix/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/matrix/odessa.pdf",
-              //     en: "/docs/matrix/odessa.pdf",
-              //     ru: "/docs/matrix/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+               name: "HTML",
+               link: {
+                 ua: "/docs/matrix/lviv.html",
+                 en: "/docs/matrix/lviv.html",
+                 ru: "/docs/matrix/lviv.html",
+               },
+              },
+              {
+               name: "PDF",
+               link: {
+                 ua: "/docs/matrix/lviv.pdf",
+                 en: "/docs/matrix/lviv.pdf",
+                 ru: "/docs/matrix/lviv.pdf",
+               },
+              },
+             ],
             },
             {
               name: {
@@ -149,24 +149,24 @@ Public group moderation is on.</p>
                 en: "Web chat: Lviv 2",
               },
               link: "https://chat.lviv2.dcomm.net.ua/",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/matrix/lviv.html",
-              //     en: "/docs/matrix/lviv.html",
-              //     ru: "/docs/matrix/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/matrix/odessa.pdf",
-              //     en: "/docs/matrix/odessa.pdf",
-              //     ru: "/docs/matrix/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+              name: "HTML",
+              link: {
+                ua: "/docs/matrix/lviv2.html",
+                en: "/docs/matrix/lviv2.html",
+                ru: "/docs/matrix/lviv2.html",
+              },
+              },
+              {
+               name: "PDF",
+               link: {
+                ua: "/docs/matrix/lviv2.pdf",
+                en: "/docs/matrix/lviv2.pdf",
+                ru: "/docs/matrix/lviv2.pdf",
+               },
+              },
+             ],
             },
             {
               name: {
@@ -175,24 +175,24 @@ Public group moderation is on.</p>
                 en: "Web chat: Rivne",
               },
               link: "https://chat.rivne.dcomm.net.ua/",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/matrix/lviv.html",
-              //     en: "/docs/matrix/lviv.html",
-              //     ru: "/docs/matrix/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/matrix/odessa.pdf",
-              //     en: "/docs/matrix/odessa.pdf",
-              //     ru: "/docs/matrix/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+               name: "HTML",
+               link: {
+                 ua: "/docs/matrix/rivne.html",
+                 en: "/docs/matrix/rivne.html",
+                 ru: "/docs/matrix/rivne.html",
+               },
+              },
+              {
+               name: "PDF",
+               link: {
+                 ua: "/docs/matrix/rivne.pdf",
+                 en: "/docs/matrix/rivne.pdf",
+                 ru: "/docs/matrix/rivne.pdf",
+               },
+              },
+             ],
             },
           ],
         },
@@ -294,24 +294,24 @@ Public group moderation is on.</p>
                 en: "Lviv server: matrix.lviv.dcomm.net.ua",
               },
               link: "",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/element/lviv.html",
-              //     en: "/docs/element/lviv.html",
-              //     ru: "/docs/element/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/element/odessa.pdf",
-              //     en: "/docs/element/odessa.pdf",
-              //     ru: "/docs/element/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+               name: "HTML",
+               link: {
+                 ua: "/docs/element/lviv.html",
+                 en: "/docs/element/lviv.html",
+                 ru: "/docs/element/lviv.html",
+               },
+              },
+              {
+               name: "PDF",
+               link: {
+                 ua: "/docs/element/lviv.pdf",
+                 en: "/docs/element/lviv.pdf",
+                 ru: "/docs/element/lviv.pdf",
+                },
+               },
+              ],
             },
             {
               name: {
@@ -320,24 +320,24 @@ Public group moderation is on.</p>
                 en: "Lviv 2 server: matrix.lviv2.dcomm.net.ua",
               },
               link: "",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/element/lviv.html",
-              //     en: "/docs/element/lviv.html",
-              //     ru: "/docs/element/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/element/odessa.pdf",
-              //     en: "/docs/element/odessa.pdf",
-              //     ru: "/docs/element/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+               name: "HTML",
+               link: {
+                 ua: "/docs/element/lviv2.html",
+                 en: "/docs/element/lviv2.html",
+                 ru: "/docs/element/lviv2.html",
+               },
+              },
+              {
+               name: "PDF",
+               link: {
+                 ua: "/docs/element/lviv2.pdf",
+                 en: "/docs/element/lviv2.pdf",
+                 ru: "/docs/element/lviv2.pdf",
+                },
+               },
+              ],
             },
             {
               name: {
@@ -346,24 +346,24 @@ Public group moderation is on.</p>
                 en: "Rivne server: matrix.rivne.dcomm.net.ua",
               },
               link: "",
-              // docs: [
-              // {
-              //   name: "HTML",
-              //   link: {
-              //     ua: "/docs/element/lviv.html",
-              //     en: "/docs/element/lviv.html",
-              //     ru: "/docs/element/lviv.html",
-              //   },
-              // },
-              // {
-              //   name: "PDF",
-              //   link: {
-              //     ua: "/docs/element/odessa.pdf",
-              //     en: "/docs/element/odessa.pdf",
-              //     ru: "/docs/element/odessa.pdf",
-              //   },
-              // },
-              // ],
+              docs: [
+              {
+               name: "HTML",
+               link: {
+                 ua: "/docs/element/rivne.html",
+                 en: "/docs/element/rivne.html",
+                 ru: "/docs/element/rivne.html",
+                },
+               },
+              {
+               name: "PDF",
+               link: {
+                 ua: "/docs/element/rivne.pdf",
+                 en: "/docs/element/rivne.pdf",
+                 ru: "/docs/element/rivne.pdf",
+                },
+               },
+              ],
             },
           ],
         },
