@@ -174,7 +174,7 @@ Public group moderation is on.</p>
                 ru: "Веб чат: Ровно",
                 en: "Web chat: Rivne",
               },
-              link: "https://chat.lviv.dcomm.net.ua/",
+              link: "https://chat.rivne.dcomm.net.ua/",
               // docs: [
               // {
               //   name: "HTML",
@@ -341,9 +341,9 @@ Public group moderation is on.</p>
             },
             {
               name: {
-                ua: "Рівне сервер: matrix.rivni.dcomm.net.ua",
-                ru: "Ровно сервер: matrix.rivni.dcomm.net.ua",
-                en: "Rivni server: matrix.rivni.dcomm.net.ua",
+                ua: "Рівне сервер: matrix.rivne.dcomm.net.ua",
+                ru: "Ровно сервер: matrix.rivne.dcomm.net.ua",
+                en: "Rivne server: matrix.rivne.dcomm.net.ua",
               },
               link: "",
               // docs: [
