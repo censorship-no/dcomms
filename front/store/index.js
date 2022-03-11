@@ -1,4 +1,11 @@
 export const state = () => ({
+  servers: [
+    { name: "cities.kyiv", link: "https://kyiv.dcomm.net.ua" },
+    { name: "cities.odessa", link: "https://odessa.dcomm.net.ua" },
+    { name: "cities.kharkiv", link: "https://kharkiv.dcomm.net.ua" },
+    { name: "cities.lviv2", link: "https://lviv2.dcomm.net.ua" },
+    { name: "cities.rivne", link: "https://rivne.dcomm.net.ua" },
+  ],
   items: {
     messaging: [
       {
@@ -113,6 +120,58 @@ Public group moderation is on.</p>
                 ua: "Web chat: Львів",
                 ru: "Веб чат: Львов",
                 en: "Web chat: Lviv",
+              },
+              link: "https://chat.lviv.dcomm.net.ua/",
+              // docs: [
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/matrix/lviv.html",
+              //     en: "/docs/matrix/lviv.html",
+              //     ru: "/docs/matrix/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/matrix/odessa.pdf",
+              //     en: "/docs/matrix/odessa.pdf",
+              //     ru: "/docs/matrix/odessa.pdf",
+              //   },
+              // },
+              // ],
+            },
+            {
+              name: {
+                ua: "Web chat: Львів 2",
+                ru: "Веб чат: Львов 2",
+                en: "Web chat: Lviv 2",
+              },
+              link: "https://chat.lviv2.dcomm.net.ua/",
+              // docs: [
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/matrix/lviv.html",
+              //     en: "/docs/matrix/lviv.html",
+              //     ru: "/docs/matrix/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/matrix/odessa.pdf",
+              //     en: "/docs/matrix/odessa.pdf",
+              //     ru: "/docs/matrix/odessa.pdf",
+              //   },
+              // },
+              // ],
+            },
+            {
+              name: {
+                ua: "Web chat: Рівне",
+                ru: "Веб чат: Ровно",
+                en: "Web chat: Rivne",
               },
               link: "https://chat.lviv.dcomm.net.ua/",
               // docs: [
@@ -253,6 +312,58 @@ Public group moderation is on.</p>
               // },
               // ],
             },
+            {
+              name: {
+                ua: "Львів 2 сервер: matrix.lviv2.dcomm.net.ua",
+                ru: "Львов 2 сервер: matrix.lviv2.dcomm.net.ua",
+                en: "Lviv 2 server: matrix.lviv2.dcomm.net.ua",
+              },
+              link: "",
+              // docs: [
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/element/lviv.html",
+              //     en: "/docs/element/lviv.html",
+              //     ru: "/docs/element/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/element/odessa.pdf",
+              //     en: "/docs/element/odessa.pdf",
+              //     ru: "/docs/element/odessa.pdf",
+              //   },
+              // },
+              // ],
+            },
+            {
+              name: {
+                ua: "Рівне сервер: matrix.rivni.dcomm.net.ua",
+                ru: "Ровно сервер: matrix.rivni.dcomm.net.ua",
+                en: "Rivni server: matrix.rivni.dcomm.net.ua",
+              },
+              link: "",
+              // docs: [
+              // {
+              //   name: "HTML",
+              //   link: {
+              //     ua: "/docs/element/lviv.html",
+              //     en: "/docs/element/lviv.html",
+              //     ru: "/docs/element/lviv.html",
+              //   },
+              // },
+              // {
+              //   name: "PDF",
+              //   link: {
+              //     ua: "/docs/element/odessa.pdf",
+              //     en: "/docs/element/odessa.pdf",
+              //     ru: "/docs/element/odessa.pdf",
+              //   },
+              // },
+              // ],
+            },
           ],
         },
       },
@@ -306,6 +417,22 @@ Public group moderation is on.</p>
                 en: "Lviv server",
               },
               link: "/docs/deltachat/lviv-invite.png",
+            },
+            {
+              name: {
+                ua: "Львів 2 сервер",
+                ru: "Львов 2 сервер",
+                en: "Lviv 2 server",
+              },
+              link: "/docs/deltachat/lviv2-invite.png",
+            },
+            {
+              name: {
+                ua: "Рівне сервер",
+                ru: "Ровно сервер",
+                en: "Rivne server",
+              },
+              link: "/docs/deltachat/rivne-invite.png",
             },
           ],
           docs: [
@@ -370,6 +497,22 @@ Public group moderation is on.</p>
                 en: "Lviv server",
               },
               link: "/docs/deltachat/lviv-invite.png",
+            },
+            {
+              name: {
+                ua: "Львів 2 сервер",
+                ru: "Львов 2 сервер",
+                en: "Lviv 2 server",
+              },
+              link: "/docs/deltachat/lviv2-invite.png",
+            },
+            {
+              name: {
+                ua: "Рівне сервер",
+                ru: "Ровно сервер",
+                en: "Rivne server",
+              },
+              link: "/docs/deltachat/rivne-invite.png",
             },
           ],
         },
@@ -493,52 +636,52 @@ Public group moderation is on.</p>
         },
       },
     ],
-//    filesharing: [
-//      {
-//        id: 1,
-//        show: true,
-//        descr: {
-//          ua: `<p>Syncthing (Синхронізатор) замінює синхронізацію володільця та хмарні сервіси за принципами відкритості, надійності і децентралізації. Ваші дані – це тільки ваші дані, і вам обирати, де вони повинні зберігатися у випадку, якщо ці дані передаються третій стороні, а також яким способом ці дані передаються через Інтернет.</p>`,
-//          en: `<p>Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet. </p>`,
-//          ru: `<p>Syncthing — это надёжное, децентрализованное облачное хранение. Ваши данные остаются только в ваших руках, вы выбираете где они хранятся, хотите ли вы делиться ими с кем-то и каким образом перeдавать их по сети.</p>`,
-//        },
-//	logo: "/logo/syncthing.png",
+    //    filesharing: [
+    //      {
+    //        id: 1,
+    //        show: true,
+    //        descr: {
+    //          ua: `<p>Syncthing (Синхронізатор) замінює синхронізацію володільця та хмарні сервіси за принципами відкритості, надійності і децентралізації. Ваші дані – це тільки ваші дані, і вам обирати, де вони повинні зберігатися у випадку, якщо ці дані передаються третій стороні, а також яким способом ці дані передаються через Інтернет.</p>`,
+    //          en: `<p>Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet. </p>`,
+    //          ru: `<p>Syncthing — это надёжное, децентрализованное облачное хранение. Ваши данные остаются только в ваших руках, вы выбираете где они хранятся, хотите ли вы делиться ими с кем-то и каким образом перeдавать их по сети.</p>`,
+    //        },
+    //	logo: "/logo/syncthing.png",
 
-//        mobileApp: {
-//          name: {
-//            ua: "Syncthing",
-//            ru: "Syncthing",
-//            en: "Syncthing",
-//          },
-//          logo: "/logo/syncthing.png",
-//          platforms: [
-//            { name: "Android", link: "" },
-//            { name: "Linux", link: "" },
-//            { name: "Windows", link: "" },
-//            { name: "macOs", link: "" },
-//          ],
-          // docs: [
-          //   {
-          //     name: "HTML",
-          //     link: {
-          //       ua: "/docs/syncthing/index_en.html",
-          //       en: "/docs/syncthing/index_en.html",
-          //       ru: "/docs/syncthing/index_en.html",
-          //     },
-          //   },
-          //   {
-          //     name: "PDF",
-          //     link: {
-          //       ua: "/docs/syncthing/syncthing.pdf",
-          //       en: "/docs/syncthing/syncthing.pdf",
-          //       ru: "/docs/syncthing/syncthing.pdf",
-          //     },
-          //   },
-          // ],
-//          link: "https://syncthing.net/downloads",
-//          localLink: "/package/syncthing/files/",
-//        },
-//      },
-//    ],
+    //        mobileApp: {
+    //          name: {
+    //            ua: "Syncthing",
+    //            ru: "Syncthing",
+    //            en: "Syncthing",
+    //          },
+    //          logo: "/logo/syncthing.png",
+    //          platforms: [
+    //            { name: "Android", link: "" },
+    //            { name: "Linux", link: "" },
+    //            { name: "Windows", link: "" },
+    //            { name: "macOs", link: "" },
+    //          ],
+    // docs: [
+    //   {
+    //     name: "HTML",
+    //     link: {
+    //       ua: "/docs/syncthing/index_en.html",
+    //       en: "/docs/syncthing/index_en.html",
+    //       ru: "/docs/syncthing/index_en.html",
+    //     },
+    //   },
+    //   {
+    //     name: "PDF",
+    //     link: {
+    //       ua: "/docs/syncthing/syncthing.pdf",
+    //       en: "/docs/syncthing/syncthing.pdf",
+    //       ru: "/docs/syncthing/syncthing.pdf",
+    //     },
+    //   },
+    // ],
+    //          link: "https://syncthing.net/downloads",
+    //          localLink: "/package/syncthing/files/",
+    //        },
+    //      },
+    //    ],
   },
 });

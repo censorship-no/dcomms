@@ -5,19 +5,10 @@
       <div class="container px-3 sm:px-0">
         <p class="text-lg">{{ $t("about.info") }}</p>
         <p class="text-lg">{{ $t("about.sites") }}</p>
-        <p
-          class="
-            grid grid-cols-1
-            sm:grid-cols-4
-            gap-3
-            sm:gap-8
-            text-center
-            justify-around
-            my-8
-          "
-        >
+        <p class="flex flex-wrap gap-3 text-center justify-center my-8">
           <a
             class="
+              min-w-[200px]
               sm:text-xl
               border-2 border-gray-600
               p-3
@@ -26,47 +17,10 @@
               text-gray-600
               hover:border-[#e53323] hover:text-[#e53323]
             "
-            href="https://kyiv.dcomm.net.ua/"
-            >{{ $t("cities.kyiv") }}</a
-          >
-          <a
-            class="
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            href="https://odessa.dcomm.net.ua"
-            >{{ $t("cities.odessa") }}</a
-          >
-          <a
-            class="
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            href="https://kharkiv.dcomm.net.ua"
-            >{{ $t("cities.kharkiv") }}</a
-          >
-          <a
-            class="
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            href="https://lviv.dcomm.net.ua"
-            >{{ $t("cities.lviv") }}</a
+            v-for="item in $store.state.servers"
+            :key="item.name"
+            :href="item.link"
+            >{{ $t(item.name) }}</a
           >
         </p>
         <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>

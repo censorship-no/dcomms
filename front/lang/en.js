@@ -7,6 +7,8 @@ export default {
     odessa: "Odessa",
     kharkiv: "Kharkiv",
     lviv: "Lviv",
+    lviv2: "Lviv 2",
+    rivne: "Rivne",
   },
   about: {
     info: "Communication services that work on a local network. Useful for staying in touch with friends and family, also when Internet connectivity to Telegram, Whatsapp, FB, etc  is no longer available in your area. The servers below are hosted in Ukraine with local Internet providers. If you can reach them, you can communicate!",
@@ -22,7 +24,7 @@ export default {
   rubric: {
     messaging: "Chat",
     browsing: "Web Browsing",
-//    filesharing: "File-Sharing",
+    //    filesharing: "File-Sharing",
   },
   items: {
     desktopApp: "Connecting from a desktop computer:",
