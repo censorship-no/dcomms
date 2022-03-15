@@ -7,5 +7,10 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
-  theme: {},
+  theme: {
+    textColor: (theme) => theme("colors"),
+    textColor: {
+      primary: "#DB573B",
+    },
+  },
 };

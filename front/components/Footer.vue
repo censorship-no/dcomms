@@ -1,19 +1,11 @@
-<template>
-  <footer class="container text-center pb-6">
-    <div class="flex flex-col xm:flex-row items-center justify-center mb-3">
-    <img width="100" class="logo mr-3" src="/logo_ceno.png" :alt="$t('org')" />
-    <span  class="pt-3 sm:pt-0">
-    {{ $t("footer.initiative") }}
-    <a
-
-      target="_blank"
-      href="https://censorship.no"
-
-    >
-      {{ $t("footer.org") }}</a
-    ></span>
+ <template>
+  <footer class="container text-center pb-10 flex flex-col items-center">
+    <div class="flex flex-col xm:flex-row items-center justify-center">
+      <img width="224" class="logo my-6" src="/eq-logo.png" :alt="$t('org')" />
+      <span class="pt-3 sm:pt-0" v-html="$t('footer.initiative')"> </span>
     </div>
-    <a href="https://github.com/censorship-no/dcomms">GNU General Public License v3.0 </a>
+    <div class="my-5 lg:w-[500px] bg-gray-300 h-[1px]"></div>
+    <span v-html="$t('footer.license')"></span>
   </footer>
 </template>
 

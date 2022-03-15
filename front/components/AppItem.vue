@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-8 bg-white rounded-xl p-8">
+  <div class="mb-8 shadow bg-white rounded-xl p-8">
     <div class="sm:flex mb-4">
       <img
         :src="data.logo"

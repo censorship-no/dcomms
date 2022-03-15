@@ -1,53 +1,39 @@
 <template>
   <div>
-    <Header></Header>
-    <div class="bg-white py-8 sm:py-20">
-      <div class="container px-3 sm:px-0">
-        <p class="text-lg">{{ $t("about.info") }}</p>
-        <p class="text-lg">{{ $t("about.sites") }}</p>
-        <p class="flex flex-wrap gap-3 text-center justify-center my-8">
-          <a
-            class="
-              min-w-[200px]
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            v-for="item in $store.state.servers"
-            :key="item.name"
-            :href="item.link"
-            >{{ $t(item.name) }}</a
-          >
-        </p>
-        <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
-      </div>
-    </div>
+    <Hero />
     <main class="container px-3 sm:px-0">
       <div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20">
-          {{ $t("rubric.messaging") }}
-        </h3>
+        <SectionTitle>
+          <template v-slot:icon>
+            <img class="w-10" src="/icons/chating.svg" alt="" />
+          </template>
+          <template>
+            {{ $t("rubric.messaging") }}
+          </template>
+        </SectionTitle>
         <div v-for="item in messaging" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20">
-          {{ $t("rubric.browsing") }}
-        </h3>
+
+        <SectionTitle>
+          <template v-slot:icon>
+            <img class="w-10" src="/icons/browsing.svg" alt="" />
+          </template>
+          <template>
+            {{ $t("rubric.browsing") }}
+          </template>
+        </SectionTitle>
         <div v-for="item in browsing" :key="item.id">
           <AppItem :data="item" />
         </div>
       </div>
     </main>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
 export default {
+  layout: "default",
   nuxtI18n: {
     locales: ["ua", "ru", "en"],
   },

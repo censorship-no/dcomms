@@ -1,9 +1,8 @@
 
 <template>
-  <header class="header m-auto flex flex-col items-center my-5">
-    <img class="w-20" src="/bridge-icon.png" alt="" />
+  <header class="container mx-auto flex items-center justify-between px-3 py-8">
+    <img class="w-[160px]" src="/dcomm_logo.svg" :alt="$t('title')" />
     <div class="block text-center">
-      <h1 class="text-3xl mb-3">{{ $t("title") }}</h1>
       <nuxt-link
         class=""
         v-for="(locale, index) in availableLocales"
@@ -11,9 +10,6 @@
         :to="switchLocalePath(locale.code)"
         >{{ locale.name + (index === availableLocales.length - 1 ? "" : " /") }}
       </nuxt-link>
-      <h2 class="text-2xl mt-4">
-        {{ $t("subtitle") }}
-      </h2>
     </div>
   </header>
 </template>

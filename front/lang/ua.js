@@ -1,7 +1,19 @@
 export default {
-  title: "dComms",
+  title:
+    "Децентралізовані комунікації, які працюють <span>з інтернетом або без нього</span>",
+  connected: "You are currently connected to the {name} server",
+
   subtitle:
-    "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+    "Decentralized communication tools you can use, even when Internet connectivity to Telegram, Whatsapp, Facebook and others is no longer available.",
+  server: "OTHER Servers:",
+  alert: {
+    title: "Don’t wait. Replicate!",
+    desr: "Stand up your own networks using our local bundle. Join the techops group on the Moscow server to discuss collaboration, new services and volunteering",
+    buttons: {
+      repo: "Code Repo",
+      servers: "Matrix Server",
+    },
+  },
   cities: {
     kyiv: "Київ",
     odessa: "Одеса",
@@ -10,13 +22,7 @@ export default {
     lviv2: "Львів 2",
     rivne: "Рівне",
   },
-  about: {
-    info: "Інструменти комунікації, що працюють в локальної мережі. Необхідні, аби залишатися на зв’язку з друзями та родиною, а також коли Telegram, Whatsapp, FB будуть недоступні у вашому регіоні.",
-    sites:
-      "Наведені нижче сервери розташовані в Україні на основі інфраструктури (мереж) місцевих інтернет-провайдерів. Якщо у вас є доступ до цієї локальної мережі, ви можете спілкуватися між собою!",
-    local:
-      "У разі відключення Інтернету ми дамо можливість завантажити усе програмне забезпечення (cофт) та документацію з локальних серверів.",
-  },
+  connected: "",
 
   footer: {
     initiative: "Ініциатива —",

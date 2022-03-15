@@ -116,7 +116,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
   pwa: {
     manifest: {
       name: "dComms",
@@ -157,7 +157,14 @@ export default {
       ],
     },
   },
-
+  googleFonts: {
+    families: {
+      Roboto: true,
+      "Josefin+Sans": true,
+      Inter: [100, 300, 400, 600, 700, 800],
+      download: true,
+    },
+  },
   i18n: {
     detectBrowserLanguage: false,
     vueI18nLoader: true,
