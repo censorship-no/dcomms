@@ -2,7 +2,10 @@
 <template>
   <div class="py-8 sm:py-20">
     <div class="container px-3 sm:px-0 text-center">
-      <h1 class="text-5xl font-bold sm:mx-[100px]" v-html="$t('title')"></h1>
+      <h1 class="text-5xl font-bold sm:mx-[100px]">
+        {{ $t("title.first") }}
+        <span class="text-primary">{{ $t("title.second") }}</span>
+      </h1>
       <p class="text-xl my-8 text-gray-500 text-center sm:mx-[120px]">
         {{ $t("subtitle") }}
       </p>
@@ -40,7 +43,6 @@
           >{{ $t(item.name) }}</Button
         >
       </div>
-      <div class="rounded-lg bg-red-100 border border-red-500"></div>
     </div>
   </div>
 </template>

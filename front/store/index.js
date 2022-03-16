@@ -12,6 +12,7 @@ export const state = () => ({
       {
         id: 1,
         show: true,
+        name: "",
         descr: {
           ua: `<p>Обмін повідомленнями, що підтримують наскрізне шифрування, приватні чати, приватні кімнати та публічні
         кімнати. Зважайте, що реєстрація доступна для всіх – будьте уважні щодо ідентифікації особи користувача, перш
@@ -30,19 +31,28 @@ Public group moderation is on.</p>
 Включена модерация публичных групп.</p>
 `,
         },
-        logo: "/logo/Matrix_logo.png",
+        logo: "/logo/logo-mark-primary.svg",
+        name: {
+          ua: "Element",
+          ru: "Element",
+          en: "Element",
+        },
         desktopApp: {
-          name: { ua: "", ru: "", en: "" },
-          logo: "/logo/logo-mark-primary.svg",
           platforms: [],
           link: "",
           localLink: "",
+          serversLabel: {
+            ua: "Web chat",
+            ru: "Web chat",
+            en: "Web chat",
+          },
           servers: [
             {
+              label: "kyiv",
               name: {
-                ua: "Web chat: Київ",
-                ru: "Веб чат: Киев",
-                en: "Web chat: Kyiv",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
               link: "https://chat.kyiv.dcomm.net.ua/",
               docs: [
@@ -65,10 +75,11 @@ Public group moderation is on.</p>
               ],
             },
             {
+              label: "kharkiv",
               name: {
-                ua: "Web chat: Харків",
-                ru: "Веб чат: Харьков",
-                en: "Web chat: Kharkiv",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
               link: "https://chat.kharkiv.dcomm.net.ua/",
               docs: [
@@ -91,10 +102,11 @@ Public group moderation is on.</p>
               ],
             },
             {
+              label: "odessa",
               name: {
-                ua: "Web chat: Одеса",
-                ru: "Веб чат: Одесса",
-                en: "Web chat: Odessa",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
               link: "https://chat.odessa.dcomm.net.ua/",
               docs: [
@@ -117,255 +129,119 @@ Public group moderation is on.</p>
               ],
             },
             {
+              label: "lviv",
               name: {
-                ua: "Web chat: Львів",
-                ru: "Веб чат: Львов",
-                en: "Web chat: Lviv",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
               link: "https://chat.lviv.dcomm.net.ua/",
               docs: [
-              {
-               name: "HTML",
-               link: {
-                 ua: "/docs/matrix/lviv.html",
-                 en: "/docs/matrix/lviv.html",
-                 ru: "/docs/matrix/lviv.html",
-               },
-              },
-              {
-               name: "PDF",
-               link: {
-                 ua: "/docs/matrix/lviv.pdf",
-                 en: "/docs/matrix/lviv.pdf",
-                 ru: "/docs/matrix/lviv.pdf",
-               },
-              },
-             ],
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/lviv.html",
+                    en: "/docs/matrix/lviv.html",
+                    ru: "/docs/matrix/lviv.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/lviv.pdf",
+                    en: "/docs/matrix/lviv.pdf",
+                    ru: "/docs/matrix/lviv.pdf",
+                  },
+                },
+              ],
             },
             {
+              label: "lviv2",
               name: {
-                ua: "Web chat: Львів 2",
-                ru: "Веб чат: Львов 2",
-                en: "Web chat: Lviv 2",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
               link: "https://chat.lviv2.dcomm.net.ua/",
               docs: [
-              {
-              name: "HTML",
-              link: {
-                ua: "/docs/matrix/lviv2.html",
-                en: "/docs/matrix/lviv2.html",
-                ru: "/docs/matrix/lviv2.html",
-              },
-              },
-              {
-               name: "PDF",
-               link: {
-                ua: "/docs/matrix/lviv2.pdf",
-                en: "/docs/matrix/lviv2.pdf",
-                ru: "/docs/matrix/lviv2.pdf",
-               },
-              },
-             ],
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/lviv2.html",
+                    en: "/docs/matrix/lviv2.html",
+                    ru: "/docs/matrix/lviv2.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/lviv2.pdf",
+                    en: "/docs/matrix/lviv2.pdf",
+                    ru: "/docs/matrix/lviv2.pdf",
+                  },
+                },
+              ],
             },
             {
+              label: "rivne",
               name: {
-                ua: "Web chat: Рівне",
-                ru: "Веб чат: Ровно",
-                en: "Web chat: Rivne",
+                ua: "Київ Web chat",
+                ru: "Киев Web chat",
+                en: "Kyiv Web chat",
               },
+
               link: "https://chat.rivne.dcomm.net.ua/",
               docs: [
-              {
-               name: "HTML",
-               link: {
-                 ua: "/docs/matrix/rivne.html",
-                 en: "/docs/matrix/rivne.html",
-                 ru: "/docs/matrix/rivne.html",
-               },
-              },
-              {
-               name: "PDF",
-               link: {
-                 ua: "/docs/matrix/rivne.pdf",
-                 en: "/docs/matrix/rivne.pdf",
-                 ru: "/docs/matrix/rivne.pdf",
-               },
-              },
-             ],
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/rivne.html",
+                    en: "/docs/matrix/rivne.html",
+                    ru: "/docs/matrix/rivne.html",
+                  },
+                },
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/rivne.html",
+                    en: "/docs/matrix/rivne.html",
+                    ru: "/docs/matrix/rivne.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/rivne.pdf",
+                    en: "/docs/matrix/rivne.pdf",
+                    ru: "/docs/matrix/rivne.pdf",
+                  },
+                },
+              ],
             },
           ],
         },
         mobileApp: {
-          name: {
-            ua: "Element",
-            ru: "Element",
-            en: "Element",
-          },
-          logo: "/logo/logo-mark-primary.svg",
           platforms: [{ name: "Android", link: "" }],
-          link: "https://element.io/get-started#download",
-          localLink: "/package/element/files/",
-          servers: [
-            {
-              name: {
-                ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
-                ru: "Киев сервер: matrix.kyiv.dcomm.net.ua",
-                en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
-              },
-              link: "",
-
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/element/kyiv.html",
-                    en: "/docs/element/kyiv.html",
-                    ru: "/docs/element/kyiv.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/kyiv.pdf",
-                    en: "/docs/element/kyiv.pdf",
-                    ru: "/docs/element/kyiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Харків сервер: matrix.kharkiv.dcomm.net.ua",
-                ru: "Харьков сервер: matrix.kharkiv.dcomm.net.ua",
-                en: "Kharkiv server: matrix.kharkiv.dcomm.net.ua",
-              },
-              link: "",
-
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/element/kharkiv.html",
-                    en: "/docs/element/kharkiv.html",
-                    ru: "/docs/element/kharkiv.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/kharkiv.pdf",
-                    en: "/docs/element/kharkiv.pdf",
-                    ru: "/docs/element/kharkiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Одеса сервер: matrix.odessa.dcomm.net.ua",
-                ru: "Одесса сервер: matrix.odessa.dcomm.net.ua",
-                en: "Odessa server: matrix.odessa.dcomm.net.ua",
-              },
-              link: "",
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/element/odessa.html",
-                    en: "/docs/element/odessa.html",
-                    ru: "/docs/element/odessa.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/odessa.pdf",
-                    en: "/docs/element/odessa.pdf",
-                    ru: "/docs/element/odessa.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Львів сервер: matrix.lviv.dcomm.net.ua",
-                ru: "Львов сервер: matrix.lviv.dcomm.net.ua",
-                en: "Lviv server: matrix.lviv.dcomm.net.ua",
-              },
-              link: "",
-              docs: [
+          downloads: {
+            mirrors: [
               {
-               name: "HTML",
-               link: {
-                 ua: "/docs/element/lviv.html",
-                 en: "/docs/element/lviv.html",
-                 ru: "/docs/element/lviv.html",
-               },
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "https://element.io/get-started#download",
               },
               {
-               name: "PDF",
-               link: {
-                 ua: "/docs/element/lviv.pdf",
-                 en: "/docs/element/lviv.pdf",
-                 ru: "/docs/element/lviv.pdf",
+                name: {
+                  ua: "Element.io",
+                  ru: "Element.io",
+                  en: "Element.io",
                 },
-               },
-              ],
-            },
-            {
-              name: {
-                ua: "Львів 2 сервер: matrix.lviv2.dcomm.net.ua",
-                ru: "Львов 2 сервер: matrix.lviv2.dcomm.net.ua",
-                en: "Lviv 2 server: matrix.lviv2.dcomm.net.ua",
+                link: "https://element.io/get-started#download",
               },
-              link: "",
-              docs: [
-              {
-               name: "HTML",
-               link: {
-                 ua: "/docs/element/lviv2.html",
-                 en: "/docs/element/lviv2.html",
-                 ru: "/docs/element/lviv2.html",
-               },
-              },
-              {
-               name: "PDF",
-               link: {
-                 ua: "/docs/element/lviv2.pdf",
-                 en: "/docs/element/lviv2.pdf",
-                 ru: "/docs/element/lviv2.pdf",
-                },
-               },
-              ],
-            },
-            {
-              name: {
-                ua: "Рівне сервер: matrix.rivne.dcomm.net.ua",
-                ru: "Ровно сервер: matrix.rivne.dcomm.net.ua",
-                en: "Rivne server: matrix.rivne.dcomm.net.ua",
-              },
-              link: "",
-              docs: [
-              {
-               name: "HTML",
-               link: {
-                 ua: "/docs/element/rivne.html",
-                 en: "/docs/element/rivne.html",
-                 ru: "/docs/element/rivne.html",
-                },
-               },
-              {
-               name: "PDF",
-               link: {
-                 ua: "/docs/element/rivne.pdf",
-                 en: "/docs/element/rivne.pdf",
-                 ru: "/docs/element/rivne.pdf",
-                },
-               },
-              ],
-            },
-          ],
+            ],
+          },
         },
       },
       {
@@ -373,87 +249,129 @@ Public group moderation is on.</p>
         show: true,
         descr: {
           ua: `<p>Delta.chat — це зашифрований сервіс обміну повідомленнями, який використовує для зв'язку протокол електронної пошти (SMTP). За дизайном схожий на WhatsApp.
-</p><p>
-Користувачам необхідно встановити додаток для смартфона та додати сервер за допомогою QR-кодів, наведених нижче. Інші люди можуть спілкуватися з вами, створивши QR-код запрошення в додатку.
-</p>`,
+      </p><p>
+      Користувачам необхідно встановити додаток для смартфона та додати сервер за допомогою QR-кодів, наведених нижче. Інші люди можуть спілкуватися з вами, створивши QR-код запрошення в додатку.
+      </p>`,
           en: `<p>Delta.chat is an encrypted messaging service that uses email protocols (SMTP) for communications. Similar in design to WhatsApp. Users need to install a smartphone application and add the server via QR codes, linked below. Other people can chat with you by generating a chat invitation QR code from the app. </p>`,
           ru: `<p>Delta.chat —  зашифрованная служба обмена сообщениями, использующая протокол электронной почты (SMTP). Дизайн похож на Whatsapp. Пользователям необходимо установить приложение для смартфона и добавить сервер с помощью QR-кодов, ссылки на которые приведены ниже. Другие люди могут общаться с вами, сгенерировав QR-код приглашения в чат в самом приложении.</p>`,
         },
+        name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
         logo: "/logo/deltachat.svg",
         desktopApp: {
-          name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
-          logo: "/logo/deltachat.svg",
           platforms: [
             { name: "Linux", link: "" },
             { name: "Windows", link: "" },
             { name: "macOs", link: "" },
           ],
           link: "https://delta.chat/en/download",
-          localLink: "",
+          downloads: {
+            mirrors: [
+              {
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "/package/deltachat/files/",
+              },
+              {
+                name: {
+                  ua: "Delta Chat",
+                  ru: "Delta Chat",
+                  en: "Delta Chat",
+                },
+                link: "https://delta.chat/en/download",
+              },
+            ],
+          },
           servers: [
             {
-              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "/docs/deltachat/kyiv-invite.png",
+              label: "kyiv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/kyiv.html",
+                    en: "/docs/matrix/kyiv.html",
+                    ru: "/docs/matrix/kyiv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Харків сервер",
-                ru: "Харьков сервер",
-                en: "Kharkiv server",
-              },
-              link: "/docs/deltachat/kharkiv-invite.png",
+              label: "kharkiv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/kharkiv.html",
+                    en: "/docs/matrix/kharkiv.html",
+                    ru: "/docs/matrix/kharkiv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Одеса сервер",
-                ru: "Одесса сервер",
-                en: "Odessa server",
-              },
-              link: "/docs/deltachat/odessa-invite.png",
+              label: "odessa",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/odessa.html",
+                    en: "/docs/matrix/odessa.html",
+                    ru: "/docs/matrix/odessa.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Львів сервер",
-                ru: "Львов сервер",
-                en: "Lviv server",
-              },
-              link: "/docs/deltachat/lviv-invite.png",
+              label: "lviv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/lviv.html",
+                    en: "/docs/matrix/lviv.html",
+                    ru: "/docs/matrix/lviv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Львів 2 сервер",
-                ru: "Львов 2 сервер",
-                en: "Lviv 2 server",
-              },
-              link: "/docs/deltachat/lviv2-invite.png",
+              label: "lviv2",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/lviv2.html",
+                    en: "/docs/matrix/lviv2.html",
+                    ru: "/docs/matrix/lviv2.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Рівне сервер",
-                ru: "Ровно сервер",
-                en: "Rivne server",
-              },
-              link: "/docs/deltachat/rivne-invite.png",
-            },
-          ],
-          docs: [
-            {
-              name: "PDF",
-              link: {
-                ua: "/docs/deltachat/deltachat-manual.pdf",
-                en: "/docs/deltachat/deltachat-manual_en.pdf",
-                ru: "/docs/deltachat/deltachat-manual_ru.pdf",
-              },
+              label: "rivne",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/rivne.html",
+                    en: "/docs/matrix/rivne.html",
+                    ru: "/docs/matrix/rivne.html",
+                  },
+                },
+              ],
             },
           ],
         },
         mobileApp: {
-          name: {
-            ua: "Deltachat",
-            ru: "Deltachat",
-            en: "Deltachat",
-          },
-          logo: "/logo/deltachat.svg",
           platforms: [
             { name: "Android", link: "" },
             { name: "iOs", link: "" },
@@ -461,7 +379,7 @@ Public group moderation is on.</p>
           link: "https://get.delta.chat/",
           docs: [
             {
-              name: "PDF",
+              name: "QR Code",
               link: {
                 ua: "/docs/deltachat/deltachat-manual.pdf",
                 en: "/docs/deltachat/deltachat-manual_en.pdf",
@@ -469,51 +387,111 @@ Public group moderation is on.</p>
               },
             },
           ],
-          localLink: "/package/deltachat/files/",
+
+          downloads: {
+            mirrors: [
+              {
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "/package/deltachat/files/",
+              },
+              {
+                name: {
+                  ua: "Delta Chat",
+                  ru: "Delta Chat",
+                  en: "Delta Chat",
+                },
+                link: "https://delta.chat/en/download",
+              },
+            ],
+          },
           servers: [
             {
-              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "/docs/deltachat/kyiv-invite.png",
+              label: "kyiv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/kyiv.html",
+                    en: "/docs/matrix/kyiv.html",
+                    ru: "/docs/matrix/kyiv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Харків сервер",
-                ru: "Харьков сервер",
-                en: "Kharkiv server",
-              },
-              link: "/docs/deltachat/kharkiv-invite.png",
+              label: "kharkiv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/kharkiv.html",
+                    en: "/docs/matrix/kharkiv.html",
+                    ru: "/docs/matrix/kharkiv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Одеса сервер",
-                ru: "Одесса сервер",
-                en: "Odessa server",
-              },
-              link: "/docs/deltachat/odessa-invite.png",
+              label: "odessa",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/odessa.html",
+                    en: "/docs/matrix/odessa.html",
+                    ru: "/docs/matrix/odessa.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Львів сервер",
-                ru: "Львов сервер",
-                en: "Lviv server",
-              },
-              link: "/docs/deltachat/lviv-invite.png",
+              label: "lviv",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/lviv.html",
+                    en: "/docs/matrix/lviv.html",
+                    ru: "/docs/matrix/lviv.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Львів 2 сервер",
-                ru: "Львов 2 сервер",
-                en: "Lviv 2 server",
-              },
-              link: "/docs/deltachat/lviv2-invite.png",
+              label: "lviv2",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/lviv2.html",
+                    en: "/docs/matrix/lviv2.html",
+                    ru: "/docs/matrix/lviv2.html",
+                  },
+                },
+              ],
             },
             {
-              name: {
-                ua: "Рівне сервер",
-                ru: "Ровно сервер",
-                en: "Rivne server",
-              },
-              link: "/docs/deltachat/rivne-invite.png",
+              label: "rivne",
+
+              docs: [
+                {
+                  name: "QR Code",
+                  link: {
+                    ua: "/docs/matrix/rivne.html",
+                    en: "/docs/matrix/rivne.html",
+                    ru: "/docs/matrix/rivne.html",
+                  },
+                },
+              ],
             },
           ],
         },
@@ -527,35 +505,57 @@ Public group moderation is on.</p>
           ru: `<p>Briar — это безопасный инструмент для обмена сообщениями, который по-умолчанию использует сеть Tor, а также может создавать локальные меш-сети, используя bluetooth телефона.</p>`,
         },
         logo: "/logo/briar.png",
+        name: {
+          ua: "Briar",
+          ru: "Briar",
+          en: "Briar",
+        },
 
         mobileApp: {
-          name: {
-            ua: "Briar",
-            ru: "Briar",
-            en: "Briar",
-          },
-          logo: "/logo/briar.png  ",
           platforms: [{ name: "Android", link: "" }],
-          docs: [
+          servers: [
             {
-              name: "HTML",
-              link: {
-                ua: "/docs/briar/index.html",
-                en: "/docs/briar/index_en.html",
-                ru: "/docs/briar/index_ru.html",
-              },
-            },
-            {
-              name: "PDF",
-              link: {
-                ua: "/docs/briar/briar.pdf",
-                en: "/docs/briar/briar_en.pdf",
-                ru: "/docs/briar/briar_ru.pdf",
-              },
+              label: "all",
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/briar/index.html",
+                    en: "/docs/briar/index_en.html",
+                    ru: "/docs/briar/index_ru.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/briar/briar.pdf",
+                    en: "/docs/briar/briar_en.pdf",
+                    ru: "/docs/briar/briar_ru.pdf",
+                  },
+                },
+              ],
             },
           ],
-          link: "https://briarproject.org/download-briar/",
-          localLink: "/package/briar/files/",
+          downloads: {
+            mirrors: [
+              {
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "/package/briar/files/",
+              },
+              {
+                name: {
+                  ua: "Briar",
+                  ru: "Briar",
+                  en: "Briar",
+                },
+                link: "https://briarproject.org/download-briar/",
+              },
+            ],
+          },
         },
       },
     ],
@@ -568,36 +568,57 @@ Public group moderation is on.</p>
           en: `<p>CENO is a web browser for accessing the Internet from censored network environments. It uses a novel method built on Bittorrent protocols to route requests through the Internet. Users automatically share retrieved content with each other using peer-to-peer connectivity. During an Internet shutdown, content already in your network continues to be available and shared among users there.</p>`,
           ru: `<p>CENO — это веб-браузер для доступа к Интернету в обход цензуры. Приложение использует метод, основанный на  Bittorrent-протоколе, для маршрутизации запросов через Интернет. Пользователи автоматически обмениваются полученным контентом друг с другом, через одноранговое соединение. Во время отключения Интернета контент, уже находящийся в вашей сети, продолжает быть доступным и распространяться среди пользователей.</p>`,
         },
+        name: {
+          ua: "CENO",
+          ru: "CENO",
+          en: "CENO",
+        },
         logo: "/logo/ceno.png",
-
         mobileApp: {
-          name: {
-            ua: "CENO",
-            ru: "CENO",
-            en: "CENO",
-          },
-          logo: "/logo/ceno.png",
           platforms: [{ name: "Android", link: "" }],
-          docs: [
+          servers: [
             {
-              name: "HTML",
-              link: {
-                ua: "/docs/ceno/index.html",
-                en: "/docs/ceno/index_en.html",
-                ru: "/docs/ceno/index_ru.html",
-              },
-            },
-            {
-              name: "PDF",
-              link: {
-                ua: "/docs/ceno/ceno-manual.pdf",
-                en: "/docs/ceno/ceno-manual_en.pdf",
-                ru: "/docs/ceno/ceno-manual_ru.pdf",
-              },
+              label: "all",
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/ceno/index.html",
+                    en: "/docs/ceno/index_en.html",
+                    ru: "/docs/ceno/index_ru.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/ceno/ceno-manual.pdf",
+                    en: "/docs/ceno/ceno-manual_en.pdf",
+                    ru: "/docs/ceno/ceno-manual_ru.pdf",
+                  },
+                },
+              ],
             },
           ],
-          link: "https://censorship.no/download",
-          localLink: "/package/ceno/files/",
+          downloads: {
+            mirrors: [
+              {
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "/package/ceno/files/",
+              },
+              {
+                name: {
+                  ua: "CENO",
+                  ru: "CENO",
+                  en: "CENO",
+                },
+                link: "https://censorship.no/download",
+              },
+            ],
+          },
         },
       },
       {
@@ -608,32 +629,52 @@ Public group moderation is on.</p>
           en: `<p>NewNode VPN creates an alternative network connection allowing your device to communicate in situations where a desired internet site or resource is blocked or unavailable. It utilizes peer-to-peer networking to route your data around network obstacles. Server-independent, resistant to DDoS attacks, and security audited - making it unique among VPN apps.</p>`,
           ru: `</p>NewNode VPN создает альтернативное сетевое подключение, позволяющее вашему устройству обмениваться данными в ситуациях, когда нужный интернет-сайт или ресурс заблокирован или недоступен. Он использует одноранговую сеть для маршрутизации ваших данных в обход сетевых препятствий. Децентрализованный доступ, устойчив к DDoS-атакам и проверен на безопасность, что делает его уникальным среди VPN-приложений.</p>`,
         },
+        name: {
+          ua: "NewNode VPN",
+          ru: "NewNode VPN",
+          en: "NewNode VPN",
+        },
         logo: "/logo/newnode.png",
-
         mobileApp: {
-          name: {
-            ua: "NewNode VPN",
-            ru: "NewNode VPN",
-            en: "NewNode VPN",
-          },
-          logo: "/logo/newnode.png",
           platforms: [
             { name: "Android", link: "" },
             { name: "iOs", link: "" },
           ],
-          docs: [
+          servers: [
             {
-              name: "HTML",
-              link: {
-                ua: "/docs/newnode/index.html",
-                en: "/docs/newnode/index_en.html",
-                ru: "/docs/newnode/index_ru.html",
-              },
+              label: "all",
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/newnode/index.html",
+                    en: "/docs/newnode/index_en.html",
+                    ru: "/docs/newnode/index_ru.html",
+                  },
+                },
+              ],
             },
           ],
-
-          link: "https://newnode.com/download-vpn",
-          localLink: "/package/newnode/files/",
+          downloads: {
+            mirrors: [
+              {
+                name: {
+                  ua: "Locally",
+                  ru: "Locally",
+                  en: "Locally",
+                },
+                link: "/package/newnode/files/",
+              },
+              {
+                name: {
+                  ua: "New node",
+                  ru: "New node",
+                  en: "New node",
+                },
+                link: "https://newnode.com/download-vpn",
+              },
+            ],
+          },
         },
       },
     ],

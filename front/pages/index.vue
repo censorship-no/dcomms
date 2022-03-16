@@ -1,34 +1,33 @@
 <template>
-  <div>
+  <main class="container px-3 sm:px-0">
     <Hero />
-    <main class="container px-3 sm:px-0">
-      <div>
-        <SectionTitle>
-          <template v-slot:icon>
-            <img class="w-10" src="/icons/chating.svg" alt="" />
-          </template>
-          <template>
-            {{ $t("rubric.messaging") }}
-          </template>
-        </SectionTitle>
-        <div v-for="item in messaging" :key="item.id">
-          <AppItem :data="item" />
-        </div>
-
-        <SectionTitle>
-          <template v-slot:icon>
-            <img class="w-10" src="/icons/browsing.svg" alt="" />
-          </template>
-          <template>
-            {{ $t("rubric.browsing") }}
-          </template>
-        </SectionTitle>
-        <div v-for="item in browsing" :key="item.id">
-          <AppItem :data="item" />
-        </div>
+    <div>
+      <SectionTitle>
+        <template v-slot:icon>
+          <img class="w-16" src="/icons/chating.svg" alt="" />
+        </template>
+        <template>
+          {{ $t("rubric.messaging") }}
+        </template>
+      </SectionTitle>
+      <div v-for="item in messaging" :key="item.id">
+        <AppItem :data="item" />
       </div>
-    </main>
-  </div>
+
+      <SectionTitle>
+        <template v-slot:icon>
+          <img class="w-16" src="/icons/browsing.svg" alt="" />
+        </template>
+        <template>
+          {{ $t("rubric.browsing") }}
+        </template>
+      </SectionTitle>
+      <div v-for="item in browsing" :key="item.id">
+        <AppItem :data="item" />
+      </div>
+    </div>
+    <ReplicateSection />
+  </main>
 </template>
 
 <script>

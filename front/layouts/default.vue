@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="bg-gray-50">
+  <div class="bg-gray-50 wrapper">
     <Header />
     <main>
       <Nuxt />
@@ -20,5 +20,10 @@ export default {
 html {
   font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.wrapper {
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 </style>
