@@ -37,7 +37,7 @@ export default {
   items: {
     desktopApp: "Як отримати доступ з комп’ютера (десктоп):",
     localDownload: "локальне скачування",
-    instruction: "інструкція",
+    instruction: "інструкція:",
     mobileApp: "Додаток для смартфона:",
   },
 };

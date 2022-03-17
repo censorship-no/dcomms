@@ -247,10 +247,21 @@ Public group moderation is on.</p>
               },
             ],
           },
+          serversLabel: {
+            ua: "Server:",
+            ru: "Сервер:",
+            en: "Сервер:",
+          },
+
           servers: [
             {
               label: "kyiv",
-
+              name: {
+                ua: "matrix.kyiv.dcomm.net.ua",
+                ru: "matrix.kyiv.dcomm.net.ua",
+                en: "matrix.kyiv.dcomm.net.ua",
+              },
+              type: "plain",
               docs: [
                 {
                   name: "HTML",
@@ -272,7 +283,13 @@ Public group moderation is on.</p>
             },
             {
               label: "kharkiv",
+              type: "plain",
 
+              name: {
+                ua: "matrix.kharkiv.dcomm.net.ua",
+                ru: "matrix.kharkiv.dcomm.net.ua",
+                en: "matrix.kharkiv.dcomm.net.ua",
+              },
               docs: [
                 {
                   name: "HTML",
@@ -294,7 +311,13 @@ Public group moderation is on.</p>
             },
             {
               label: "odessa",
+              type: "plain",
 
+              name: {
+                ua: "matrix.odessa.dcomm.net.ua",
+                ru: "matrix.odessa.dcomm.net.ua",
+                en: "matrix.odessa.dcomm.net.ua",
+              },
               docs: [
                 {
                   name: "HTML",
@@ -316,7 +339,13 @@ Public group moderation is on.</p>
             },
             {
               label: "lviv",
+              type: "plain",
 
+              name: {
+                ua: "matrix.lviv.dcomm.net.ua",
+                ru: "matrix.lviv.dcomm.net.ua",
+                en: "matrix.lviv.dcomm.net.ua",
+              },
               docs: [
                 {
                   name: "HTML",
@@ -338,7 +367,13 @@ Public group moderation is on.</p>
             },
             {
               label: "lviv2",
+              type: "plain",
 
+              name: {
+                ua: "matrix.lviv2.dcomm.net.ua",
+                ru: "matrix.lviv2.dcomm.net.ua",
+                en: "matrix.lviv2.dcomm.net.ua",
+              },
               docs: [
                 {
                   name: "HTML",
@@ -360,7 +395,13 @@ Public group moderation is on.</p>
             },
             {
               label: "rivne",
+              type: "plain",
 
+              name: {
+                ua: "matrix.rivne.dcomm.net.ua",
+                ru: "matrix.rivne.dcomm.net.ua",
+                en: "matrix.rivne.dcomm.net.ua",
+              },
               docs: [
                 {
                   name: "HTML",
@@ -396,6 +437,11 @@ Public group moderation is on.</p>
         },
         name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
         logo: "/logo/deltachat.svg",
+        explain: {
+          ua: "EMAIL-BASED CHAT",
+          ru: "EMAIL-BASED CHAT",
+          en: "EMAIL-BASED CHAT",
+        },
         desktopApp: {
           platforms: [
             { name: "Linux", link: "" },
@@ -648,7 +694,11 @@ Public group moderation is on.</p>
           ru: "Briar",
           en: "Briar",
         },
-
+        explain: {
+          ua: "P2p messaging",
+          ru: "P2p messaging",
+          en: "P2p messaging",
+        },
         mobileApp: {
           platforms: [{ name: "Android", link: "" }],
           servers: [
@@ -705,6 +755,11 @@ Public group moderation is on.</p>
           ua: `<p>СENO — це веб-браузер для доступу до Інтернету там, де задіяні обмеження чи відключення інтернету. Браузер використовує сучасний метод маршрутизації запитів в Інтернеті на основі протоколів Bittorrent. Користувачі автоматично обмінюються отриманим контентом один з одним, використовуючи однорангове підключення (пірингове/ P2P). У випадку зовнішнього відключення Інтернету контент, що вже є у вашій мережі, залишається доступним і й розподіляється між користувачами.</p>`,
           en: `<p>CENO is a web browser for accessing the Internet from censored network environments. It uses a novel method built on Bittorrent protocols to route requests through the Internet. Users automatically share retrieved content with each other using peer-to-peer connectivity. During an Internet shutdown, content already in your network continues to be available and shared among users there.</p>`,
           ru: `<p>CENO — это веб-браузер для доступа к Интернету в обход цензуры. Приложение использует метод, основанный на  Bittorrent-протоколе, для маршрутизации запросов через Интернет. Пользователи автоматически обмениваются полученным контентом друг с другом, через одноранговое соединение. Во время отключения Интернета контент, уже находящийся в вашей сети, продолжает быть доступным и распространяться среди пользователей.</p>`,
+        },
+        explain: {
+          ua: "CENSORSHIP-RESISTANT Browsing",
+          ru: "CENSORSHIP-RESISTANT Browsing",
+          en: "CENSORSHIP-RESISTANT Browsing",
         },
         name: {
           ua: "CENO",
@@ -771,6 +826,11 @@ Public group moderation is on.</p>
           ua: "NewNode VPN",
           ru: "NewNode VPN",
           en: "NewNode VPN",
+        },
+        explain: {
+          ua: "P2p VPN",
+          ru: "P2p VPN",
+          en: "P2p VPN",
         },
         logo: "/logo/newnode.png",
         mobileApp: {

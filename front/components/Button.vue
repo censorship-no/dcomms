@@ -9,10 +9,12 @@
       sm:text-sm
       border border-gray-300
       bg-white
-      p-1
+      px-2
+      py-1
       shadow-sm
       rounded
-      text-gray-700
+      text-gray-700 text-center
+      hover:text-white hover:bg-gray-700
     "
   >
     <slot></slot>
@@ -25,10 +27,12 @@
       bg-white
       sm:text-sm
       border border-gray-300
-      p-1
+      px-2
+      py-1
       shadow-sm
       rounded
-      text-gray-700
+      text-gray-700 text-center
+      hover:text-white hover:bg-gray-700
     "
   >
     <slot></slot>

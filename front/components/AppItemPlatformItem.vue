@@ -22,9 +22,11 @@
           v-if="itemServers.name && itemServers.link"
           >{{ itemServers.name[$i18n.locale] }}</Button
         >
-        <Button v-if="itemServers.name && !itemServers.link">{{
-          itemServers.name[$i18n.locale]
-        }}</Button>
+        <span
+          class="text-sm text-gray-600"
+          v-if="itemServers.type === 'plain'"
+          >{{ itemServers.name[$i18n.locale] }}</span
+        >
       </div>
       <div v-if="itemServers.docs" class="flex items-center mb-3">
         <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"

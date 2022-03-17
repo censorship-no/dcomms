@@ -38,7 +38,7 @@ export default {
   items: {
     desktopApp: "Подключиться с компьютера:",
     localDownload: "локальное скачивание",
-    instruction: "инструкция",
+    instruction: "Инструкция:",
     mobileApp: "Приложение для телефона:",
   },
 };
