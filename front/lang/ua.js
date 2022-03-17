@@ -1,8 +1,9 @@
 export default {
-  title:
-    "Децентралізовані комунікації, які працюють <span>з інтернетом або без нього</span>",
+  title: {
+    first: "Stay in touch with family and friends",
+    second: "with or without the Internet",
+  },
   connected: "You are currently connected to the {name} server",
-
   subtitle:
     "Decentralized communication tools you can use, even when Internet connectivity to Telegram, Whatsapp, Facebook and others is no longer available.",
   server: "OTHER Servers:",
@@ -23,7 +24,6 @@ export default {
     lviv2: "Львів 2",
     rivne: "Рівне",
   },
-  connected: "",
 
   footer: {
     initiative: `An initiative by <a target="_blank" href="https://equalit.ie/">eQualit.ie</a>`,
