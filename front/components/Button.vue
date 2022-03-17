@@ -5,8 +5,8 @@
     :href="link"
     target="_blank"
     class="
-      min-w-[109px]
-      sm:text-sm
+      min-w-[90px]
+      sm:min-w-[109px] sm:text-sm
       border border-gray-300
       bg-white
       p-1

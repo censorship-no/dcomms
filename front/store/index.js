@@ -37,6 +37,11 @@ Public group moderation is on.</p>
           ru: "Element",
           en: "Element",
         },
+        explain: {
+          ua: "ENCRYPTED FEDERATED CHAT",
+          ru: "ENCRYPTED FEDERATED CHAT",
+          en: "ENCRYPTED FEDERATED CHAT",
+        },
         desktopApp: {
           platforms: [],
           link: "",

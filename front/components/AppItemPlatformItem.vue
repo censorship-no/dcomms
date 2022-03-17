@@ -14,7 +14,7 @@
       <div class="mb-3 flex items-center">
         <span
           v-if="data.serversLabel"
-          class="mr-3 text-sm min-w-[100px] text-right"
+          class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
           >{{ data.serversLabel[$i18n.locale] }}</span
         >
         <Button
@@ -27,7 +27,7 @@
         }}</Button>
       </div>
       <div v-if="itemServers.docs" class="flex items-center mb-3">
-        <span class="mr-3 text-sm min-w-[100px] text-right"
+        <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
           >{{ $t("items.instruction") }}
         </span>
 
@@ -43,7 +43,7 @@
     </div>
     <div class="mb-3 items-center" v-if="data.downloads">
       <div class="flex">
-        <span class="mr-3 text-sm min-w-[100px] text-right"
+        <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
           >{{ $t("items.downloads") }}
         </span>
         <ButtonGroups>

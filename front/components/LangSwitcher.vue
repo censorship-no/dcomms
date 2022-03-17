@@ -11,9 +11,10 @@
       p-1
       shadow-sm
       rounded
+      px-3
+      py-2
       text-gray-700
     "
-    @input="changeLang"
     v-model="lang"
   >
     <option
@@ -21,7 +22,9 @@
       v-for="locale in availableLocales"
       :key="locale.code"
     >
-      {{ locale.nameFull }}
+      <span class="px-2 sm:px-3 py-1 sm:py-2 leading-5">
+        {{ locale.nameFull }}
+      </span>
     </option>
   </select>
 </template>
@@ -36,12 +39,13 @@ export default {
       lang: this.$i18n.locale,
     };
   },
-  name: "LangSwitcher",
-  methods: {
-    changeLang() {
-      this.$i18n.setLocale(this.lang);
+  watch: {
+    lang: function (val) {
+      this.$i18n.setLocale(val);
     },
   },
+  name: "LangSwitcher",
+
   computed: {
     availableLocales() {
       return this.$i18n.locales;

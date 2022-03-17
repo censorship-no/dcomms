@@ -1,12 +1,12 @@
 
 <template>
-  <div class="py-8 sm:py-20">
-    <div class="container px-3 sm:px-0 text-center">
-      <h1 class="text-5xl font-bold sm:mx-[100px]">
+  <div class="py-6 sm:py-20">
+    <div class="container px-3 sm:px-0 sm:text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold md:mx-[100px]">
         {{ $t("title.first") }}
         <span class="text-primary">{{ $t("title.second") }}</span>
       </h1>
-      <p class="text-xl my-8 text-gray-500 text-center sm:mx-[120px]">
+      <p class="text-xl my-8 text-gray-500 md:mx-[120px]">
         {{ $t("subtitle") }}
       </p>
       <span
@@ -25,14 +25,24 @@
       <div
         class="
           flex flex-wrap
-          gap-3
-          text-center
+          gap-2
+          sm:gap-3 sm:text-center
           items-center
-          justify-center
+          sm:justify-center
           my-8
         "
       >
-        <div class="text-gray-500 font-bold text-center text-sm uppercase">
+        <div
+          class="
+            w-full
+            sm:w-auto
+            text-gray-500
+            font-bold
+            text-sm
+            uppercase
+            basis-full
+          "
+        >
           {{ $t("server") }}
         </div>
 
