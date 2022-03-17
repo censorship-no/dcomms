@@ -1,17 +1,20 @@
 export default {
-  title:
-    "Децентрализованные коммуникации, которые работают <span>с интернетом или без него</span>",
-  connected: "You are currently connected to the {name} server",
-  server: "OTHER Servers:",
+  title: {
+    first: "Оставайся на связь с семьёй и друзьями",
+    second: "с интернетом или без него",
+  },
+  connected: "Ваш текущий сервер  <b>{name}</b>",
+  server: "Дугие сервера:",
 
   subtitle:
-    "Decentralized communication tools you can use, even when Internet connectivity to Telegram, Whatsapp, Facebook and others is no longer available.",
+    "Подорка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут боле недоступны",
   alert: {
-    title: "Don’t wait. Replicate!",
-    desr: "Stand up your own networks using our local bundle. Join the techops group on the Moscow server to discuss collaboration, new services and volunteering",
+    title: "Не жди. Маштабируй!",
+    descr:
+      "Создавайте свои собственные сети используя код. Присоединяйтесь к технической группе на московском сервере для обсуждения сотрудничества, новых услуг и волонтерства",
     buttons: {
-      repo: "Code Repo",
-      servers: "Matrix Server",
+      repo: "Репозиторий",
+      servers: "Matrix сервер",
     },
   },
   cities: {
@@ -23,10 +26,9 @@ export default {
     rivne: "Ровно",
   },
 
-
   footer: {
-    initiative: "Инициатива —",
-    org: "censorship.no",
+    initiative: `Инициатива — <a target="_blank" href="https://equalit.ie/">eQualit.ie</a>`,
+    license: `Под лицензией <a  href="https://github.com/censorship-no/dcomms"> GNU General Public License v3.0</a>`,
   },
   rubric: {
     messaging: "Переписка",

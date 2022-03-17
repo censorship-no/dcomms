@@ -49,7 +49,8 @@
         <Button
           v-for="item in $store.state.servers"
           :key="item.name"
-          :href="item.link"
+          :link="item.link"
+          class="min-w-[109px]"
           >{{ $t(item.name) }}</Button
         >
       </div>
@@ -65,9 +66,10 @@ export default {
   name: "Hero",
   computed: {
     server() {
-      return window.location.host.split(".")[1]
-        ? window.location.host.split(".")[0]
-        : "kyiv";
+      return "kyiv";
+      // return window.location.host.split(".")[1]
+      //   ? window.location.host.split(".")[0]
+      //   : "kyiv";
     },
   },
 };

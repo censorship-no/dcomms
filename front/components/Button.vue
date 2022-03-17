@@ -5,8 +5,8 @@
     :href="link"
     target="_blank"
     class="
-      min-w-[90px]
-      sm:min-w-[109px] sm:text-sm
+      inline-block
+      sm:text-sm
       border border-gray-300
       bg-white
       p-1
@@ -21,7 +21,7 @@
   <button
     v-else
     class="
-      min-w-[109px]
+      inline-block
       bg-white
       sm:text-sm
       border border-gray-300

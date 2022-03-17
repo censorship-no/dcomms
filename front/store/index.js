@@ -82,9 +82,9 @@ Public group moderation is on.</p>
             {
               label: "kharkiv",
               name: {
-                ua: "Київ Web chat",
-                ru: "Киев Web chat",
-                en: "Kyiv Web chat",
+                ua: "Харків Web chat",
+                ru: "Харьков Web chat",
+                en: "Kharkiv Web chat",
               },
               link: "https://chat.kharkiv.dcomm.net.ua/",
               docs: [
@@ -109,9 +109,9 @@ Public group moderation is on.</p>
             {
               label: "odessa",
               name: {
-                ua: "Київ Web chat",
-                ru: "Киев Web chat",
-                en: "Kyiv Web chat",
+                ua: "Одеса Web chat",
+                ru: "Одесса Web chat",
+                en: "Odessa Web chat",
               },
               link: "https://chat.odessa.dcomm.net.ua/",
               docs: [
@@ -136,9 +136,9 @@ Public group moderation is on.</p>
             {
               label: "lviv",
               name: {
-                ua: "Київ Web chat",
-                ru: "Киев Web chat",
-                en: "Kyiv Web chat",
+                ua: "Львів Web chat",
+                ru: "Львов Web chat",
+                en: "Lviv Web chat",
               },
               link: "https://chat.lviv.dcomm.net.ua/",
               docs: [
@@ -163,9 +163,9 @@ Public group moderation is on.</p>
             {
               label: "lviv2",
               name: {
-                ua: "Київ Web chat",
-                ru: "Киев Web chat",
-                en: "Kyiv Web chat",
+                ua: "Львів 2 Web chat",
+                ru: "Львов 2 Web chat",
+                en: "Lviv 2 Web chat",
               },
               link: "https://chat.lviv2.dcomm.net.ua/",
               docs: [
@@ -190,9 +190,9 @@ Public group moderation is on.</p>
             {
               label: "rivne",
               name: {
-                ua: "Київ Web chat",
-                ru: "Киев Web chat",
-                en: "Kyiv Web chat",
+                ua: "Рівне Web chat",
+                ru: "Ровно Web chat",
+                en: "Rivne Web chat",
               },
 
               link: "https://chat.rivne.dcomm.net.ua/",
@@ -247,6 +247,140 @@ Public group moderation is on.</p>
               },
             ],
           },
+          servers: [
+            {
+              label: "kyiv",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/kyiv.html",
+                    en: "/docs/matrix/kyiv.html",
+                    ru: "/docs/matrix/kyiv.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/kyiv.pdf",
+                    en: "/docs/matrix/kyiv.pdf",
+                    ru: "/docs/matrix/kyiv.pdf",
+                  },
+                },
+              ],
+            },
+            {
+              label: "kharkiv",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/kharkiv.html",
+                    en: "/docs/matrix/kharkiv.html",
+                    ru: "/docs/matrix/kharkiv.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/kharkiv.pdf",
+                    en: "/docs/matrix/kharkiv.pdf",
+                    ru: "/docs/matrix/kharkiv.pdf",
+                  },
+                },
+              ],
+            },
+            {
+              label: "odessa",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/odessa.html",
+                    en: "/docs/matrix/odessa.html",
+                    ru: "/docs/matrix/odessa.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/odessa.pdf",
+                    en: "/docs/matrix/odessa.pdf",
+                    ru: "/docs/matrix/odessa.pdf",
+                  },
+                },
+              ],
+            },
+            {
+              label: "lviv",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/lviv.html",
+                    en: "/docs/matrix/lviv.html",
+                    ru: "/docs/matrix/lviv.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/lviv.pdf",
+                    en: "/docs/matrix/lviv.pdf",
+                    ru: "/docs/matrix/lviv.pdf",
+                  },
+                },
+              ],
+            },
+            {
+              label: "lviv2",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/lviv2.html",
+                    en: "/docs/matrix/lviv2.html",
+                    ru: "/docs/matrix/lviv2.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/lviv2.pdf",
+                    en: "/docs/matrix/lviv2.pdf",
+                    ru: "/docs/matrix/lviv2.pdf",
+                  },
+                },
+              ],
+            },
+            {
+              label: "rivne",
+
+              docs: [
+                {
+                  name: "HTML",
+                  link: {
+                    ua: "/docs/matrix/rivne.html",
+                    en: "/docs/matrix/rivne.html",
+                    ru: "/docs/matrix/rivne.html",
+                  },
+                },
+                {
+                  name: "PDF",
+                  link: {
+                    ua: "/docs/matrix/rivne.pdf",
+                    en: "/docs/matrix/rivne.pdf",
+                    ru: "/docs/matrix/rivne.pdf",
+                  },
+                },
+              ],
+            },
+          ],
         },
       },
       {
@@ -348,7 +482,6 @@ Public group moderation is on.</p>
             },
             {
               label: "lviv2",
-
               docs: [
                 {
                   name: "QR Code",

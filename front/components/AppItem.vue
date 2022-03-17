@@ -33,7 +33,7 @@
 
           <AppItemPlatformItem
             :data="data.mobileApp"
-            class="border-t sm:border-0 pt-6 mt-6"
+            class="border-t sm:border-0 pt-6 mt-6 sm:pt-0 sm:mt-0"
           />
         </div>
       </div>

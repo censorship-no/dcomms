@@ -111,14 +111,15 @@ export default {
   props: { data: Object, desktop: Boolean },
   computed: {
     server() {
-      return window.location.host.split(".")[1]
-        ? window.location.host.split(".")[0]
-        : "kyiv";
+      return "kyiv";
+      // return window.location.host.split(".")[1]
+      //   ? window.location.host.split(".")[0]
+      //   : "kyiv";
     },
     item() {
       if (this.data.servers) {
         return this.data.servers.filter((item) => {
-          return item.label === "odessa" || item.label === "all";
+          return item.label === "kyiv" || item.label === "all";
         });
       } else {
         return false;

@@ -8,7 +8,8 @@ export default {
   server: "OTHER Servers:",
   alert: {
     title: "Don’t wait. Replicate!",
-    desr: "Stand up your own networks using our local bundle. Join the techops group on the Moscow server to discuss collaboration, new services and volunteering",
+    descr:
+      "Stand up your own networks using our local bundle. Join the techops group on the Moscow server to discuss collaboration, new services and volunteering",
     buttons: {
       repo: "Code Repo",
       servers: "Matrix Server",
@@ -25,8 +26,8 @@ export default {
   connected: "",
 
   footer: {
-    initiative: "Ініциатива —",
-    org: "censorship.no",
+    initiative: `An initiative by <a target="_blank" href="https://equalit.ie/">eQualit.ie</a>`,
+    license: `Licensed under the <a  href="https://github.com/censorship-no/dcomms"> GNU General Public License v3.0</a>`,
   },
   rubric: {
     messaging: "Переписка",
