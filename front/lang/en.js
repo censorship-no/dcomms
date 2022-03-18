@@ -1,4 +1,9 @@
 export default {
+  lang: {
+    ru: "Russian",
+    ua: "Ukrainian",
+    en: "English",
+  },
   title: {
     first: "Stay in touch with family and friends",
     second: "with or without the Internet",
@@ -33,6 +38,7 @@ export default {
     browsing: "Web Browsing",
     //    filesharing: "File-Sharing",
   },
+  adressCopy: "Adress copy",
   items: {
     downloads: "Downloads:",
     desktopApp: "Connecting from a desktop computer:",

@@ -19,10 +19,10 @@
     </div>
     <div class="col-span-12 sm:col-span-4 flex sm:justify-end">
       <div>
-        <Button link="https://github.com/censorship-no/dcomms">{{
+        <Button link="https://github.com/censorship-no/dcomms" class="mb-2">{{
           $t("alert.buttons.repo")
         }}</Button>
-        <Button link="">{{ $t("alert.buttons.servers") }}</Button>
+        <Button link="" class="mb-2">{{ $t("alert.buttons.servers") }}</Button>
       </div>
     </div>
   </div>

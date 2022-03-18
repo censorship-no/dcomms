@@ -38,7 +38,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
       {
         hid: "twitter:card",
@@ -53,7 +53,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
       {
         hid: "twitter:image:alt",
@@ -79,7 +79,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
       {
         hid: "og:image:heigth",
@@ -99,21 +99,21 @@ export default {
       {
         hid: "og:image:secure_url",
         property: "og:image:secure_url",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
 
       {
         hid: "vk:image",
         property: "vk:image",
-        content: `/bridge-icon.png`,
+        content: `/android-chrome-192x192.svg`,
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.svg" }],
   },
 
   modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
@@ -129,27 +129,27 @@ export default {
       theme_color: "#111111",
       icons: [
         {
-          src: "/android-chrome-192x192.png",
+          src: "/android-chrome-192x192.svg",
           type: "image/png",
           sizes: "192x192",
         },
         {
-          src: "/android-chrome-512x512.png",
+          src: "/android-chrome-512x512.svg",
           type: "image/png",
           sizes: "512x512",
         },
         {
-          src: "/favicon-32x32.png",
+          src: "/favicon-32x32.svg",
           type: "image/png",
           sizes: "32x32",
         },
         {
-          src: "/favicon-16x16.png",
+          src: "/favicon-16x16.svg",
           type: "image/png",
           sizes: "16x16",
         },
         {
-          src: "/android-chrome-192x192.png",
+          src: "/android-chrome-192x192.svg",
           sizes: "192x192",
           type: "image/png",
           purpose: "any maskable",

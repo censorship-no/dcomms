@@ -39,7 +39,7 @@ Public group moderation is on.</p>
         },
         explain: {
           ua: "ENCRYPTED FEDERATED CHAT",
-          ru: "ENCRYPTED FEDERATED CHAT",
+          ru: "Федеративный чат с шифрованием",
           en: "ENCRYPTED FEDERATED CHAT",
         },
         desktopApp: {
@@ -232,7 +232,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "https://element.io/get-started#download",
@@ -261,7 +261,7 @@ Public group moderation is on.</p>
                 ru: "matrix.kyiv.dcomm.net.ua",
                 en: "matrix.kyiv.dcomm.net.ua",
               },
-              type: "plain",
+              type: "copy",
               docs: [
                 {
                   name: "HTML",
@@ -283,8 +283,7 @@ Public group moderation is on.</p>
             },
             {
               label: "kharkiv",
-              type: "plain",
-
+              type: "copy",
               name: {
                 ua: "matrix.kharkiv.dcomm.net.ua",
                 ru: "matrix.kharkiv.dcomm.net.ua",
@@ -311,8 +310,7 @@ Public group moderation is on.</p>
             },
             {
               label: "odessa",
-              type: "plain",
-
+              type: "copy",
               name: {
                 ua: "matrix.odessa.dcomm.net.ua",
                 ru: "matrix.odessa.dcomm.net.ua",
@@ -339,8 +337,7 @@ Public group moderation is on.</p>
             },
             {
               label: "lviv",
-              type: "plain",
-
+              type: "copy",
               name: {
                 ua: "matrix.lviv.dcomm.net.ua",
                 ru: "matrix.lviv.dcomm.net.ua",
@@ -367,8 +364,7 @@ Public group moderation is on.</p>
             },
             {
               label: "lviv2",
-              type: "plain",
-
+              type: "copy",
               name: {
                 ua: "matrix.lviv2.dcomm.net.ua",
                 ru: "matrix.lviv2.dcomm.net.ua",
@@ -395,8 +391,7 @@ Public group moderation is on.</p>
             },
             {
               label: "rivne",
-              type: "plain",
-
+              type: "copy",
               name: {
                 ua: "matrix.rivne.dcomm.net.ua",
                 ru: "matrix.rivne.dcomm.net.ua",
@@ -439,7 +434,7 @@ Public group moderation is on.</p>
         logo: "/logo/deltachat.svg",
         explain: {
           ua: "EMAIL-BASED CHAT",
-          ru: "EMAIL-BASED CHAT",
+          ru: "EMAIL-Чат",
           en: "EMAIL-BASED CHAT",
         },
         desktopApp: {
@@ -454,7 +449,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "/package/deltachat/files/",
@@ -577,7 +572,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "/package/deltachat/files/",
@@ -696,7 +691,7 @@ Public group moderation is on.</p>
         },
         explain: {
           ua: "P2p messaging",
-          ru: "P2p messaging",
+          ru: "P2p мессенджер",
           en: "P2p messaging",
         },
         mobileApp: {
@@ -729,7 +724,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "/package/briar/files/",
@@ -758,7 +753,7 @@ Public group moderation is on.</p>
         },
         explain: {
           ua: "CENSORSHIP-RESISTANT Browsing",
-          ru: "CENSORSHIP-RESISTANT Browsing",
+          ru: "Обход цензуры в интернете",
           en: "CENSORSHIP-RESISTANT Browsing",
         },
         name: {
@@ -797,7 +792,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "/package/ceno/files/",
@@ -858,7 +853,7 @@ Public group moderation is on.</p>
               {
                 name: {
                   ua: "Locally",
-                  ru: "Locally",
+                  ru: "Локально",
                   en: "Locally",
                 },
                 link: "/package/newnode/files/",

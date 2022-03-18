@@ -23,10 +23,20 @@
           >{{ itemServers.name[$i18n.locale] }}</Button
         >
         <span
-          class="text-sm text-gray-600"
-          v-if="itemServers.type === 'plain'"
-          >{{ itemServers.name[$i18n.locale] }}</span
+          class="text-sm text-gray-600 flex"
+          v-if="itemServers.type === 'copy'"
         >
+          <input
+            id="text"
+            :value="itemServers.name[$i18n.locale]"
+            readonly
+            type="text"
+            class="w-[76%] focus:outline-none"
+          />
+          <span @click="doCopy()"
+            ><img src="/icons/copy.svg" class="w-4 cursor-pointer" alt=""
+          /></span>
+        </span>
       </div>
       <div v-if="itemServers.docs" class="flex items-center mb-3">
         <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
@@ -111,6 +121,17 @@ export default {
   },
   name: "AppItemPlatformItem",
   props: { data: Object, desktop: Boolean },
+  methods: {
+    doCopy() {
+      var copyText = document.getElementById("text");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
+      alert(this.$t("adressCopy"));
+    },
+  },
   computed: {
     server() {
       return "kyiv";

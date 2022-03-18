@@ -1,55 +1,56 @@
 
 <template>
-  <select
-    name=""
-    id=""
-    class="
-      min-w-[50px]
-      sm:text-sm
-      border border-gray-300
-      bg-white
-      p-1
-      shadow-sm
-      rounded
-      px-3
-      py-2
-      text-gray-700
-    "
+  <v-select
+    class="min-w-[160px] bg-white focus:outline-none"
+    :clearable="false"
     v-model="lang"
+    :options="availableLocales"
   >
-    <option
-      v-bind:value="locale.code"
-      v-for="locale in availableLocales"
-      :key="locale.code"
-    >
-      <span class="px-2 sm:px-3 py-1 sm:py-2 leading-5">
-        {{ locale.nameFull }}
+    <template #option="{ code }">
+      <span class="px-2 sm:px-3 py-1 sm:py-2">
+        {{ $t(`lang.${code}`) }}
       </span>
-    </option>
-  </select>
+    </template>
+    <template #selected-option="{}">
+      <span class="sm:px-3 py-1">
+        {{ $t(`lang.${lang.code}`) }}
+      </span>
+    </template>
+  </v-select>
 </template>
 
 <script>
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
+
 export default {
+  components: {
+    "v-select": vSelect,
+  },
   nuxtI18n: {
     locales: ["ua", "ru", "en"],
   },
   data() {
     return {
-      lang: this.$i18n.locale,
+      lang: this.$i18n.locales.filter((i) => i.code === this.$i18n.locale)[0],
     };
   },
   watch: {
     lang: function (val) {
-      this.$i18n.setLocale(val);
+      this.$i18n.setLocale(val.code);
     },
   },
   name: "LangSwitcher",
 
   computed: {
     availableLocales() {
-      return this.$i18n.locales;
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
     },
   },
 };
 </script>
+<style >
+.vs__actions {
+  padding-right: 10px;
+}
+</style>

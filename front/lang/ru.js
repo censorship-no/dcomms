@@ -1,4 +1,9 @@
 export default {
+  lang: {
+    ru: "Русский",
+    ua: "Украинский",
+    en: "Английский",
+  },
   title: {
     first: "Оставайся на связь с семьёй и друзьями",
     second: "с интернетом или без него",
@@ -35,10 +40,14 @@ export default {
     browsing: "Просмотр сайтов",
     //    filesharing: "Обмен файлами",
   },
+  adressCopy: "Адрес скопирован",
+
   items: {
     desktopApp: "Подключиться с компьютера:",
     localDownload: "локальное скачивание",
     instruction: "Инструкция:",
+    downloads: "Скачать:",
+    notAvail: "Недоступен",
     mobileApp: "Приложение для телефона:",
   },
 };

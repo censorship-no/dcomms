@@ -1,4 +1,9 @@
 export default {
+  lang: {
+    ru: "Russian",
+    ua: "Ukrainian",
+    en: "English",
+  },
   title: {
     first: "Stay in touch with family and friends",
     second: "with or without the Internet",
@@ -34,6 +39,8 @@ export default {
     browsing: "Перегляд сайтів",
     //    filesharing: "Файлообмінник",
   },
+  adressCopy: "Adress copy",
+
   items: {
     desktopApp: "Як отримати доступ з комп’ютера (десктоп):",
     localDownload: "локальне скачування",
