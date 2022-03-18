@@ -1,19 +1,19 @@
 <template>
   <div class="mb-8 shadow bg-white rounded-xl p-8">
-    <div class="sm:flex mb-4">
+    <div class="md:flex mb-4">
       <img
         :src="data.logo"
         alt=""
         class="
           mb-6
-          sm:mb-0 sm:mx-auto
+          md:mb-0 md:mx-auto
           h-[48px]
           w-[48px]
           object-contain
-          sm:mr-10
+          md:mr-10
         "
       />
-      <div class="mb-6 sm:mb-0">
+      <div class="mb-6 md:mb-0">
         <div
           class="text-sm font-semibold uppercase text-primary mb-3"
           v-if="data.explain"
