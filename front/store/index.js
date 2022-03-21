@@ -38,7 +38,7 @@ Public group moderation is on.</p>
           en: "Element",
         },
         explain: {
-          ua: "ENCRYPTED FEDERATED CHAT",
+          ua: "ЧАТ З ШИФРУВАННЯМ",
           ru: "Федеративный чат с шифрованием",
           en: "ENCRYPTED FEDERATED CHAT",
         },
@@ -433,7 +433,7 @@ Public group moderation is on.</p>
         name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
         logo: "/logo/deltachat.svg",
         explain: {
-          ua: "EMAIL-BASED CHAT",
+          ua: "EMAIL-ЧАТ",
           ru: "EMAIL-Чат",
           en: "EMAIL-BASED CHAT",
         },
@@ -679,7 +679,7 @@ Public group moderation is on.</p>
         id: 3,
         show: true,
         descr: {
-          ua: `<p>ОМесенджер Briar — це безпечний інструмент чату, який за замовчуванням використовує мережу Tor, а також може створювати локальні мережеві мережі за допомогою функції Bluetooth у вашому смартфоні.</p>`,
+          ua: `<p>Месенджер Briar — це безпечний інструмент чату, який за замовчуванням використовує мережу Tor, а також може створювати локальні мережеві мережі за допомогою функції Bluetooth у вашому смартфоні.</p>`,
           en: `<p>Briar messenger is a secure chat tool that uses the Tor network by default and can also build local area mesh networks using the phone’s Bluetooth connectivity</p>`,
           ru: `<p>Briar — это безопасный инструмент для обмена сообщениями, который по-умолчанию использует сеть Tor, а также может создавать локальные меш-сети, используя bluetooth телефона.</p>`,
         },
@@ -690,7 +690,7 @@ Public group moderation is on.</p>
           en: "Briar",
         },
         explain: {
-          ua: "P2p messaging",
+          ua: "P2P МЕСЕНДЖЕР",
           ru: "P2p мессенджер",
           en: "P2p messaging",
         },

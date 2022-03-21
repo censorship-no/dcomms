@@ -5,12 +5,12 @@ export default {
     en: "English",
   },
   title: {
-    first: "Stay in touch with family and friends",
-    second: "with or without the Internet",
+    first: "Залишайтеся на зв’язку з родиною та друзями ",
+    second: "з Інтернетом або без нього",
   },
-  connected: "You are currently connected to the {name} server",
+  connected: "Ваш нинішній сервер {name}",
   subtitle:
-    "Decentralized communication tools you can use, even when Internet connectivity to Telegram, Whatsapp, Facebook and others is no longer available.",
+    "Децентралізовані інструменти комунікації, які ви зможете використовувати, навіть якщо доступ до Telegram, Whatsapp, Facebook та інших мереж буде недоступним.",
   server: "OTHER Servers:",
   alert: {
     title: "Don’t wait. Replicate!",
