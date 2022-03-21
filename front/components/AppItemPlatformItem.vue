@@ -89,8 +89,8 @@
 
         <ButtonGroups>
           <Button
-            v-for="(itemDocs, index) in itemServers.docs"
-            :key="index"
+            v-for="itemDocs in itemServers.docs"
+            :key="itemDocs.link[$i18n.locale]"
             :link="itemDocs.link[$i18n.locale]"
             >{{ itemDocs.name }}
           </Button>
@@ -115,8 +115,8 @@
         </span>
         <ButtonGroups>
           <Button
-            v-for="(itemDownload, index) in data.downloads.mirrors"
-            :key="index"
+            v-for="itemDownload in data.downloads.mirrors"
+            :key="itemDownload.name[$i18n.locale]"
             :link="itemDownload.link"
             >{{ itemDownload.name[$i18n.locale] }}
           </Button>
@@ -192,7 +192,7 @@ export default {
   },
   computed: {
     server() {
-      if (this.$t(`cities['${window.location.host.split(".")[0]}']`)) {
+      if (this.$t(`cities`)[`${window.location.host.split(".")[0]}`]) {
         return window.location.host.split(".")[1]
           ? window.location.host.split(".")[0]
           : "kyiv";

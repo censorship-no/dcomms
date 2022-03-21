@@ -66,7 +66,7 @@ export default {
   name: "Hero",
   computed: {
     server() {
-      if (this.$t(`cities['${window.location.host.split(".")[0]}']`)) {
+      if (this.$t(`cities`)[`${window.location.host.split(".")[0]}`]) {
         return window.location.host.split(".")[1]
           ? window.location.host.split(".")[0]
           : "kyiv";
