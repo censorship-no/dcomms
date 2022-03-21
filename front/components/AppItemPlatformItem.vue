@@ -11,12 +11,23 @@
     </div>
 
     <div v-for="itemServers in item" :key="itemServers.label" class="sm:pr-6">
-      <div class="mb-3 flex items-center">
+      <div class="mb-3 sm:flex items-center">
         <span
           v-if="data.serversLabel"
-          class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
+          class="
+            block
+            sm:inline
+            mb-3
+            sm:mb-0
+            mr-3
+            text-sm
+            sm:min-w-[90px]
+            min-w-[80px]
+            sm:text-right
+          "
           >{{ data.serversLabel[$i18n.locale] }}</span
         >
+
         <Button
           :link="itemServers.link"
           v-if="itemServers.name && itemServers.link"
@@ -26,20 +37,53 @@
           class="text-sm text-gray-600 flex"
           v-if="itemServers.type === 'copy'"
         >
-          <span @click="doCopy()"
-            ><img src="/icons/copy.svg" class="w-4 mr-2 cursor-pointer" alt=""
-          /></span>
-          <input
-            id="text"
-            :value="itemServers.name[$i18n.locale]"
-            readonly
-            type="text"
-            class="focus:outline-none"
-          />
+          <ButtonGroups>
+            <input
+              id="text"
+              :value="itemServers.name[$i18n.locale]"
+              readonly
+              type="text"
+              class="
+                max-w-[70%]
+                min-h-[30px]
+                inline-block
+                text-xs
+                border border-gray-300
+                bg-white
+                py-1
+                shadow-sm
+                rounded
+                text-primary
+                underline
+                text-center
+                focus:outline-none
+              "
+            />
+            <Button @click.native="doCopy()">
+              <span class="flex flex-nowrap">
+                <img
+                  src="/icons/copy.svg"
+                  class="w-4 mr-1 cursor-pointer"
+                  alt=""
+                />{{ $t("copyUrl") }}</span
+              >
+            </Button>
+          </ButtonGroups>
         </span>
       </div>
-      <div v-if="itemServers.docs" class="flex items-center mb-3">
-        <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
+      <div v-if="itemServers.docs" class="sm:flex items-center mb-3">
+        <span
+          class="
+            block
+            sm:inline
+            mb-3
+            sm:mb-0
+            mr-3
+            text-sm
+            sm:min-w-[90px]
+            min-w-[80px]
+            sm:text-right
+          "
           >{{ $t("items.instruction") }}
         </span>
 
@@ -54,8 +98,19 @@
       </div>
     </div>
     <div class="mb-3 items-center" v-if="data.downloads">
-      <div class="flex items-center">
-        <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
+      <div class="sm:flex items-center">
+        <span
+          class="
+            block
+            sm:inline
+            mb-3
+            sm:mb-0
+            mr-3
+            text-sm
+            sm:min-w-[90px]
+            min-w-[80px]
+            sm:text-right
+          "
           >{{ $t("items.downloads") }}
         </span>
         <ButtonGroups>
@@ -67,7 +122,10 @@
           </Button>
         </ButtonGroups>
       </div>
-      <div v-if="data.platforms.length" class="italic text-sm ml-[110px] pt-3">
+      <div
+        v-if="data.platforms.length"
+        class="italic text-sm sm:ml-[110px] pt-3"
+      >
         (<span
           v-for="(platformItem, index) in data.platforms"
           :key="platformItem.name"

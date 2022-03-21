@@ -14,7 +14,8 @@
       shadow-sm
       rounded
       text-gray-700 text-center
-      hover:text-white hover:bg-gray-700
+      hover:bg-gray-300
+      min-h-[30px]
     "
   >
     <slot></slot>
@@ -32,7 +33,8 @@
       shadow-sm
       rounded
       text-gray-700 text-center
-      hover:text-white hover:bg-gray-700
+      hover:bg-gray-300
+      min-h-[30px]
     "
   >
     <slot></slot>

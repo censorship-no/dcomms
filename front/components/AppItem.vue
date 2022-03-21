@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-8 shadow bg-white rounded-xl p-8">
+  <div class="mb-8 shadow bg-white rounded-xl p-4 sm:p-8">
     <div class="md:flex mb-4">
       <img
         :src="data.logo"
@@ -24,16 +24,16 @@
           {{ data.name[$i18n.locale] }}
         </div>
         <div v-html="data.descr[$i18n.locale]" class="text-sm"></div>
-        <div class="md:grid md:grid-cols-2 md:gap-8 mt-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 mt-8">
           <AppItemPlatformItem
             desktop
             :data="data.desktopApp"
-            class="md:border-r md:border-gray-300"
+            class="lg:border-r lg:border-gray-300"
           />
 
           <AppItemPlatformItem
             :data="data.mobileApp"
-            class="border-t md:border-0 pt-6 mt-6 md:pt-0 md:mt-0"
+            class="border-t lg:border-0 pt-6 mt-6 lg:pt-0 lg:mt-0"
           />
         </div>
       </div>
