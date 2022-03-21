@@ -41,7 +41,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
       - type: bind
-        source: ./www
+        source: /var/www/dcomms
         target: /www
     networks:
       - caddy
