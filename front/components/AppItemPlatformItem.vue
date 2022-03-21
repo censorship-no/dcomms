@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="mb-3 items-center" v-if="data.downloads">
-      <div class="flex">
+      <div class="flex items-center">
         <span class="mr-3 text-sm sm:min-w-[100px] min-w-[80px] text-right"
           >{{ $t("items.downloads") }}
         </span>
@@ -134,15 +134,18 @@ export default {
   },
   computed: {
     server() {
-      return "kyiv";
-      // return window.location.host.split(".")[1]
-      //   ? window.location.host.split(".")[0]
-      //   : "kyiv";
+      if (this.$t(`cities['${window.location.host.split(".")[0]}']`)) {
+        return window.location.host.split(".")[1]
+          ? window.location.host.split(".")[0]
+          : "kyiv";
+      } else {
+        return "kyiv";
+      }
     },
     item() {
       if (this.data.servers) {
         return this.data.servers.filter((item) => {
-          return item.label === "kyiv" || item.label === "all";
+          return item.label === this.server || item.label === "all";
         });
       } else {
         return false;

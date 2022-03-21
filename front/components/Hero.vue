@@ -66,10 +66,13 @@ export default {
   name: "Hero",
   computed: {
     server() {
-      return "kyiv";
-      // return window.location.host.split(".")[1]
-      //   ? window.location.host.split(".")[0]
-      //   : "kyiv";
+      if (this.$t(`cities['${window.location.host.split(".")[0]}']`)) {
+        return window.location.host.split(".")[1]
+          ? window.location.host.split(".")[0]
+          : "kyiv";
+      } else {
+        return "kyiv";
+      }
     },
   },
 };
