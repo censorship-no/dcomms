@@ -26,13 +26,13 @@
         <div v-html="data.descr[$i18n.locale]" class="text-sm"></div>
         <div class="lg:grid lg:grid-cols-2 lg:gap-8 mt-8">
           <AppItemPlatformItem
-            desktop
-            :data="data.desktopApp"
+            :data="data.mobileApp"
             class="lg:border-r lg:border-gray-300"
           />
 
           <AppItemPlatformItem
-            :data="data.mobileApp"
+            desktop
+            :data="data.desktopApp"
             class="border-t lg:border-0 pt-6 mt-6 lg:pt-0 lg:mt-0"
           />
         </div>

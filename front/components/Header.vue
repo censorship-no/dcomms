@@ -1,11 +1,13 @@
 
 <template>
   <header class="container mx-auto flex items-center justify-between px-3 py-8">
-    <img
-      class="w-[126px] sm:w-[160px]"
-      src="/dcomm_logo.svg"
-      :alt="$t('title')"
-    />
+    <a href="/">
+      <img
+        class="w-[126px] sm:w-[160px]"
+        src="/dcomm_logo.svg"
+        :alt="$t('title')"
+    /></a>
+
     <LangSwitcher />
   </header>
 </template>

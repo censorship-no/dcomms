@@ -235,7 +235,7 @@ Public group moderation is on.</p>
                   ru: "Локально",
                   en: "Locally",
                 },
-                link: "https://element.io/get-started#download",
+                link: "/package/element/files/",
               },
               {
                 name: {
@@ -472,9 +472,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/kyiv.html",
-                    en: "/docs/matrix/kyiv.html",
-                    ru: "/docs/matrix/kyiv.html",
+                    ua: "/docs/deltachat/kyiv-invite.png",
+                    en: "/docs/deltachat/kyiv-invite.png",
+                    ru: "/docs/deltachat/kyiv-invite.png",
                   },
                 },
               ],
@@ -486,9 +486,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/kharkiv.html",
-                    en: "/docs/matrix/kharkiv.html",
-                    ru: "/docs/matrix/kharkiv.html",
+                    ua: "/docs/deltachat/kharkiv-invite.png",
+                    en: "/docs/deltachat/kharkiv-invite.png",
+                    ru: "/docs/deltachat/kharkiv-invite.png",
                   },
                 },
               ],
@@ -500,9 +500,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/odessa.html",
-                    en: "/docs/matrix/odessa.html",
-                    ru: "/docs/matrix/odessa.html",
+                    ua: "/docs/deltachat/odessa-invite.png",
+                    en: "/docs/deltachat/odessa-invite.png",
+                    ru: "/docs/deltachat/odessa-invite.png",
                   },
                 },
               ],
@@ -514,9 +514,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/lviv.html",
-                    en: "/docs/matrix/lviv.html",
-                    ru: "/docs/matrix/lviv.html",
+                    ua: "/docs/deltachat/lviv-invite.png",
+                    en: "/docs/deltachat/lviv-invite.png",
+                    ru: "/docs/deltachat/lviv-invite.png",
                   },
                 },
               ],
@@ -527,9 +527,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/lviv2.html",
-                    en: "/docs/matrix/lviv2.html",
-                    ru: "/docs/matrix/lviv2.html",
+                    ua: "/docs/deltachat/lviv2-invite.png",
+                    en: "/docs/deltachat/lviv2-invite.png",
+                    ru: "/docs/deltachat/lviv2-invite.png",
                   },
                 },
               ],
@@ -541,9 +541,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/rivne.html",
-                    en: "/docs/matrix/rivne.html",
-                    ru: "/docs/matrix/rivne.html",
+                    ua: "/docs/deltachat/rivne.html",
+                    en: "/docs/deltachat/rivne.html",
+                    ru: "/docs/deltachat/rivne.html",
                   },
                 },
               ],
@@ -595,9 +595,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/kyiv.html",
-                    en: "/docs/matrix/kyiv.html",
-                    ru: "/docs/matrix/kyiv.html",
+                    ua: "/docs/deltachat/kyiv-invite.png",
+                    en: "/docs/deltachat/kyiv-invite.png",
+                    ru: "/docs/deltachat/kyiv-invite.png",
                   },
                 },
               ],
@@ -609,9 +609,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/kharkiv.html",
-                    en: "/docs/matrix/kharkiv.html",
-                    ru: "/docs/matrix/kharkiv.html",
+                    ua: "/docs/deltachat/kharkiv-invite.png",
+                    en: "/docs/deltachat/kharkiv-invite.png",
+                    ru: "/docs/deltachat/kharkiv-invite.png",
                   },
                 },
               ],
@@ -623,9 +623,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/odessa.html",
-                    en: "/docs/matrix/odessa.html",
-                    ru: "/docs/matrix/odessa.html",
+                    ua: "/docs/deltachat/odessa-invite.png",
+                    en: "/docs/deltachat/odessa-invite.png",
+                    ru: "/docs/deltachat/odess-invite.png",
                   },
                 },
               ],
@@ -637,9 +637,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/lviv.html",
-                    en: "/docs/matrix/lviv.html",
-                    ru: "/docs/matrix/lviv.html",
+                    ua: "/docs/deltachat/lviv-invite.png",
+                    en: "/docs/deltachat/lviv-invite.png",
+                    ru: "/docs/deltachat/lviv-invite.png",
                   },
                 },
               ],
@@ -651,9 +651,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/lviv2.html",
-                    en: "/docs/matrix/lviv2.html",
-                    ru: "/docs/matrix/lviv2.html",
+                    ua: "/docs/deltachat/lviv2-invite.png",
+                    en: "/docs/deltachat/lviv2-invite.png",
+                    ru: "/docs/deltachat/lviv2-invite.png",
                   },
                 },
               ],
@@ -665,9 +665,9 @@ Public group moderation is on.</p>
                 {
                   name: "QR Code",
                   link: {
-                    ua: "/docs/matrix/rivne.html",
-                    en: "/docs/matrix/rivne.html",
-                    ru: "/docs/matrix/rivne.html",
+                    ua: "/docs/deltachat/rivne-invite.png",
+                    en: "/docs/deltachat/rivne-invite.png",
+                    ru: "/docs/deltachat/rivne-invite.png",
                   },
                 },
               ],
