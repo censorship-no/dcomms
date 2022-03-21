@@ -15,6 +15,8 @@ Decentralized communications that work with or without the Internet
 
 It is used to rapidly deploy and orchestrate decentralized, federated, communications platforms such as [Matrix](https://matrix.org/) and [DeltaChat](https://delta.chat) across multiple hosts.
 
+Let's Encrypt TLS certificates are automatically issued and managed by the Caddy container across all services.
+
 ## Service containers
 
 The dcomms stack leverages single node, non-replicated containers of the following services built from the latest images below:
