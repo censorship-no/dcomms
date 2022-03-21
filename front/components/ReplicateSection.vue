@@ -22,7 +22,11 @@
         <Button link="https://github.com/censorship-no/dcomms" class="mb-2">{{
           $t("alert.buttons.repo")
         }}</Button>
-        <Button link="" class="mb-2">{{ $t("alert.buttons.servers") }}</Button>
+        <Button
+          link="https://chat.kyiv.dcomm.net.ua/#/room/#dcomms:matrix.debian.social"
+          class="mb-2"
+          >{{ $t("alert.buttons.servers") }}</Button
+        >
       </div>
     </div>
   </div>

@@ -26,16 +26,16 @@
           class="text-sm text-gray-600 flex"
           v-if="itemServers.type === 'copy'"
         >
+          <span @click="doCopy()"
+            ><img src="/icons/copy.svg" class="w-4 mr-2 cursor-pointer" alt=""
+          /></span>
           <input
             id="text"
             :value="itemServers.name[$i18n.locale]"
             readonly
             type="text"
-            class="w-[76%] focus:outline-none"
+            class="focus:outline-none"
           />
-          <span @click="doCopy()"
-            ><img src="/icons/copy.svg" class="w-4 cursor-pointer" alt=""
-          /></span>
         </span>
       </div>
       <div v-if="itemServers.docs" class="flex items-center mb-3">

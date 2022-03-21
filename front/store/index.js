@@ -231,7 +231,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },
@@ -430,7 +430,7 @@ Public group moderation is on.</p>
           en: `<p>Delta.chat is an encrypted messaging service that uses email protocols (SMTP) for communications. Similar in design to WhatsApp. Users need to install a smartphone application and add the server via QR codes, linked below. Other people can chat with you by generating a chat invitation QR code from the app. </p>`,
           ru: `<p>Delta.chat —  зашифрованная служба обмена сообщениями, использующая протокол электронной почты (SMTP). Дизайн похож на Whatsapp. Пользователям необходимо установить приложение для смартфона и добавить сервер с помощью QR-кодов, ссылки на которые приведены ниже. Другие люди могут общаться с вами, сгенерировав QR-код приглашения в чат в самом приложении.</p>`,
         },
-        name: { ua: "Deltachat", ru: "Deltachat", en: "Deltachat" },
+        name: { ua: "Delta Сhat", ru: "Delta Сhat", en: "Delta Сhat" },
         logo: "/logo/deltachat.svg",
         explain: {
           ua: "EMAIL-ЧАТ",
@@ -448,7 +448,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },
@@ -571,7 +571,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },
@@ -723,7 +723,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },
@@ -747,12 +747,12 @@ Public group moderation is on.</p>
         id: 1,
         show: true,
         descr: {
-          ua: `<p>СENO — це веб-браузер для доступу до Інтернету там, де задіяні обмеження чи відключення інтернету. Браузер використовує сучасний метод маршрутизації запитів в Інтернеті на основі протоколів Bittorrent. Користувачі автоматично обмінюються отриманим контентом один з одним, використовуючи однорангове підключення (пірингове/ P2P). У випадку зовнішнього відключення Інтернету контент, що вже є у вашій мережі, залишається доступним і й розподіляється між користувачами.</p>`,
-          en: `<p>CENO is a web browser for accessing the Internet from censored network environments. It uses a novel method built on Bittorrent protocols to route requests through the Internet. Users automatically share retrieved content with each other using peer-to-peer connectivity. During an Internet shutdown, content already in your network continues to be available and shared among users there.</p>`,
-          ru: `<p>CENO — это веб-браузер для доступа к Интернету в обход цензуры. Приложение использует метод, основанный на  Bittorrent-протоколе, для маршрутизации запросов через Интернет. Пользователи автоматически обмениваются полученным контентом друг с другом, через одноранговое соединение. Во время отключения Интернета контент, уже находящийся в вашей сети, продолжает быть доступным и распространяться среди пользователей.</p>`,
+          ua: `<p>СENO — це веб-браузер для доступу до Інтернету там, де задіяні обмеження чи відключення інтернету. Браузер використовує сучасний метод маршрутизації запитів в Інтернеті на основі протоколів BitTorrent. Користувачі автоматично обмінюються отриманим контентом один з одним, використовуючи однорангове підключення (пірингове/ P2P). У випадку зовнішнього відключення Інтернету контент, що вже є у вашій мережі, залишається доступним і й розподіляється між користувачами.</p>`,
+          en: `<p>CENO is a web browser for accessing the Internet from censored network environments. It uses a novel method built on BitTorrent protocols to route requests through the Internet. Users automatically share retrieved content with each other using peer-to-peer connectivity. During an Internet shutdown, content already in your network continues to be available and shared among users there.</p>`,
+          ru: `<p>CENO — это веб-браузер для доступа к Интернету в обход цензуры. Приложение использует метод, основанный на  BitTorrent-протоколе, для маршрутизации запросов через Интернет. Пользователи автоматически обмениваются полученным контентом друг с другом, через одноранговое соединение. Во время отключения Интернета контент, уже находящийся в вашей сети, продолжает быть доступным и распространяться среди пользователей.</p>`,
         },
         explain: {
-          ua: "CENSORSHIP-RESISTANT Browsing",
+          ua: "БРАУЗЕР АБИ ОБІЙТИ БЛОКУВАННЯ",
           ru: "Обход цензуры в интернете",
           en: "CENSORSHIP-RESISTANT Browsing",
         },
@@ -791,7 +791,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },
@@ -815,7 +815,7 @@ Public group moderation is on.</p>
         descr: {
           ua: `<p>NewNode VPN створює альтернативне мережеве з'єднання, що дозволяє вашому пристрою спілкуватися в ситуаціях, коли потрібний інтернет-сайт або ресурс заблоковані або недоступні. Він використовує однорангову мережу для маршрутизації ваших даних навколо мережевих перешкод. Незалежний від сервера, стійкий до DDoS-атак і перевірений безпекою, що робить його унікальним серед додатків VPN.</p>`,
           en: `<p>NewNode VPN creates an alternative network connection allowing your device to communicate in situations where a desired internet site or resource is blocked or unavailable. It utilizes peer-to-peer networking to route your data around network obstacles. Server-independent, resistant to DDoS attacks, and security audited - making it unique among VPN apps.</p>`,
-          ru: `</p>NewNode VPN создает альтернативное сетевое подключение, позволяющее вашему устройству обмениваться данными в ситуациях, когда нужный интернет-сайт или ресурс заблокирован или недоступен. Он использует одноранговую сеть для маршрутизации ваших данных в обход сетевых препятствий. Децентрализованный доступ, устойчив к DDoS-атакам и проверен на безопасность, что делает его уникальным среди VPN-приложений.</p>`,
+          ru: `</p>NewNode VPN создает альтернативное сетевое подключение, позволяющее вашему устройству обмениваться данными в ситуациях, когда нужный интернет-сайт или ресурс заблокирован или недоступен. Он использует одноранговую сеть для маршрутизации ваших данных в обход сетевых препятствий. Децентрализованный доступ, устойчивость к DDoS-атакам и независимый аудит безопасности, делают его уникальным среди VPN-приложений.</p>`,
         },
         name: {
           ua: "NewNode VPN",
@@ -852,7 +852,7 @@ Public group moderation is on.</p>
             mirrors: [
               {
                 name: {
-                  ua: "Locally",
+                  ua: "Локально",
                   ru: "Локально",
                   en: "Locally",
                 },

@@ -3,6 +3,7 @@
   <v-select
     class="min-w-[160px] bg-white focus:outline-none"
     :clearable="false"
+    :searchable="false"
     v-model="lang"
     :options="availableLocales"
   >

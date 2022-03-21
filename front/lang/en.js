@@ -14,7 +14,7 @@ export default {
   alert: {
     title: "Don’t wait. Replicate!",
     descr:
-      "Stand up your own networks using our local bundle. Join the techops group on the Moscow server to discuss collaboration, new services and volunteering",
+      "Stand up your own networks using our local bundle. Join the techops group to discuss collaboration, new services and volunteering",
     buttons: {
       repo: "Code Repo",
       servers: "Matrix Server",
