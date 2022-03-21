@@ -5,6 +5,7 @@ Decentralized communications that work with or without the Internet
 # Prerequisites
 * A pre-existing [docker swarm](https://docs.docker.com/engine/swarm/) already setup and configured is necessary for orchestration of this software service stack.
 * A domain to use for production.
+* A directory named `/var/www/dcomms` created on the hosts of all docker nodes for the website document root.
 * A subdomain with the A record pointed to the IP address of a node for automatic issuance of a Let's Encrypt SSL certificate.
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
 
@@ -88,7 +89,7 @@ DWEB_DOMAIN=server1.example.org ./redeploy.sh
 
 # Post installation
 
-* Copy a pre-existing website into `/var/www` of the docker host or checkout all files from `./site` into the same location.
+* Copy a pre-existing website into `/var/www/dcomms/` across all docker nodes or checkout all files from `./site` into the same location.
 * Optionally visit `https://server1.example.org` to view the website.
 * Optionally visit `https://chat.server1.example.org` to view the Element service.
 * Optionally configure a Matrix client to use `https://matrix.server1.example.org` as the homeserver.
