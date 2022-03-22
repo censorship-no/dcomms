@@ -39,28 +39,7 @@ export default {
   name: "IndexPage",
   head() {
     return {
-      meta: [
-        {
-          hid: "og:image:alt",
-          property: "og:image:alt",
-          content: `${window.location.origin}/preview-logo.png`,
-        },
-        {
-          hid: "twitter:image",
-          name: "twitter:image",
-          content: `${window.location.origin}/preview-logo.png`,
-        },
-        {
-          hid: "vk:image",
-          property: "vk:image",
-          content: `${window.location.origin}/preview-logo.png`,
-        },
-        {
-          hid: "og:image:secure_url",
-          property: "og:image:secure_url",
-          content: `${window.location.origin}/preview-logo.png`,
-        },
-      ],
+      meta: [],
     };
   },
   computed: {
