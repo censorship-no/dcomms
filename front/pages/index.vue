@@ -37,6 +37,32 @@ export default {
     locales: ["ua", "ru", "en"],
   },
   name: "IndexPage",
+  head() {
+    return {
+      meta: [
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: `${window.location.origin}/android-chrome-192x192.svg`,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: `${window.location.origin}/android-chrome-192x192.svg`,
+        },
+        {
+          hid: "vk:image",
+          property: "vk:image",
+          content: `${window.location.origin}/android-chrome-192x192.svg`,
+        },
+        {
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: `${window.location.origin}/android-chrome-192x192.svg`,
+        },
+      ],
+    };
+  },
   computed: {
     messaging() {
       return this.$store.state.items.messaging.filter((item) => {

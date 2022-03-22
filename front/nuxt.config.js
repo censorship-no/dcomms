@@ -35,11 +35,7 @@ export default {
         content:
           "Децентралізовані комунікації, які працюють з інтернетом або без нього",
       },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: `/android-chrome-192x192.svg`,
-      },
+
       {
         hid: "twitter:card",
         name: "twitter:card",
@@ -95,22 +91,6 @@ export default {
         hid: "og:type",
         property: "og:type",
         content: "website",
-      },
-      {
-        hid: "og:image:secure_url",
-        property: "og:image:secure_url",
-        content: `/android-chrome-192x192.svg`,
-      },
-      {
-        hid: "og:image:alt",
-        property: "og:image:alt",
-        content: `/android-chrome-192x192.svg`,
-      },
-
-      {
-        hid: "vk:image",
-        property: "vk:image",
-        content: `/android-chrome-192x192.svg`,
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.svg" }],
