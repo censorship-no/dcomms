@@ -92,26 +92,6 @@ export default {
         property: "og:type",
         content: "website",
       },
-      {
-        hid: "og:image:alt",
-        property: "og:image:alt",
-        content: `/preview-logo.png`,
-      },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: `/preview-logo.png`,
-      },
-      {
-        hid: "vk:image",
-        property: "vk:image",
-        content: `/preview-logo.png`,
-      },
-      {
-        hid: "og:image:secure_url",
-        property: "og:image:secure_url",
-        content: `/preview-logo.png`,
-      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.svg" }],
   },
