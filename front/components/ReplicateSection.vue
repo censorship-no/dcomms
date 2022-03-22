@@ -25,7 +25,7 @@
 
         <ButtonGroups>
           <input
-            id="text"
+            id="linkMatrix"
             value="#dcommsp2p:matrix.kyiv.dcomms.net.ua"
             readonly
             type="text"
@@ -73,7 +73,7 @@ export default {
   name: "ReplicateSection",
   methods: {
     doCopy() {
-      var copyText = document.getElementById("text");
+      var copyText = document.getElementById("linkMatrix");
 
       /* Select the text field */
       copyText.select();
