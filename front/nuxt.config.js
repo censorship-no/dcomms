@@ -19,6 +19,31 @@ export default {
       "Децентралізовані комунікації, які працюють з інтернетом або без нього",
     meta: [
       {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "vk:image",
+        property: "vk:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image:secure_url",
+        content: `/preview-logo.png`,
+      },
+      {
         hid: "description",
         name: "description",
         content:
