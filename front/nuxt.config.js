@@ -46,11 +46,7 @@ export default {
         name: "twitter:creator",
         content: "summary_large_image",
       },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: `/android-chrome-192x192.svg`,
-      },
+
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
@@ -72,11 +68,7 @@ export default {
         content:
           "Децентралізовані комунікації, які працюють з інтернетом або без нього",
       },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: `/android-chrome-192x192.svg`,
-      },
+
       {
         hid: "og:image:heigth",
         property: "og:image:heigth",

@@ -51,6 +51,11 @@ export default {
           content: `${window.location.origin}/preview-logo.png`,
         },
         {
+          hid: "og:image",
+          property: "og:image",
+          content: `${window.location.origin}/preview-logo.png`,
+        },
+        {
           hid: "vk:image",
           property: "vk:image",
           content: `${window.location.origin}/preview-logo.png`,
