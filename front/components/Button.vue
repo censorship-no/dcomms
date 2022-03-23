@@ -16,6 +16,7 @@
       text-gray-700 text-center
       hover:bg-gray-300
       min-h-[30px]
+      whitespace-nowrap
     "
   >
     <slot></slot>
@@ -35,6 +36,7 @@
       text-gray-700 text-center
       hover:bg-gray-300
       min-h-[30px]
+      whitespace-nowrap
     "
   >
     <slot></slot>

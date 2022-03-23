@@ -13,7 +13,7 @@
       </span>
     </template>
     <template #selected-option="{}">
-      <span class="sm:px-3 py-1">
+      <span class="py-1">
         {{ $t(`lang.${lang.code}`) }}
       </span>
     </template>
@@ -53,5 +53,8 @@ export default {
 <style >
 .vs__actions {
   padding-right: 10px;
+}
+.vs__dropdown-toggle {
+  height: 42px;
 }
 </style>

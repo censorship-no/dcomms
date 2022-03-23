@@ -28,6 +28,7 @@ export default {
     lviv2: "Lviv 2",
     rivne: "Rivne",
   },
+  copyUrl: "Copy URL",
 
   footer: {
     initiative: `An initiative by <a target="_blank" href="https://equalit.ie/">eQualit.ie</a>`,
