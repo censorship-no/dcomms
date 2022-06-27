@@ -103,7 +103,7 @@ services:
         max_replicas_per_node: 1
       resources:
         limits:
-          memory: 512G
+          memory: 512M
   # element is a matrix web GUI running as a service
   element:
     image: vectorim/element-web:v1.10.14
