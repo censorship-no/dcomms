@@ -38,7 +38,7 @@ matrix_config () {
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
     sed -i 's/#enable_registration: false/enable_registration: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    #sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sed -i 's/#encryption_enabled_by_default_for_room_type: invite/encryption_enabled_by_default_for_room_type: all/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     cp ./conf/element/config.json ./conf/element/$DWEB_DOMAIN.config.json
     sed -i 's/#rc_registration:/rc_registration:\n  per_second: 0.1 \n  burst_count: 2/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
