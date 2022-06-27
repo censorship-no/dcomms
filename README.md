@@ -93,19 +93,19 @@ DWEB_DOMAIN=server1.example.org ./dcomm.sh
 
 The script will prompt you before it overwrites any configuration files. To simply redeploy the swarm enter `no` to all overwrite prompts.
 
-# Post installation
-
-* Copy a pre-existing website into `/var/www/dcomms/` across all docker nodes or checkout all files from either the [dcomms-web repo (UA)](https://github.com/censorship-no/dcomms-web) or the [chatv3 repo (RU)](https://github.com/censorship-no/chatv3-web) into the same location.
-* Optionally visit `https://server1.example.org` to view the website.
-* Optionally visit `https://chat.server1.example.org` to view the Element service.
-* Optionally configure a Matrix client to use `https://matrix.server1.example.org` as the homeserver.
-
 # Tor
 
 If you would like to make your deployement accesible via a Tor hidden service you need to include the `DWEB_ONION` variable when running dcomm.sh.
 ```
 DWEB_ONION=g674ny5yywiijzbl2gt6hp3sf4wkbnypvzfdasdasdasfnntbxb32yid.onion DWEB_DOMAIN=server1.example.org ./dcomm.sh
 ```
+
+# Post installation
+
+* Copy a pre-existing website into `/var/www/dcomms/` across all docker nodes or checkout all files from either the [dcomms-web repo (UA)](https://github.com/censorship-no/dcomms-web) or the [chatv3 repo (RU)](https://github.com/censorship-no/chatv3-web) into the same location.
+* Optionally visit `https://server1.example.org` to view the website.
+* Optionally visit `https://chat.server1.example.org` to view the Element service.
+* Optionally configure a Matrix client to use `https://matrix.server1.example.org` as the homeserver.
 
 ## Tagging images
 
