@@ -19,7 +19,12 @@
         "servers": [
             "matrix.kharkiv.dcomm.net.ua",
             "matrix.kyiv.dcomm.net.ua",
-            "matrix.odessa.dcomm.net.ua"
+            "matrix.odessa.dcomm.net.ua",
+            "matrix.lviv.dcomm.net.ua",
+            "matrix.lviv2.dcomm.net.ua",
+            "matrix.kherson.dcomm.net.ua",
+            "matrix.mykolayiv.dcomm.net.ua",
+            "matrix.rivne.dcomm.net.ua"
         ]
     },
     "enable_presence_by_hs_url": {
