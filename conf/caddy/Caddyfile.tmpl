@@ -35,7 +35,6 @@ matrix.{{ env "DWEB_DOMAIN" }}, http://matrix.{{ env "DWEB_ONION" }} {
 
 matrix.{{ env "DWEB_DOMAIN" }}:8448, http://matrix.{{ env "DWEB_ONION" }}:8448 {
   reverse_proxy http://localhost:8008
-  header Onion-Location http://matrix.{{ env "DWEB_ONION" }}
 }
 
 # Refer to the Caddy docs for more information:
