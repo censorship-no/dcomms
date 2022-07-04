@@ -1,0 +1,6 @@
+conf/element/*
+!conf/element/config.json
+!conf/element/nginx.conf
+conf/synapse/*
+conf/caddy/*
+!conf/caddy/Caddyfile.tmpl

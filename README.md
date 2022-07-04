@@ -8,6 +8,7 @@ Decentralized communications that work with or without the Internet
 * A directory named `/var/www/dcomms` created on the hosts of all docker nodes for the website document root.
 * A subdomain with the A record pointed to the IP address of a node for automatic issuance of a Let's Encrypt SSL certificate.
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
+* (Optional) A Tor hidden service [installed](https://community.torproject.org/onion-services/setup/), and listening on port 80 and 8448.
 
 # Introduction
 
@@ -24,6 +25,7 @@ The dcomms stack leverages single node, non-replicated containers of the followi
 * [CENO client](https://hub.docker.com/r/equalitie/ceno-client) courtesy of censorship.no
 * [Synapse Docker](https://hub.docker.com/r/matrixdotorg/synapse/) courtesy of matrix.org
 * [Element](https://hub.docker.com/r/vectorim/element-web/) courtesy of vector-im
+* [Mau](https://mau.dev/maubot/maubot) courtesy of the maubot dev team
 * [Caddy](https://hub.docker.com/_/caddy) courtesy of the Caddy Docker Maintainers
 * [docker-mailadm](https://github.com/deltachat/docker-mailadm), includes dovecot and postfix, courtesy of DeltaChat
 
@@ -77,7 +79,7 @@ docker node update --label-add=dwebstackdomain=server1.example.org <nodeid>
 Provision a dcomms server as `server1.example.org`.  From the manager node type:
 
 ```
-DWEB_DOMAIN=server1.example.org ./provision.sh
+DWEB_DOMAIN=server1.example.org ./dcomm.sh
 ```
 
 * Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overwriting data.
@@ -86,7 +88,16 @@ DWEB_DOMAIN=server1.example.org ./provision.sh
 
 In the future, to redeploy or restart all dcomms services on `server1.example.org`, from the manager node type:
 ```
-DWEB_DOMAIN=server1.example.org ./redeploy.sh
+DWEB_DOMAIN=server1.example.org ./dcomm.sh
+```
+
+The script will prompt you before it overwrites any configuration files. To simply redeploy the swarm enter `no` to all overwrite prompts.
+
+# Tor
+
+If you would like to make your deployement accesible via a Tor hidden service you need to include the `DWEB_ONION` variable when running dcomm.sh.
+```
+DWEB_ONION=g674ny5yywiijzbl2gt6hp3sf4wkbnypvzfdasdasdasfnntbxb32yid.onion DWEB_DOMAIN=server1.example.org ./dcomm.sh
 ```
 
 # Post installation

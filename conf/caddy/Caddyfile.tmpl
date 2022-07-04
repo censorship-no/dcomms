@@ -12,28 +12,30 @@
   acme_ca https://acme-v02.api.letsencrypt.org/directory
 }
 
-{{ env "DWEB_DOMAIN" }} {
+{{ env "DWEB_DOMAIN" }}, http://{{ env "DWEB_ONION" }} {
   handle_path /new_email* {
     rewrite * /{path}
     reverse_proxy http://localhost:3691
   }
   root * /www
   file_server browse
+  header Onion-Location http://{{ env "DWEB_ONION" }}
 }
 
-chat.{{ env "DWEB_DOMAIN" }} {
+chat.{{ env "DWEB_DOMAIN" }}, http://chat.{{ env "DWEB_ONION" }} {
   reverse_proxy http://localhost:8001
+  header Onion-Location http://chat.{{ env "DWEB_ONION" }}
 }
 
-matrix.{{ env "DWEB_DOMAIN" }} {
+matrix.{{ env "DWEB_DOMAIN" }}, http://matrix.{{ env "DWEB_ONION" }} {
   reverse_proxy /_matrix/* http://localhost:8008
   reverse_proxy /_synapse/client/* http://localhost:8008
+  header Onion-Location http://matrix.{{ env "DWEB_ONION" }}
 }
 
-matrix.{{ env "DWEB_DOMAIN" }}:8448 {
+matrix.{{ env "DWEB_DOMAIN" }}:8448, http://matrix.{{ env "DWEB_ONION" }}:8448 {
   reverse_proxy http://localhost:8008
 }
-
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
