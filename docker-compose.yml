@@ -16,6 +16,7 @@ volumes:
   synapse_data:
     external: true
   mailadm_db:
+  mau_data:
 services:
   # ceno-client "bridge" service is below
   bridge:
@@ -212,6 +213,8 @@ services:
     configs:
       - source: mau-config
         target: /data/config.yaml
+    volumes:
+      - mau_data:/data/
     networks:
       - caddy
     depends_on:
