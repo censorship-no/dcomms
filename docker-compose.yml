@@ -16,6 +16,7 @@ volumes:
   synapse_data:
     external: true
   mailadm_db:
+  synapse_db:
   mau_data:
 services:
   # ceno-client "bridge" service is below
