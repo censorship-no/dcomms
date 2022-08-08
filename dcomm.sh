@@ -7,6 +7,8 @@ then
     exit 1
 fi
 
+
+
 # Replace dots with dashes
 export DWEB_FRIENDLY_DOMAIN="${DWEB_DOMAIN//./_}"
 
@@ -32,13 +34,13 @@ matrix_config () {
         -e SYNAPSE_SERVER_NAME=matrix.$DWEB_DOMAIN \
         -e SYNAPSE_REPORT_STATS=no \
         -e SYNAPSE_DATA_DIR=/data \
-    matrixdotorg/synapse:v1.53.0 generate
+    matrixdotorg/synapse:v1.63.0 generate
     echo "## Copying config files into docker swarm configs"
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
     sed -i 's/#enable_registration: false/enable_registration: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    #sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sed -i 's/#encryption_enabled_by_default_for_room_type: invite/encryption_enabled_by_default_for_room_type: all/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     cp ./conf/element/config.json ./conf/element/$DWEB_DOMAIN.config.json
     sed -i 's/#rc_registration:/rc_registration:\n  per_second: 0.1 \n  burst_count: 2/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
@@ -123,18 +125,18 @@ else
     matrix_config
 fi
 
-#echo ""
-#if [ -f "./conf/mastodon/$DWEB_DOMAIN.env.production" ]; then
-#    echo "A Mastodon config for $DWEB_DOMAIN already exists."
-#    if ! confirm "Overwrite existing config (y/n) "
-#    then
-#        echo "Not overwritting config"
-#    else
-#        mastodon_config
-#    fi
-#else
-#    mastodon_config
-#fi
+echo ""
+if [ -f "./conf/mastodon/$DWEB_DOMAIN.env.production" ]; then
+    echo "A Mastodon config for $DWEB_DOMAIN already exists."
+    if ! confirm "Overwrite existing config (y/n) "
+    then
+        echo "Not overwritting config"
+    else
+        mastodon_config
+    fi
+else
+    mastodon_config
+fi
 
 echo ""
 if [ -f "./conf/mau/$DWEB_DOMAIN.config.yaml" ]; then
