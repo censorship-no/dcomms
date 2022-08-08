@@ -69,16 +69,16 @@ mastodon_config () {
         bundle exec rake mastodon:webpush:generate_vapid_key)
     VAPID_FRIENDLY_KEYS=${VAPID_KEYS//$'\n'/\\$'\n'}
 
-    REDIS_PW=$(openssl rand -base64 12)
+    #REDIS_PW=$(openssl rand -base64 12)
 
     sed -i "s/REPLACEME/$DWEB_DOMAIN/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/SECRET_KEY_BASE=/&$SECRET_KEY_BASE/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/OTP_SECRET=/&$OTP_SECRET/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/VAPID_KEYS=/$VAPID_FRIENDLY_KEYS/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i 's/\r$//g' ./conf/mastodon/$DWEB_DOMAIN.env.production
-    sed -i "s/ALTERNATE_DOMAINS=mastodon./&$DWEB_ONION/" ./conf/mastodon/$DWEB_DOMAIN.env.production
+    sed -i "s/ALTERNATE_DOMAINS=social./&$DWEB_ONION/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/SMTP_SERVER=/&$DWEB_DOMAIN/" ./conf/mastodon/$DWEB_DOMAIN.env.production
-    sed -i "s/REDIS_PASSWORD=/&$REDIS_PW/" ./conf/mastodon/$DWEB_DOMAIN.env.production
+    #sed -i "s/REDIS_PASSWORD=/&$REDIS_PW/" ./conf/mastodon/$DWEB_DOMAIN.env.production
 }
 
 mau_config () {

@@ -319,7 +319,7 @@ services:
       - "[[ -e /mastodon/public/db.lock ]] && touch /mastodon/public/db.lock || touch /mastodon/public/db.lock && bundle exec rake db:prepare; /usr/bin/tini -- bundle exec rails server"
     env_file: conf/mastodon/${DWEB_DOMAIN}.env.production
     environment:
-      LOCAL_DOMAIN: "mastodon.${DWEB_DOMAIN}"
+      LOCAL_DOMAIN: "social.${DWEB_DOMAIN}"
       SMTP_FROM_ADDRESS: "notifications${DWEB_DOMAIN}"
     command: bash -c "rm -f /mastodon/tmp/pids/server.pid; bundle exec rails s -p 3000"
     ports:
