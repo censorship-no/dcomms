@@ -58,7 +58,7 @@ social.{{ env "DWEB_DOMAIN" }}, http://social.{{ env "DWEB_ONION" }}  {
                 Strict-Transport-Security "max-age=31536000;"
         }
 
-        header Onion-Location http://mastodon.{{ env "DWEB_ONION" }}
+        header Onion-Location http://social.{{ env "DWEB_ONION" }}
 
         header /sw.js  Cache-Control "public, max-age=0";
         header /emoji* Cache-Control "public, max-age=31536000, immutable"
