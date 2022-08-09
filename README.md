@@ -82,8 +82,6 @@ Provision a dcomms server as `server1.example.org`.  From the manager node type:
 DWEB_DOMAIN=server1.example.org ./dcomm.sh
 ```
 
-* Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overwriting data.
-
 ## Redeploy
 
 In the future, to redeploy or restart all dcomms services on `server1.example.org`, from the manager node type:
