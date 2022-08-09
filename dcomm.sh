@@ -3,11 +3,17 @@ if [[ -z "${DWEB_DOMAIN}" ]]
 then
     echo "## Error"
     echo "Please set a DWEB_DOMAIN environment variable before running this script"
-    echo "For example: DWEB_DOMAIN=matrix.org ./provision"
+    echo "For example: DWEB_DOMAIN=matrix.org ./dcomm.sh"
     exit 1
 fi
 
-
+if [[ ! -z "$1" ]] && [[ "$1" != "regen" ]]
+then
+    echo "## Error"
+    echo "This script only takes the argument 'regen' to overwrite existing configs."
+    echo "DWEB_DOMAIN=matrix.org ./dcomm.sh regen"
+    exit 1
+fi
 
 # Replace dots with dashes
 export DWEB_FRIENDLY_DOMAIN="${DWEB_DOMAIN//./_}"
@@ -115,11 +121,11 @@ sleep 10
 echo ""
 if [ -f "./conf/synapse/$DWEB_DOMAIN.homeserver.yaml" ]; then
     echo "A Synapse config for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config? (y/n) "
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
     then
-        echo "Not overwritting Matrix config"
-    else
         matrix_config
+    else
+        echo "Not overwritting Matrix config"
     fi
 else
     matrix_config
@@ -128,11 +134,11 @@ fi
 echo ""
 if [ -f "./conf/mastodon/$DWEB_DOMAIN.env.production" ]; then
     echo "A Mastodon config for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config (y/n) "
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
     then
-        echo "Not overwritting config"
-    else
         mastodon_config
+    else
+        echo "Not overwritting Mastodon config"
     fi
 else
     mastodon_config
@@ -141,11 +147,11 @@ fi
 echo ""
 if [ -f "./conf/mau/$DWEB_DOMAIN.config.yaml" ]; then
     echo "A Mau config for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config (y/n) "
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
     then
-        echo "Not overwritting config"
-    else
         mau_config
+    else
+        echo "Not overwritting config"
     fi
 else
     mau_config
@@ -154,12 +160,12 @@ fi
 echo ""
 if [ -f "./conf/caddy/Caddyfile.$DWEB_DOMAIN.tmpl" ]; then
     echo "A caddyfile for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config (y/n)"
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n)"
     then
-        echo "Not overwritting config"
-    else
         echo "Copy CaddyFile"
         cp ./conf/caddy/Caddyfile.tmpl ./conf/caddy/Caddyfile.$DWEB_DOMAIN.tmpl
+    else
+        echo "Not overwritting config"
     fi
 else
     echo "Copy CaddyFile"

@@ -91,7 +91,11 @@ In the future, to redeploy or restart all dcomms services on `server1.example.or
 DWEB_DOMAIN=server1.example.org ./dcomm.sh
 ```
 
-The script will prompt you before it overwrites any configuration files. To simply redeploy the swarm enter `no` to all overwrite prompts.
+### Generate new configs
+
+**This action is destructive!**
+To overwrite generated configs, run the script with the `regen` argument.
+The script will prompt you before it overwrites any configuration files.
 
 # Tor
 
