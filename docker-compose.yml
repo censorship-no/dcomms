@@ -318,9 +318,6 @@ services:
       #- "bundle exec rake db:prepare && cd /opt/mastodon && /usr/bin/tini -- bundle exec rails server"
       - "[[ -e /mastodon/public/db.lock ]] && touch /mastodon/public/db.lock || touch /mastodon/public/db.lock && bundle exec rake db:prepare; /usr/bin/tini -- bundle exec rails server"
     env_file: conf/mastodon/${DWEB_DOMAIN}.env.production
-    environment:
-      LOCAL_DOMAIN: "social.${DWEB_DOMAIN}"
-      SMTP_FROM_ADDRESS: "notifications${DWEB_DOMAIN}"
     command: bash -c "rm -f /mastodon/tmp/pids/server.pid; bundle exec rails s -p 3000"
     ports:
       - target: 3000
@@ -330,6 +327,7 @@ services:
     depends_on:
       - mastodon-pg
       - mastodon-redis
+      - mastodon-streaming
     volumes:
       # https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers
       - mastodon_public:/mastodon/public/ # map static files in volume for caddy
@@ -353,9 +351,6 @@ services:
       test: wget -q --spider --proxy=off localhost:4000/api/v1/streaming/health || exit 1
         ]
     env_file: conf/mastodon/${DWEB_DOMAIN}.env.production
-    environment:
-      LOCAL_DOMAIN: "mastodon.${DWEB_DOMAIN}"
-      SMTP_FROM_ADDRESS: "notifications@${DWEB_DOMAIN}"
     command: node ./streaming
     ports:
       - target: 4000
@@ -390,9 +385,6 @@ services:
     healthcheck:
       test: ps aux | grep '[s]idekiq\ 6' || false
     env_file: conf/mastodon/${DWEB_DOMAIN}.env.production
-    environment:
-      LOCAL_DOMAIN: "mastodon.${DWEB_DOMAIN}"
-      SMTP_FROM_ADDRESS: "notifications@${DWEB_DOMAIN}"
     command: bundle exec sidekiq
     depends_on:
       - mastodon-pg
