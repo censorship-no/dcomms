@@ -3,7 +3,15 @@ if [[ -z "${DWEB_DOMAIN}" ]]
 then
     echo "## Error"
     echo "Please set a DWEB_DOMAIN environment variable before running this script"
-    echo "For example: DWEB_DOMAIN=matrix.org ./provision"
+    echo "For example: DWEB_DOMAIN=matrix.org ./dcomm.sh"
+    exit 1
+fi
+
+if [[ ! -z "$1" ]] && [[ "$1" != "regen" ]]
+then
+    echo "## Error"
+    echo "This script only takes the argument 'regen' to overwrite existing configs."
+    echo "DWEB_DOMAIN=matrix.org ./dcomm.sh regen"
     exit 1
 fi
 
@@ -32,13 +40,13 @@ matrix_config () {
         -e SYNAPSE_SERVER_NAME=matrix.$DWEB_DOMAIN \
         -e SYNAPSE_REPORT_STATS=no \
         -e SYNAPSE_DATA_DIR=/data \
-    matrixdotorg/synapse:v1.53.0 generate
+    matrixdotorg/synapse:v1.63.0 generate
     echo "## Copying config files into docker swarm configs"
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
     sed -i 's/#enable_registration: false/enable_registration: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    #sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sed -i 's/#encryption_enabled_by_default_for_room_type: invite/encryption_enabled_by_default_for_room_type: all/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     cp ./conf/element/config.json ./conf/element/$DWEB_DOMAIN.config.json
     sed -i 's/#rc_registration:/rc_registration:\n  per_second: 0.1 \n  burst_count: 2/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
@@ -67,16 +75,16 @@ mastodon_config () {
         bundle exec rake mastodon:webpush:generate_vapid_key)
     VAPID_FRIENDLY_KEYS=${VAPID_KEYS//$'\n'/\\$'\n'}
 
-    REDIS_PW=$(openssl rand -base64 12)
+    #REDIS_PW=$(openssl rand -base64 12)
 
     sed -i "s/REPLACEME/$DWEB_DOMAIN/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/SECRET_KEY_BASE=/&$SECRET_KEY_BASE/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/OTP_SECRET=/&$OTP_SECRET/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/VAPID_KEYS=/$VAPID_FRIENDLY_KEYS/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i 's/\r$//g' ./conf/mastodon/$DWEB_DOMAIN.env.production
-    sed -i "s/ALTERNATE_DOMAINS=mastodon./&$DWEB_ONION/" ./conf/mastodon/$DWEB_DOMAIN.env.production
+    sed -i "s/ALTERNATE_DOMAINS=social./&$DWEB_ONION/" ./conf/mastodon/$DWEB_DOMAIN.env.production
     sed -i "s/SMTP_SERVER=/&$DWEB_DOMAIN/" ./conf/mastodon/$DWEB_DOMAIN.env.production
-    sed -i "s/REDIS_PASSWORD=/&$REDIS_PW/" ./conf/mastodon/$DWEB_DOMAIN.env.production
+    #sed -i "s/REDIS_PASSWORD=/&$REDIS_PW/" ./conf/mastodon/$DWEB_DOMAIN.env.production
 }
 
 mau_config () {
@@ -113,37 +121,37 @@ sleep 10
 echo ""
 if [ -f "./conf/synapse/$DWEB_DOMAIN.homeserver.yaml" ]; then
     echo "A Synapse config for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config? (y/n) "
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
     then
-        echo "Not overwritting Matrix config"
-    else
         matrix_config
+    else
+        echo "Not overwritting Matrix config"
     fi
 else
     matrix_config
 fi
 
-#echo ""
-#if [ -f "./conf/mastodon/$DWEB_DOMAIN.env.production" ]; then
-#    echo "A Mastodon config for $DWEB_DOMAIN already exists."
-#    if ! confirm "Overwrite existing config (y/n) "
-#    then
-#        echo "Not overwritting config"
-#    else
-#        mastodon_config
-#    fi
-#else
-#    mastodon_config
-#fi
+echo ""
+if [ -f "./conf/mastodon/$DWEB_DOMAIN.env.production" ]; then
+    echo "A Mastodon config for $DWEB_DOMAIN already exists."
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
+    then
+        mastodon_config
+    else
+        echo "Not overwritting Mastodon config"
+    fi
+else
+    mastodon_config
+fi
 
 echo ""
 if [ -f "./conf/mau/$DWEB_DOMAIN.config.yaml" ]; then
     echo "A Mau config for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config (y/n) "
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n) "
     then
-        echo "Not overwritting config"
-    else
         mau_config
+    else
+        echo "Not overwritting config"
     fi
 else
     mau_config
@@ -152,12 +160,12 @@ fi
 echo ""
 if [ -f "./conf/caddy/Caddyfile.$DWEB_DOMAIN.tmpl" ]; then
     echo "A caddyfile for $DWEB_DOMAIN already exists."
-    if ! confirm "Overwrite existing config (y/n)"
+    if [ "$1" == "regen" ] && confirm "Overwrite existing config? (y/n)"
     then
-        echo "Not overwritting config"
-    else
         echo "Copy CaddyFile"
         cp ./conf/caddy/Caddyfile.tmpl ./conf/caddy/Caddyfile.$DWEB_DOMAIN.tmpl
+    else
+        echo "Not overwritting config"
     fi
 else
     echo "Copy CaddyFile"
