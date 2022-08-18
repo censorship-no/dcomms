@@ -45,12 +45,19 @@ matrix_config () {
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.log.config ./conf/synapse/$DWEB_DOMAIN.log.config
-    sed -i 's/#enable_registration: false/enable_registration: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    sed -i 's/#registration_requires_token: true/registration_requires_token: true/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    sed -i 's/#encryption_enabled_by_default_for_room_type: invite/encryption_enabled_by_default_for_room_type: all/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     cp ./conf/element/config.json ./conf/element/$DWEB_DOMAIN.config.json
-    sed -i 's/#rc_registration:/rc_registration:\n  per_second: 0.1 \n  burst_count: 2/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
-    sed -i 's/^presence:/presence:\n  enabled: false/' ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    sed -i -z "s/database.*homeserver.db//" ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    sed -i "s/# vim:ft=yaml//" ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+
+    printf "enable_registration: true\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "registration_requires_token: true\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "encryption_enabled_by_default_for_room_type: all\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "rc_registration:\n  per_second: 0.1 \n  burst_count: 2\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "presence:\n  enabled: false\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "database:\n  name: psycopg2\n  txn_limit: 10000\n  args:\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "    user: synapse\n    password: null\n    database: synapse\n    host: localhost\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+    printf "    port: 5432\n    cp_min: 5\n    cp_max: 10\n" >> ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
+
     sed -i "s/TEMPLATE/$DWEB_DOMAIN/" ./conf/element/$DWEB_DOMAIN.config.json
 }
 
