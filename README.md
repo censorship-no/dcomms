@@ -10,6 +10,8 @@ Decentralized communications that work with or without the Internet
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
 * (Optional) A Tor hidden service [installed](https://community.torproject.org/onion-services/setup/), and listening on port 80 and 8448.
 
+A version of this repo built on Docker Compose, and with several other extra features, can be found here https://github.com/aphick/dcomms-compose
+
 # Introduction
 
 `dcomms` is a bundle of decentralized communication software running as services in the form of a docker swarm stack.
