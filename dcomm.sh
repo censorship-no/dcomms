@@ -68,17 +68,17 @@ mastodon_config () {
     sudo cp -a ./conf/mastodon/mastodon.env.production ./conf/mastodon/$DWEB_DOMAIN.env.production
     SECRET_KEY_BASE=`docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.0.2 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
         bundle exec rake secret` >/dev/null
 
     OTP_SECRET=$(docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.0.2 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
         bundle exec rake secret) >/dev/null
 
     VAPID_KEYS=$(docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.0.2 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
         bundle exec rake mastodon:webpush:generate_vapid_key)>/dev/null
     VAPID_FRIENDLY_KEYS=${VAPID_KEYS//$'\n'/\\$'\n'}
 
