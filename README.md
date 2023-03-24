@@ -1,4 +1,4 @@
-# dcomms
+# dComms
 
 Decentralized communications that work with or without the Internet 
 
