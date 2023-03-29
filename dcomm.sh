@@ -40,7 +40,7 @@ matrix_config () {
         -e SYNAPSE_SERVER_NAME=matrix.$DWEB_DOMAIN \
         -e SYNAPSE_REPORT_STATS=no \
         -e SYNAPSE_DATA_DIR=/data \
-    matrixdotorg/synapse:v1.74.0 generate 2>/dev/null
+    matrixdotorg/synapse:v1.80.0 generate 2>/dev/null
     echo "## Copying config files into docker swarm configs"
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/homeserver.yaml ./conf/synapse/$DWEB_DOMAIN.homeserver.yaml
     sudo cp -a /var/lib/docker/volumes/synapse_data_tmp/_data/matrix.$DWEB_DOMAIN.signing.key ./conf/synapse/$DWEB_DOMAIN.signing.key
@@ -68,17 +68,17 @@ mastodon_config () {
     sudo cp -a ./conf/mastodon/mastodon.env.production ./conf/mastodon/$DWEB_DOMAIN.env.production
     SECRET_KEY_BASE=`docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.1 \
         bundle exec rake secret` >/dev/null
 
     OTP_SECRET=$(docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.1 \
         bundle exec rake secret) >/dev/null
 
     VAPID_KEYS=$(docker run -it --rm \
         --mount type=volume,src=masto_data_tmp,dst=/opt/mastodon \
-            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.0 \
+            -e RUBYOPT=-W0 tootsuite/mastodon:v4.1.1 \
         bundle exec rake mastodon:webpush:generate_vapid_key)>/dev/null
     VAPID_FRIENDLY_KEYS=${VAPID_KEYS//$'\n'/\\$'\n'}
 
